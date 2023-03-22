@@ -1,17 +1,19 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+
 import { RouterProvider } from "react-router-dom";
 import routes from "./router/Router";
 
+const queryClient = new QueryClient();
 function App() {
+  // const queryClient = new QueryClient();
   const [count, setCount] = useState(0);
 
   return (
     <div className="">
-      {/* <h2 className="text-2xl text-red-600">App .js file</h2> */}
-      <RouterProvider router={routes}></RouterProvider>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={routes}></RouterProvider>
+      </QueryClientProvider>
     </div>
   );
 }
