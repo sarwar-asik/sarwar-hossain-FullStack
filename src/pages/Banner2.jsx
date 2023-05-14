@@ -3,7 +3,7 @@ import hero2 from "../assets/main/hero2.png"
 
 const Banner2 = () => {
     return (
-        <div className='block lg:flex items-center gap-5 my-10 w-[95%] mx-auto'>
+        <div className='block lg:flex items-center gap-5 my-10 '>
             <section className='Lg:w-[35%]'>
                 <img src={hero2} className="lg:h-[32rem]" alt="" />
             </section>

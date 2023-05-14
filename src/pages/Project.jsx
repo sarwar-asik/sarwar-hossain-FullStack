@@ -1,5 +1,6 @@
 import React from "react";
 import useGetData from "../hooks/useGetData";
+import loaderImg from "../assets/icon/loader2Img.svg"
 
 const Project = () => {
     const [data] = useGetData(
@@ -20,20 +21,24 @@ const Project = () => {
         There are some my projects those I created recently. <br />
         You can explore my projects click by live{" "}
       </p>
+      {
+        allProjects.length<1 &&
+        <img src={loaderImg} className="h-[230px] w-[300px] mx-auto"/>
+      }
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {allProjects?.map((project) => {
+      {allProjects?.map((project) => {
           console.log(project);
           return (
             <div className="shadow-2xl p-2 ">
               <figure className="">
                 <img
                   src={project?.img}
-                  className="h-[32rem]  lg:w-[90%] sm:w-full mx-auto rounded-lg"
+                  className="h-[32rem]  w-full mx-auto rounded-lg"
                   alt=""
                 />
               </figure>
               <h1 className="text-3xl font-bold  text-center mt-2 text-slate-600 font-serif">
-                {" "}
+              
                 {project?.name}
               </h1>
               <div className="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
@@ -58,7 +63,7 @@ const Project = () => {
               </div>
               <button
                 onClick={() => handleClick(project)}
-                className="w-full my-5 py-3 bg-slate-300 font-bold text-2xl  hover:bg-[#0e2a47]  hover:text-white"
+                className="w-full my-5 py-3 bg-slate-300 font-bold text-2xl  hover:bg-c  hover:text-white"
               >
                 Details
               </button>

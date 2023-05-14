@@ -46,17 +46,14 @@ const Features = () => {
 
           return (
             <div class="card text-start   shadow-2xl px-4 py-5 relative">
-              <figures
-                className={` h-[100px] w-[100px] text-center p-6 rounded-[10%] my-2`}
-                style={{ backgroundColor: `${color}` }}
-              >
-                <img class="h-[70px] w-[70px]" src={img} alt="Title" />
-              </figures>
-              <h1 className="font-semibold mt-5 font-serif lg:text-4xl sm:text-2xl">{name}</h1>
-              <p className="font-normal lg:text-xl mt-2 sm:text-sm text-slate-500 mb-2 ">
+            <figure className="bg-slate-300 rounded-xl py-3 h-[100px] pl-2">
+            <img src={img} className="h-full w-[90px]" alt="" />
+            </figure>
+              <h1 className="font-semibold mt-5 font-serif text-[1.4em]">{name}</h1>
+              <p className="font-normal text-[1em] font-mono mt-2 text-slate-500 mb-2 ">
                 {detail} <br /> Regularly I work with {name} <br />
               </p>
-              <h6 className="text-slate-700"> See more ...</h6>
+              <h6 className="text-slate-400 "> See more ...</h6>
             </div>
           );
         })}
