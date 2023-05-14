@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 const Main = () => {
     return (
-        <div>
+        <div className='lg:w-[95%] mx-auto'>
         
             <Outlet/>
         </div>

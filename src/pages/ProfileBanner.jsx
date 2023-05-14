@@ -19,7 +19,7 @@ const ProfileBanner = () => {
 
   return (
     <div
-      className="block lg:flex items-center justify-between w-[95%] mx-auto banner mt-4 pl-7 text-white pt-2 rounded-lg"
+      className="block lg:flex items-center justify-between  banner mt-4 pl-7 text-white pt-2 rounded-lg"
       style={{ backgroundImage:`url(${bgImage})`}}
     >
       <section className="lg:w-[%] mx-auto sm:w-full ">
