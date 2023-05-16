@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bgImage from "../assets/main/bg1.svg"
 
 const Login = () => {
     return (
         <div>
-            <div className="relative lg:max-w-[93%] mx-auto mt-3">
-      <div className="absolute inset-0 object-cover bg-primary w-full h-full"></div>
+            <div className="relative  mx-auto mt-3">
+            <img
+            src={bgImage}
+            className="absolute inset-0 object-cover w-full h-full"
+            alt=""
+          />
       <div className="relative bg-opacity-75 bg-deep-purple-accent-700">
         <svg
           className="absolute inset-x-0 bottom-0 text-white"

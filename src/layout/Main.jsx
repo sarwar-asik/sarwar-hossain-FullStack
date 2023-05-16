@@ -13,7 +13,7 @@ const Main = () => {
       </nav>
       <Outlet />
       <Footer />
-      <section className="lg:hidden fixed bottom-0 min-w-ful w-[94%] ">
+      <section className="lg:hidden fixed bottom-0 min-w-ful w-[87%] ">
       <SmNavbar/>
       </section>
     </div>
