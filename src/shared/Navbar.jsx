@@ -20,7 +20,6 @@ const Navbar = () => {
 
   const activeClass =
     "bg-[#0e2a47] text-white font-bold rounded p-2 font-serif";
-
   const [activeItem, setActiveItem] = useState("home");
 
   const handleItemClick = (item) => {

@@ -62,7 +62,7 @@ const SmNavbar = () => {
 
         <div
         
-          className={activeItem === "home" ? "  -mt-[24px] px-1 border-[#0e2a47] border-2 rounded-t-[15px]" : "absolute top-[-30px] right-[225px]  px-1 "}
+          className={activeItem === "home" ? "  -mt-[24px] px-1 border-[#0e2a47] border-2 rounded-t-[15px]" : "-mt-[24px]  px-1 "}
           onClick={() => handleItemClick("home")}
         >
           <NavLink

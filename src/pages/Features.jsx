@@ -45,13 +45,22 @@ const Features = () => {
           const { name, img, detail, color } = feature;
 
           return (
-            <div class="card text-start   shadow-2xl px-4 py-5 relative">
-            <figure className="bg-slate-300 rounded-xl py-3 h-[100px] pl-2">
-            <img src={img} className="h-full w-[90px]" alt="" />
-            </figure>
-              <h1 className="font-semibold mt-5 font-serif text-[1.4em]">{name}</h1>
-              <p className="font-normal text-[1em] font-mono mt-2 text-slate-500 mb-2 ">
-                {detail} <br /> Regularly I work with {name} <br />
+            <div
+              class={`text-start  bg-slate-300 rounded-md  shadow-2xl px-4 py-5 relative `}
+            >
+              {/* <figure className="bg-slate-300 rounded-xl py-3 h-[100px] pl-2">
+            </figure> */}
+              <img
+                src={img}
+                className="h-[100px] px-3 w-[120px] float-left"
+                alt=""
+              />
+              <p className="font-normal text-[1em] font-mono mt-2 text-slate-500 mb-2 px-2">
+                {detail} Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Alias atque magnam nostrum corrupti ex facilis quae
+                repellendus repudiandae blanditiis numquam!
+                {/* <h1 className="font-semibold mt-5 font-serif text-[1.4em]">{name}</h1> */}
+                {/* {detail} <br /> Regularly I work with {name} <br /> */}
               </p>
               <h6 className="text-slate-400 "> See more ...</h6>
             </div>
