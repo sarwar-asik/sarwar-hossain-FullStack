@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className="relative mt-10 shadow-inner bg-blue-50">
+        <div className="relative mt-10 shadow-inner bg-blue-100 ">
         {/* <svg
           className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
           preserveAspectRatio="none"
@@ -19,7 +19,7 @@ const Footer = () => {
           
 
             
-            <div className="flex justify-around">
+            <div className="block  lg:flex justify-between gap-5">
               <div>
                 <p className="font-semibold tracking-wide text-teal-accent-400">
                 My Work Type
@@ -32,7 +32,7 @@ const Footer = () => {
                 <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"> Brand Executing </li>
                 </ul>
               </div>
-              <div>
+              <div className='mt-2'>
                 <p className="font-semibold tracking-wide text-teal-accent-400">
                  My site
                 </p>
