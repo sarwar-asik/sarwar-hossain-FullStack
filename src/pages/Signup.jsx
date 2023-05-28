@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../assets/main/bg1.svg";
 import useTitle from "../hooks/useTitle";
+import gIcon from "../assets/icon/googleLogo.jpg"
 
 const SignUp = () => {
   useTitle("SignUp");
@@ -116,9 +117,10 @@ const SignUp = () => {
                 </form>
                 <button
                   //   onClick={handleGoogleLogin}
-                  className="bg-blue-700 mt-2 w-full text-red-50 py-3 font-bold font-serif rounded"
+                  className="bg-slate-200 mt-2 w-full  py-3 font-bold font-serif rounded flex justify-evenly items-center"
                 >
-                  Google Login
+                  <img className="h-[36px] w-[70px] rounded-md " src={gIcon} alt="" />
+                 <span> Google Login</span>
                 </button>
               </div>
             </div>

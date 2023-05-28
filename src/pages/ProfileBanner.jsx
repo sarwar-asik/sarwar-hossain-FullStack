@@ -19,13 +19,13 @@ const ProfileBanner = () => {
 
   return (
     <div
-      className="block lg:flex items-center justify-between  banner mt-4 pl-7 text-white pt-2 rounded-lg"
+      className="block lg:flex items-center justify-between  banner mt-4 pl-7 text-text1 pt-2 rounded-lg"
       style={{ backgroundImage:`url(${bgImage})`}}
     >
       <section className="lg:w-[%] mx-auto sm:w-full ">
         <h1 className="text-5xl font-bold font-serif "> Sarwar Hossain </h1>
         <h3 className="h-14 text-[22px] mt-3 font-semibold font-sans">{text1}</h3>
-        <p className="font-[300] lg:text-xl mt-2 sm:text-lg font-mono mb-8">
+        <p className="text-text2 font-[300] lg:text-xl mt-2 sm:text-lg font-mono mb-8 ">
           I am a Front-end Developer working with <br /> passionate . My goal is
           achieve success by <br />
           Hard working .
@@ -34,7 +34,7 @@ const ProfileBanner = () => {
           href="https://drive.google.com/file/d/1j1D-pT8J5klHsF-SeSOyD1DkUF45kg0T/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
-          className="bg-[hsla(201,78%,33%,1)] text-white py-3 px-2 my-5 rounded-lg font-bold text-slate-7 hover:bg-[#4E6E81] hover:text-white"
+          className="bg-slate-300 text-primary py-3 px-2 my-5 rounded-lg font-bold text-slate-7 hover:bg-[#4E6E81] hover:text-white shadow-inner  transition duration-500 ease-in-out"
         >
             My Resume
         </a>

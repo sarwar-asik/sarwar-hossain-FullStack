@@ -19,7 +19,7 @@ const SmNavbar = () => {
   ];
 
   const activeClass =
-    "bg-[#0e2a47] flex flex-col items-center text-white p-1 rounded shadow-inner ";
+    "bg-primary flex flex-col items-center text-white p-1 rounded shadow-inner ";
 
   const noActiveClass = `flex flex-col items-center p-1`;
 
@@ -29,7 +29,7 @@ const SmNavbar = () => {
     setActiveItem(item);
   };
   return (
-    <div className="bg-slate-300  px-2 mt-3 ">
+    <div className="bg-secondary  px-2 mt-3 ">
       {/* <section>
         <h3 className="text-[1.5rem] font-semibold font-serif">Sarwar Hossain</h3>
       </section> */}

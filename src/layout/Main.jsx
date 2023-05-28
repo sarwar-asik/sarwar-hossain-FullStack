@@ -6,7 +6,7 @@ import SmNavbar from "../shared/SmNavbar";
 
 const Main = () => {
   return (
-    <div className="lg:w-[95%] mx-auto  relative p-4 z-40">
+    <div className="lg:w-[95%] mx-auto  relative p-4 z-40 bg-bg1">
       <nav>
         <Navbar />
        

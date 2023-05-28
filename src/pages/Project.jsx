@@ -1,6 +1,6 @@
 import React from "react";
 import useGetData from "../hooks/useGetData";
-import loaderImg from "../assets/icon/loader2Img.svg"
+import Loader from "../shared/Loader";
 
 const Project = () => {
     const [data] = useGetData(
@@ -12,10 +12,13 @@ const Project = () => {
 
     const allProjects = data;
 
+
+    console.log(window.screenY,"from windossss");
+
   //   console.log(data, "from data");
   return (
     <div className=" my-10 w-[95%] mx-auto" style={{ overflow: "hidden" }}>
-      <h1 className=" text-5xl my-5 font-bold font-serif "> My Projects ,</h1>
+      <h1 className="text-text1 text-5xl my-5 font-bold font-serif "> My Projects ,</h1>
       <p className="font-normal lg:text-xl mt-2 sm:text-lg text-slate-500 mb-8">
         {" "}
         There are some my projects those I created recently. <br />
@@ -23,11 +26,11 @@ const Project = () => {
       </p>
       {
         allProjects.length<1 &&
-        <img src={loaderImg} className="h-[230px] w-[300px] mx-auto"/>
+        <Loader/>
       }
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {allProjects?.map((project) => {
-          console.log(project);
+          // console.log(project);
           return (
             <div className="shadow-2xl p-2 ">
               <figure className="">
@@ -37,13 +40,13 @@ const Project = () => {
                   alt=""
                 />
               </figure>
-              <h1 className="text-3xl font-bold  text-center mt-2 text-slate-600 font-serif">
+              <h1 className="text-3xl font-bold  text-center mt-2 text-text1 font-serif">
               
                 {project?.name}
               </h1>
               <div className="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
                 <a
-                  className="text-xl font-semibold font-mono bg-[#0e2a47]  py-1 px-3  rounded-lg text-slate-200  hover:bg-slate-300 shadow-xl   hover:text-[#0e2a47]"
+                  className="text-xl font-semibold font-mono bg-primary  py-1 px-3  rounded-lg text-slate-200  hover:bg-slate-300 shadow-xl   hover:text-primary  transition duration-500 ease-in-out"
                   href={project?.live}
                   target="_blank"
                   rel="noreferrer"
@@ -52,7 +55,7 @@ const Project = () => {
                   Live site{" "}
                 </a>
                 <a
-                  className="text-xl font-semibold font-mono bg-[#0e2a47] py-1 px-3  rounded-lg hover:text-[#0e2a47] text-slate-200 hover:bg-slate-300 shadow-xl"
+                  className="text-xl font-semibold font-mono bg-primary py-1 px-3  rounded-lg hover:text-primary text-slate-200 hover:bg-slate-300 shadow-xl  transition duration-500 ease-in-out"
                   href={project?.source}
                   target="_blank"
                   rel="noreferrer"
@@ -63,7 +66,7 @@ const Project = () => {
               </div>
               <button
                 onClick={() => handleClick(project)}
-                className="w-full my-5 py-3 bg-slate-300 font-bold text-2xl  hover:bg-c  hover:text-white"
+                className="w-full my-5 py-3 bg-slate-300 font-bold text-2xl  hover:bg-  hover:text-w"
               >
                 Details
               </button>

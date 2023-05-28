@@ -9,11 +9,14 @@ const Home = () => {
   useTitle("Home");
   return (
     <div>
+      
       <ProfileBanner />
 
       <Banner2 />
       <Project></Project>
       <Features />
+
+
     </div>
   );
 };

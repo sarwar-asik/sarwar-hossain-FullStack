@@ -3,6 +3,7 @@ import feature1 from "../assets/fetures/feature1.png";
 import feature2 from "../assets/fetures/feature2.png";
 import feature3 from "../assets/fetures/feature3.png";
 
+
 const Features = () => {
   const features = [
     {
@@ -28,20 +29,20 @@ const Features = () => {
     },
   ];
   return (
-    <div className="my-8 px-[15px]">
+    <div className="my-8 px-[15px] ">
       <header className="text-center">
-        <h6 className="text-4xl font-bold font-serif "> My Services</h6>
-        <h4 className="text-xl font-semibold font-mono">
+        <h6 className="text-text1 text-4xl font-bold font-serif "> My Services</h6>
+        <h4 className="text-text1 text-xl font-semibold font-mono">
           Best Client or Company Support
         </h4>
 
-        <p className="font-normal lg:text-xl mt-2 sm:text-lg text-slate-500 mb-8">
+        <p className="text-text2 font-normal lg:text-xl mt-2 sm:text-lg  mb-8">
           I try to best service to Client or buyer for them satisfied . <br />
-          My every projects is impleament by my Skills
+          My every projects is implement by my Skills
         </p>
       </header>
       <main className="my-4 grid grid-cols-1 gap-[25px] md:grid-cols-2 lg:grid-cols-3 mt-4 mb-5">
-        {features.map((feature) => {
+        {features?.map((feature) => {
           const { name, img, detail, color } = feature;
 
           return (
@@ -55,7 +56,7 @@ const Features = () => {
                 className="h-[100px] px-3 w-[120px] float-left"
                 alt=""
               />
-              <p className="font-normal text-[1em] font-mono mt-2 text-slate-500 mb-2 px-2">
+              <p className="font-normal text-[1em] font-mono mt-2 text-slate-600 mb-2 px-2">
                 {detail} Lorem, ipsum dolor sit amet consectetur adipisicing
                 elit. Alias atque magnam nostrum corrupti ex facilis quae
                 repellendus repudiandae blanditiis numquam!
@@ -66,7 +67,11 @@ const Features = () => {
             </div>
           );
         })}
+
+
       </main>
+ 
+
     </div>
   );
 };
