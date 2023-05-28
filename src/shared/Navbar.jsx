@@ -35,7 +35,7 @@ const Navbar = () => {
       <section className=" flex gap-3 justify-around font-serif font-[600] text-[1em]">
         {NavData?.map((item) => {
           return (
-            <div>
+            <div key={item?.name}>
               <NavLink
                 className={activeItem === item?.name ? activeClass : ""}
                 onClick={() => handleItemClick(item.name)}

@@ -47,7 +47,8 @@ const Features = () => {
 
           return (
             <div
-              class={`text-start  bg-slate-300 rounded-md  shadow-2xl px-4 py-5 relative `}
+              className={`text-start  bg-slate-300 rounded-md  shadow-2xl px-4 py-5 relative `}
+              key={name}
             >
               {/* <figure className="bg-slate-300 rounded-xl py-3 h-[100px] pl-2">
             </figure> */}

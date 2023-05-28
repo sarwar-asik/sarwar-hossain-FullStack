@@ -13,7 +13,6 @@ const Project = () => {
     const allProjects = data;
 
 
-    console.log(window.screenY,"from windossss");
 
   //   console.log(data, "from data");
   return (
@@ -32,7 +31,7 @@ const Project = () => {
       {allProjects?.map((project) => {
           // console.log(project);
           return (
-            <div className="shadow-2xl p-2 ">
+            <div className="shadow-2xl p-2 " key={project?.name}>
               <figure className="">
                 <img
                   src={project?.img}

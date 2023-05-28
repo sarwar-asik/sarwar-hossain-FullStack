@@ -5,16 +5,17 @@ import Footer from "../shared/Footer";
 import SmNavbar from "../shared/SmNavbar";
 
 const Main = () => {
+  // console.log(window.innerWidth,"from windossss");
+
   return (
     <div className="lg:w-[95%] mx-auto  relative p-4 z-40 bg-bg1">
       <nav>
         <Navbar />
-       
       </nav>
       <Outlet />
       <Footer />
-      <section className="lg:hidden fixed bottom-0 min-w-ful w-[87%] ">
-      <SmNavbar/>
+      <section className="">
+        <SmNavbar />
       </section>
     </div>
   );

@@ -23,7 +23,7 @@ const ProfileBanner = () => {
       style={{ backgroundImage:`url(${bgImage})`}}
     >
       <section className="lg:w-[%] mx-auto sm:w-full ">
-        <h1 className="text-5xl font-bold font-serif "> Sarwar Hossain </h1>
+        <h1 className="text-[3rem] font-bold font-serif "> Sarwar Hossain </h1>
         <h3 className="h-14 text-[22px] mt-3 font-semibold font-sans">{text1}</h3>
         <p className="text-text2 font-[300] lg:text-xl mt-2 sm:text-lg font-mono mb-8 ">
           I am a Front-end Developer working with <br /> passionate . My goal is
