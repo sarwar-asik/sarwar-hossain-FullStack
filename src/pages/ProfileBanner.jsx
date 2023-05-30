@@ -7,10 +7,10 @@ import "../pages/pages.css"
 const ProfileBanner = () => {
   const [text1] = useTypewriter({
     words: [
-      "Web Developer",
-      "Frontend Developer",
-      "MERN Stack Developer",
-      "React Developer",
+      "[Web Developer]",
+      "[Frontend Developer[React]]",
+      "[MERN Stack Developer]",
+      "[Backend Developer[mongodb]]",
     ],
     loop: 200,
     delaySpeed: 2000,
@@ -39,7 +39,7 @@ const ProfileBanner = () => {
             My Resume
         </a>
       </section>
-      <section className="w-full mx-auto bg-red-40 lg:-mt-[7.5rem]">
+      <section className="w-full mx-auto bg-red-40 lg:-mt-[7.6rem]">
         <img src={profile} className="lg:w-[520px] sm:w-[90%] ml-auto h-[520px] rounded-t-[30%]" alt="" />
       </section>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import BackRoutes from "../shared/BackRoutes/BackRoutes";
 
 const DetailsProjects = () => {
   const { state } = useLocation();
@@ -8,6 +9,7 @@ const DetailsProjects = () => {
   console.log(state, "form");
   return (
     <main className="container mx-auto py-3 my-4">
+        <BackRoutes></BackRoutes>
       <h2 className="text-[1.8rem] my-3 font-serif font-bold text-text1 text-center">
         {" "}
         Project Details{" "}

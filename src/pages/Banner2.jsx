@@ -17,14 +17,14 @@ const Banner2 = () => {
     },
   ];
   return (
-    <div className="block lg:flex items-center gap-5 my-10 rounded-b-full">
-      <section className="Lg:w-[35%]">
-        <img src={hero2} className="lg:h-[32rem]" alt="" />
+    <div className="block lg:flex items-center gap-5 my-5 rounded-b-full">
+      <section className="lg:w-[45%]">
+        <img src={hero2} className="lg:h-[32rem] rounded-r-[1%]" alt="" />
       </section>
       <section className="lg:w-[65%] mt-5">
         <h2 className="text-[2.5rem] text-text1 font-bold font-serif">
           {" "}
-          Web Development{" "}
+          Development Categories
         </h2>
         <p className="font-normal text-[1rem] mt-2  text-text2 mb-8">
           On this Modern world I am trying to update myself to the update world
