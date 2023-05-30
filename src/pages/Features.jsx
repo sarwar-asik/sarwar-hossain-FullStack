@@ -54,7 +54,7 @@ const Features = () => {
             </figure> */}
               <img
                 src={img}
-                className="h-[100px] px-3 w-[120px] float-left"
+                className="h-[100px] px-3 w-[120px] float-left "
                 alt=""
               />
               <p className="font-normal text-[1em] font-mono mt-2 text-slate-600 mb-2 px-2">

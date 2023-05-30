@@ -29,7 +29,7 @@ const SmNavbar = () => {
     setActiveItem(item);
   };
   return (
-    <div className="bg-secondary    lg:hidden fixed bottom-0 right-0 left-0  mx-auto px-1  min-w-fit mt-10">
+    <div className="bg-secondary   lg:hidden fixed bottom-0 right-0 left-0  mx-auto px-1  min-w-fit mt-10">
       {/* <section>
         <h3 className="text-[1.5rem] font-semibold font-serif">Sarwar Hossain</h3>
       </section> */}

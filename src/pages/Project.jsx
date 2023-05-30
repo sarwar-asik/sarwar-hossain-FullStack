@@ -1,6 +1,7 @@
 import React from "react";
 import useGetData from "../hooks/useGetData";
 import Loader from "../shared/Loader";
+import { useNavigate } from "react-router-dom";
 
 const Project = () => {
     const [data] = useGetData(
@@ -8,6 +9,8 @@ const Project = () => {
     );
     // console.log(data);
 
+
+    const navigate = useNavigate()
 
 
     const allProjects = data;
@@ -45,7 +48,7 @@ const Project = () => {
               </h1>
               <div className="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
                 <a
-                  className="text-xl font-semibold font-mono bg-primary  py-1 px-3  rounded-lg text-slate-200  hover:bg-slate-300 shadow-xl   hover:text-primary  transition duration-500 ease-in-out"
+                  className="text-xl font-semibold font-mono bg-primary  py-1 px-3  rounded-lg text-slate-200  hover:bg-slate-300 shadow-xl   hover:text-primary  transition duration-500 ease-in-out cursor-alias"
                   href={project?.live}
                   target="_blank"
                   rel="noreferrer"
@@ -54,7 +57,7 @@ const Project = () => {
                   Live site{" "}
                 </a>
                 <a
-                  className="text-xl font-semibold font-mono bg-primary py-1 px-3  rounded-lg hover:text-primary text-slate-200 hover:bg-slate-300 shadow-xl  transition duration-500 ease-in-out"
+                  className="text-xl font-semibold font-mono bg-primary py-1 px-3  rounded-lg hover:text-primary text-slate-200 hover:bg-slate-300 shadow-xl  transition duration-500 ease-in-out cursor-alias"
                   href={project?.source}
                   target="_blank"
                   rel="noreferrer"
@@ -64,8 +67,8 @@ const Project = () => {
                 </a>
               </div>
               <button
-                onClick={() => handleClick(project)}
-                className="w-full my-5 py-3 bg-slate-300 font-bold text-2xl  hover:bg-  hover:text-w"
+                onClick={() => navigate(`/projectsDetails/${project?.name}`,{state:project})}
+                className="w-full my-5 py-4 bg-slate-300 font-bold text-[1.3rem]  hover:bg-  hover:text-w  rounded-tl-[100%] rounded-tr-[2%] rounded-bl-[2%] rounded-br-[100%] cursor-help"
               >
                 Details
               </button>
@@ -73,6 +76,8 @@ const Project = () => {
           );
         })}
       </div>
+
+      <div className="text-center text-[1rem] font-[500] bg-primary rounded text-text1 px-3 py-3  w-[90%]   mt-2 rounded-br-[50%] rounded-bl-[50%] mx-auto cursor-pointer ">See All</div>
     </div>
   );
 };

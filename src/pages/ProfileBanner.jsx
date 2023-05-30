@@ -1,6 +1,6 @@
 import React from "react";
 import { useTypewriter } from "react-simple-typewriter";
-import profile from "../assets/main/professional-removebg-preview.png";
+import profile from "../assets/fetures/professionalimg-removebg-preview.png";
 import bgImage from "../assets/main/bg1.svg";
 import "../pages/pages.css"
 
@@ -19,10 +19,10 @@ const ProfileBanner = () => {
 
   return (
     <div
-      className="block lg:flex items-center justify-between  banner mt-4 pl-7 text-text1 pt-2 rounded-lg"
+      className="block lg:flex items-center justify-between  banner lg:mt-[7rem] pl-7 text-text1 pt-2 rounded-lg lg:rounded-tl-[36%]"
       style={{ backgroundImage:`url(${bgImage})`}}
     >
-      <section className="lg:w-[%] mx-auto sm:w-full ">
+      <section className="lg:w-[%] mx-auto sm:w-full pt-3 pl-1">
         <h1 className="text-[3rem] font-bold font-serif "> Sarwar Hossain </h1>
         <h3 className="h-14 text-[22px] mt-3 font-semibold font-sans">{text1}</h3>
         <p className="text-text2 font-[300] lg:text-xl mt-2 sm:text-lg font-mono mb-8 ">
@@ -39,8 +39,8 @@ const ProfileBanner = () => {
             My Resume
         </a>
       </section>
-      <section className="w-full mx-auto">
-        <img src={profile} className="lg:w-[520px] sm:[90%] ml-auto h-[500px]" alt="" />
+      <section className="w-full mx-auto bg-red-40 lg:-mt-[7.5rem]">
+        <img src={profile} className="lg:w-[520px] sm:w-[90%] ml-auto h-[520px] rounded-t-[30%]" alt="" />
       </section>
     </div>
   );

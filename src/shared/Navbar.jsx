@@ -26,7 +26,7 @@ const Navbar = () => {
     setActiveItem(item);
   };
   return (
-    <div className="hidden lg:flex bg-secondary py-4  justify-between  px-5 rounded">
+    <div className="hidden lg:flex bg-secondary py-2  justify-between  px-5 rounded-b-lg">
       <section>
         <NavLink to="/" className="text-[1.6rem] font-semibold font-serif">
           Sarwar Hossain
