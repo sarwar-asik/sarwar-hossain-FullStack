@@ -8,7 +8,7 @@ const Main = () => {
   // console.log(window.innerWidth,"from windossss");
 
   return (
-    <div className="lg:w-[95%] mx-auto  relative px- z-40 bg-bg1">
+    <div className="lg:w-[98%] mx-auto  relative px- z-40 bg-bg1">
       <nav>
         <Navbar />
       </nav>

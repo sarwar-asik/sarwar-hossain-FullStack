@@ -6,10 +6,14 @@ const DetailsProjects = () => {
   const { state } = useLocation();
 
   const { name, time, image1, image2, image3, tech, live, source, img } = state;
-  console.log(state, "form");
+  // console.log(state, "form");
+
+  const location = useLocation()
+  // console.log(location);
+
   return (
     <main className="container mx-auto py-3 my-4">
-        <BackRoutes></BackRoutes>
+        <BackRoutes key={"Details"} path={location?.pathname}></BackRoutes>
       <h2 className="text-[1.8rem] my-3 font-serif font-bold text-text1 text-center">
         {" "}
         Project Details{" "}
@@ -40,8 +44,8 @@ const DetailsProjects = () => {
       <div className="my-3 text-center py-3">
         <h2 className="text-text1 font-serif">Used Technology 🎶🎶🎶 : </h2>
         <p className="text-text2  flex  justify-center gap-2 mt-2">
-          {tech.map(item=>{
-            return<div>
+          {tech.map((item,i)=>{
+            return<div key={i}>
                 <img className="h-[40px] w-[40px] rounded-[100%]" src={item} alt="" />
             </div>
 

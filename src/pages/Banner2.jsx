@@ -17,7 +17,11 @@ const Banner2 = () => {
     },
   ];
   return (
-    <div className="block lg:flex items-center gap-5 my-5 rounded-b-full">
+    <div className="block lg:flex items-center gap-5 my-5 px-2 rounded-b-full"
+    data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom"
+    data-aos-duration="1500"
+    >
       <section className="lg:w-[45%]">
         <img src={hero2} className="lg:h-[32rem] rounded-r-[1%]" alt="" />
       </section>
@@ -32,11 +36,14 @@ const Banner2 = () => {
           technology .
         </p>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 my-5 text-slate-700 px-2">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 my-5 text-slate-700  px-2">
           {data?.map((item) => (
             <button
+            data-aos="zoom-in"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-duration="2000"
               key={item?.name}
-              className="bg-slate-50 shadow-2xl p-2 rounded-br-[100%] rounded-bl-[100%] font-mono"
+              className="bg-primary text-text1 shadow-2xl px-2 py-4 rounded-br-[100%] rounded-bl-[100%] font-mono"
             >
               {item?.name}
             </button>

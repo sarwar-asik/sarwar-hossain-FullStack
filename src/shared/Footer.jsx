@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <div className="relative mt-10 shadow-inner bg-primary text-text1 ">
+        <div 
+        data-aos="fade-up"
+     
+     data-aos-duration="1700"
+        data-aos-anchor-placement="center-bottom"
+         className="relative mt-10 shadow-inner bg-primary text-text1 ">
         {/* <svg
           className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
           preserveAspectRatio="none"
@@ -25,11 +30,11 @@ const Footer = () => {
                 My Work Type
                 </p>
                 <ul className="mt-2 space-y-2">
-                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"> Content Creating </li>
-                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"> Digital Creating  </li>
-                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Social Activity </li>
-                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Blogs scripting </li>
-                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"> Brand Executing </li>
+                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"> Frontend Development </li>
+                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"> Backend Api  </li>
+                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">MERN Stack </li>
+                <li className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400">Programe solving </li>
+               
                 </ul>
               </div>
               <div className='mt-2'>
@@ -89,7 +94,7 @@ const Footer = () => {
               <Link
                 to="https://www.facebook.com/shah.muntachir/photos"
                 target="_blanck"
-                title='Muntacher Mihan Twitter'
+                title='Sarwar Hossain Twitter'
 
                 className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
               >
@@ -99,7 +104,7 @@ const Footer = () => {
               </Link>
               <Link
                to="https://www.linkedin.com/in/shah-muntacher-hossain-mihan-7120541b5/" target="_blanck"
-               title='Muntacher Mihan Instragram'
+               title='Sarwar Hossain Instragram'
 
                 className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
               >
@@ -111,7 +116,7 @@ const Footer = () => {
               <Link
                 to="https://www.facebook.com/shah.muntachir/photos"
                 target="_blanck"
-                title='Muntacher Mihan Facebook'
+                title='Sarwar Hossain Facebook'
                 className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
