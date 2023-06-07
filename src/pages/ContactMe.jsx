@@ -13,7 +13,7 @@ const ContactMe = () => {
     console.log(data);
     toast.success("sent your message");
     if (data) {
-      reset();
+      // reset();
     }
   };
   return (
@@ -78,7 +78,7 @@ const ContactMe = () => {
             <input
               type="email"
               {...register("email")}
-              className="w-full rounded  mt-2 outline-none py-3 bg-slate-300 px-3"
+              className="w-full rounded  mt-2 outline-none py-3 bg-slate-300 px-3 text-primary"
               required
               placeholder="Your gmail"
             />
@@ -90,7 +90,7 @@ const ContactMe = () => {
             </label>
             <textarea
               type="email"
-              className="w-full rounded px-5 mt-2 outline-none py-3 bg-slate-300"
+              className="w-full rounded px-5 mt-2 outline-none py-3 bg-slate-300 text-primary"
               {...register("message")}
               required
               placeholder="Your Message"
