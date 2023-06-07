@@ -20,7 +20,7 @@ const Banner2 = () => {
     <div className="block lg:flex items-center gap-5 my-5 px-2 rounded-b-full"
     data-aos="fade-up"
     data-aos-anchor-placement="center-bottom"
-    data-aos-duration="1500"
+    data-aos-duration="1200"
     >
       <section className="lg:w-[45%]">
         <img src={hero2} className="lg:h-[32rem] rounded-r-[1%]" alt="" />
