@@ -16,6 +16,10 @@ const Navbar = () => {
       name: "Project",
       path: "/projects",
     },
+    {
+      name: "Contact",
+      path: "/contact",
+    },
   ];
 
   const activeClass =

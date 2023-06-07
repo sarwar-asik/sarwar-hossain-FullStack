@@ -5,6 +5,7 @@ import Project from "./Project";
 import Features from "./Features";
 import useTitle from "../hooks/useTitle";
 import Experience from "./Experience/Experience";
+import ContactMe from "./ContactMe";
 
 const Home = () => {
   useTitle("Home");
@@ -15,6 +16,7 @@ const Home = () => {
       <Banner2 />
       <Project></Project>
       <Features />
+      <ContactMe/>
       <Experience />
     </div>
   );

@@ -59,7 +59,7 @@ const SmNavbar = () => {
         </NavLink>
 
         <NavLink
-          to="/"
+          to="/contact"
           className={activeItem === "contact" ? activeClass : noActiveClass}
           onClick={() => handleItemClick("contact")}
         >
@@ -107,6 +107,7 @@ const SmNavbar = () => {
         </NavLink>
 
         <NavLink
+        to='/about'
           className={activeItem === "about" ? activeClass : noActiveClass}
           onClick={() => handleItemClick("about")}
         >

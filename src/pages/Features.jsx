@@ -36,7 +36,7 @@ const Features = () => {
     }
   ];
   return (
-    <div className="my-8 px-[15px] ">
+    <div className="lg:my-8 px-[15px] ">
       <header className="text-center ">
         <h6 className="text-text1 text-4xl font-bold font-serif ">
           {" "}
@@ -51,12 +51,12 @@ const Features = () => {
           My every projects is implement by my Skills
         </p>
       </header>
-      <main className="my-4 grid grid-cols-1 gap-[36px] md:grid-cols-2 lg:grid-cols-3  ">
+      <main className="my-4 grid grid-cols-1 gap-[36px] md:grid-cols-2 lg:grid-cols-2  ">
         {features?.map((feature) => {
           const { name, img, detail, color } = feature;
           return (
             <div
-              className={`text-start mt-4 bg-slate-300  rounded-tr-[26%] rounded-r  shadow-2xl px-7 py-10 relative `}
+              className={`text-start mt-4 bg-slate-300  rounded-tr-[16%] rounded-r  shadow-2xl px-7 py-10 relative `}
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
               data-aos-duration="2000"

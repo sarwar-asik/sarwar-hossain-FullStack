@@ -29,7 +29,7 @@ const SignUp = () => {
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
               <h2 className="max-w-lg mb-6 f text-4xl font-bold font-serif tracking-tight text-white sm:text-4xl sm:leading-none">
-                Sign Up <br /> take the position
+                Sign Up <br /> To contact Me
               </h2>
               <p className="max-w-xl mb-4 text-base text-gray-200 md:text-[16px]">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem

@@ -3,12 +3,14 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import SmNavbar from "../shared/SmNavbar";
+import "../App.css"
 
 const Main = () => {
   // console.log(window.innerWidth,"from windossss");
 
   return (
-    <div className="lg:w-[98%] mx-auto  relative px- z-40 bg-bg1">
+    <div className="lg:w-[98%] mx-auto  relative px- z-40 bg-bg1 
+    ">
       <nav>
         <Navbar />
       </nav>

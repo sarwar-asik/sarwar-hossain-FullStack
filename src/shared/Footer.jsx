@@ -88,11 +88,11 @@ const Footer = () => {
           </div>
           <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
             <p className="text-sm text-gray-100">
-              © Copyright 2020 Lorem Inc. All rights reserved.
+              © Copyright 2022 Sarwar Hossain. All rights reserved.
             </p>
             <div className="flex items-center mt-4 space-x-4 sm:mt-0">
               <Link
-                to="https://www.facebook.com/shah.muntachir/photos"
+                to="https://www.facebook.com/profile.php?id=100087624802395"
                 target="_blanck"
                 title='Sarwar Hossain Twitter'
 
@@ -103,7 +103,7 @@ const Footer = () => {
                 </svg>
               </Link>
               <Link
-               to="https://www.linkedin.com/in/shah-muntacher-hossain-mihan-7120541b5/" target="_blanck"
+               to="https://www.linkedin.com/in/sarwar-hossain-a29660257/" target="_blanck"
                title='Sarwar Hossain Instragram'
 
                 className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
@@ -114,7 +114,7 @@ const Footer = () => {
                 </svg>
               </Link>
               <Link
-                to="https://www.facebook.com/shah.muntachir/photos"
+                to="https://www.linkedin.com/in/sarwar-hossain-a29660257/"
                 target="_blanck"
                 title='Sarwar Hossain Facebook'
                 className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"

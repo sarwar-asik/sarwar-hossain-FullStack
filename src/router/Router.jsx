@@ -8,6 +8,8 @@ import DetailsProjects from "../pages/DetailsProjects";
 import Experience from "../pages/Experience/Experience";
 import EducationExp from "../pages/Experience/EducationExp";
 import Skills from "../pages/Experience/Skills";
+import ContactMe from "../pages/ContactMe";
+import Features from "../pages/Features";
 
 const routes = createBrowserRouter([
   {
@@ -61,6 +63,14 @@ const routes = createBrowserRouter([
       {
         path: "/education",
         element: <EducationExp/>
+      },
+      {
+        path: "/contact",
+        element: <ContactMe/>
+      },
+      {
+        path: "/about",
+        element: <Features/>
       },
       {
         path: "/skills",
