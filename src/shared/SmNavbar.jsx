@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const SmNavbar = () => {
+const SmNavbar = ({toggleDrawer}) => {
   const NavData = [
     {
       name: "Home",
@@ -29,7 +29,7 @@ const SmNavbar = () => {
     setActiveItem(item);
   };
   return (
-    <div className="bg-secondary   lg:hidden fixed bottom-0 right-0 left-0  mx-auto px-1  min-w-fit mt-10">
+    <div className="bg-secondary sm:flex md:hidden lg:hidden fixed bottom-0 right-0 left-0  mx-auto px-1  min-w-fit mt-10">
       {/* <section>
         <h3 className="text-[1.5rem] font-semibold font-serif">Sarwar Hossain</h3>
       </section> */}
@@ -106,10 +106,13 @@ const SmNavbar = () => {
           <span className="">Home</span>
         </NavLink>
 
-        <NavLink
-        to='/about'
-          className={activeItem === "about" ? activeClass : noActiveClass}
-          onClick={() => handleItemClick("about")}
+        <div
+        // to='/about'
+          className={activeItem === "Features" ? activeClass : noActiveClass}
+          onClick={() => {
+            handleItemClick("Features");
+            toggleDrawer();
+          }}
         >
           <figure>
             <svg
@@ -132,12 +135,13 @@ const SmNavbar = () => {
               />
             </svg>
           </figure>
-          <span>About</span>
-        </NavLink>
+          <span>Features</span>
+        </div>
+        
         <NavLink
-          to="/login"
-          className={activeItem === "login" ? activeClass : noActiveClass}
-          onClick={() => handleItemClick("login")}
+          to="/about"
+          className={activeItem === "about" ? activeClass : noActiveClass}
+          onClick={() => handleItemClick("about")}
         >
           <figure>
             <svg
@@ -155,7 +159,7 @@ const SmNavbar = () => {
               />
             </svg>
           </figure>
-          <span>Login</span>
+          <span>About</span>
         </NavLink>
       </section>
     </div>

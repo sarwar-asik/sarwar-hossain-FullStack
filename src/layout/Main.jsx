@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import SmNavbar from "../shared/SmNavbar";
@@ -21,6 +21,12 @@ const Main = () => {
     }, 4600);
   }, []);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
       {isLoading ? (
@@ -28,12 +34,39 @@ const Main = () => {
       ) : (
         <main className="lg:w-[98%] mx-auto  relative px- z-40 bg-bg1 ">
           <nav>
-            <Navbar />
+
+
+
+     
+       {/* ---- drawer start ---- */}
+       <div className="flex">
+          {/* Left Drawer */}
+           <div
+           
+            className={`w-[50%] lg:w-64 flex justify-between bg-primary px-2 pt-2 ${
+              isOpen ? 'translate-x-0' : '-translate-x-full '
+            } transform transition-transform ease-in-out duration-500 fixed z-40 top-0 left-0 h-screen`}
+          >
+            {/* Drawer content */}
+            
+                  <section className="p-4 flex flex-col gpa-3 font-bold font-serif">
+                    <Link onClick={toggleDrawer} to='/about' className="text-text1 shadow-2xl py-2 "> About </Link>
+                    <Link onClick={toggleDrawer} to='/projects' className="text-text1 shadow-2xl py-2"> Project </Link>
+                    <Link onClick={toggleDrawer} to='/login' className="text-text1 shadow-2xl py-2"> Login </Link>
+                    
+                  </section>
+                  <div onClick={toggleDrawer} className="">✖</div>
+           </div>
+      </div>
+
+            <Navbar toggleDrawer={toggleDrawer} key={2222}/>
           </nav>
-          <Outlet />
+        <section onClick={()=>setIsOpen(false)} className={`${isOpen && "opacity-[0.5] transition-opacity ease-in duration-700"}`}>
+        <Outlet />
+        </section>
           <Footer />
           <section className="">
-            <SmNavbar />
+            <SmNavbar toggleDrawer={toggleDrawer} key={1111} />
           </section>
 
           <ToTop />

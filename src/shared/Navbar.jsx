@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({toggleDrawer} ) => {
   const NavData = [
     {
       name: "Home",
@@ -22,15 +22,14 @@ const Navbar = () => {
     },
   ];
 
-  const activeClass =
-    "bg-primary text-white font-bold rounded p-2 font-serif";
+  const activeClass = "bg-primary text-white font-bold rounded p-2 font-serif";
   const [activeItem, setActiveItem] = useState("home");
 
   const handleItemClick = (item) => {
     setActiveItem(item);
   };
   return (
-    <div className="hidden lg:flex bg-secondary py-2  justify-between  px-5 rounded-b-lg">
+    <div className="hidden sm:hidden md:flex lg:flex bg-secondary py-2  justify-between  px-5 rounded-b-lg">
       <section>
         <NavLink to="/" className="text-[1.6rem] font-semibold font-serif">
           Sarwar Hossain
@@ -47,9 +46,20 @@ const Navbar = () => {
               >
                 {item?.name}
               </NavLink>
+
             </div>
           );
         })}
+         <div
+        className={`${activeItem === "feature"?activeClass:"" } font-serif font-[600] text-[1em]`}  
+        onClick={() => {
+          handleItemClick("feature");
+          toggleDrawer();
+        }}
+       > Features </div>
+
+      
+
       </section>
     </div>
   );
