@@ -6,18 +6,21 @@ import Features from "./Features";
 import useTitle from "../hooks/useTitle";
 import Experience from "./Experience/Experience";
 import ContactMe from "./ContactMe";
+import ChatGptDash from "./ChatGpt/ChatGptDash";
+import Footer from "../shared/Footer";
 
 const Home = () => {
   useTitle("Home");
   return (
-    <div>
+    <div className="">
       <ProfileBanner />
-
+      {/* <ChatGptDash></ChatGptDash> */}
       <Banner2 />
       <Project></Project>
       <Features />
       <ContactMe/>
       <Experience />
+      <Footer></Footer>
     </div>
   );
 };

@@ -8,12 +8,12 @@ const queryClient = new QueryClient();
 function App() {
   // const queryClient = new QueryClient();
   const [count, setCount] = useState(0);
-
   return (
     <div className="">
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={routes}></RouterProvider>
       </QueryClientProvider>
+      
     </div>
   );
 }

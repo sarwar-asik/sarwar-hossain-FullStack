@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div 
-        data-aos="fade-up"
+    //     data-aos="fade-up"
      
-     data-aos-duration="1700"
-        data-aos-anchor-placement="center-bottom"
+    //  data-aos-duration="1700"
+    //     data-aos-anchor-placement="center-bottom"
          className="relative mt-10 shadow-inner bg-primary text-text1 ">
         {/* <svg
           className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
