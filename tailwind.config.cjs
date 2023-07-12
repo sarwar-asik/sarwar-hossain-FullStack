@@ -9,7 +9,7 @@ module.exports = {
         text1: "#e2e8f0",
         text2:"#94a3b8",
         bg1: {
-          DEFAULT: "#4d4855",
+          DEFAULT: "#030929",
           gradient: "linear-gradient(147deg, #4d4855 0%, #000000 74%",
         },
       },

@@ -44,7 +44,7 @@ const Main = () => {
             <Navbar toggleDrawer={toggleDrawer} key={2222}/>
           </nav>
           {isLoading ? <MainLoader></MainLoader> :
-          <section onClick={()=>setIsOpen(false)} className={`${isOpen && "opacity-[0.5] transition-opacity ease-in duration-700"} w-full absolute top-[4.9rem] bg-bg1`}>
+          <section onClick={()=>setIsOpen(false)} className={`${isOpen && "opacity-[0.5] transition-opacity ease-in duration-700"} w-full absolute lg:top-[4.3rem] bg-bg1`}>
           <Outlet />
           </section>
 
