@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
-import { Schema, Types, model } from 'mongoose';
+import { Schema,  model } from 'mongoose';
 import { IUser, UserModel } from './user.interface';
 import bcrypt from 'bcrypt';
 
