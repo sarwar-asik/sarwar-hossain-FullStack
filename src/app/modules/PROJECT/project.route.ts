@@ -8,21 +8,24 @@ import validateRequest from '../../middlesWare/validateUserRequest';
 import { ProjectController } from './project.controller';
 
 // it is optional
-
 router.post(
   '/create-project',
   validateRequest(ProjectValidation.createProjectZodSchema),
-  auth(ENUM_USER_ROLE.ADMIN),
+  // auth(ENUM_USER_ROLE.ADMIN),
   ProjectController.createProject
 );
 
 router.get(
   '/:id',
-  auth(ENUM_USER_ROLE.ADMIN),
+  // auth(ENUM_USER_ROLE.ADMIN),
   ProjectController.getSingleProject
 );
 
-router.get('/', auth(ENUM_USER_ROLE.ADMIN), ProjectController.getALLProject);
+router.get(
+  '/',
+  // auth(ENUM_USER_ROLE.ADMIN),
+  ProjectController.getALLProject
+);
 
 router.delete(
   '/:id',

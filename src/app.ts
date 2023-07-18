@@ -8,7 +8,6 @@ import GlobalHandler from './app/middlesWare/globalErrorHandler';
 
 import routes from './app/routes';
 import sendResponse from './shared/sendResponce';
-import { generateFacultyId } from './app/modules/users/user.utils';
 import cookieParser from 'cookie-parser';
 
 // import { createUser } from './app/modules/users/users.services'
@@ -18,7 +17,7 @@ const app: Application = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(cookieParser())
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 // Application
@@ -27,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.use("/api/v1/semester",semesterRouter)
 
 //*** */ or ***////
-app.use('/api/v1', routes);
+app.use('/api/v2', routes);
 
 app.get('/', async (req: Request, res: Response) => {
   //  const addUser = await createUser({id:"445",role:"admin",password:"asdfasdf"})
@@ -40,7 +39,7 @@ app.get('/', async (req: Request, res: Response) => {
   // next("next error")
   sendResponse(res, {
     success: true,
-    message: 'Running the Cow hut server',
+    message: 'Running the Sarwar server',
     statusCode: 201,
     data: null,
   });
@@ -63,19 +62,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   });
   next();
 });
-
-// for testing userId dynamic based on yaer and code ///
-// const academicSemester = {
-//   code: '01',
-//   year: '2025',
-// };
-
-const testId = async () => {
-  const testId = await generateFacultyId();
-
-  console.log(testId, 'testId from app.ts');
-};
-
-testId();
 
 export default app;
