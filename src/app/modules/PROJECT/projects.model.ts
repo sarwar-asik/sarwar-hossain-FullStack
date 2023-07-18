@@ -24,8 +24,10 @@ const ProjectSchema:Schema<IProject>= new Schema<IProject>({
       },
       tech: {
         type: [String],
-        required: true
       },
+      photo:{
+        type:[String]
+      }
 },{
     timestamps:true,
     toJSON:{

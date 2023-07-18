@@ -6,8 +6,8 @@ export type IProject ={
     source: string;
     time: string;
     img: string;
-    tech: string[];
-    photo:string[] 
+    tech?: string[];
+    photo?:string[] 
 }
 
 // export type ProjectModel ={
