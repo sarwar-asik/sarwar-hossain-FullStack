@@ -1,7 +1,8 @@
+
 /* eslint-disable @typescript-eslint/no-this-alias */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
-import { Schema,  model } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { IUser, UserModel } from './user.interface';
 import bcrypt from 'bcrypt';
 
@@ -9,6 +10,7 @@ import bcrypt from 'bcrypt';
 //   Seller : "seller",
 //   Buyer :"buyer",
 // }
+
 
 const UserSchema: Schema<IUser> = new Schema<IUser>(
   {
