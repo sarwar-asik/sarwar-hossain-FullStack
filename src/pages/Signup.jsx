@@ -2,10 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../assets/main/bg1.svg";
 import useTitle from "../hooks/useTitle";
-import gIcon from "../assets/icon/googleLogo.jpg"
+import gIcon from "../assets/icon/googleLogo.jpg";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   useTitle("SignUp");
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    toast(` Sign up the ${data?.email}`)
+  };
+
   return (
     <div className="relative  mx-auto mt-3">
       <img
@@ -43,9 +57,7 @@ const SignUp = () => {
                 <h3 className="mb-4 text-4xl font-bold text-center sm:mb-6 sm:text-4xl">
                   Sign up
                 </h3>
-                <form
-                //   onSubmit={handleSubmit(onSubmit)}
-                >
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="mb-1 sm:mb-2">
                     <label
                       htmlFor="name"
@@ -54,7 +66,7 @@ const SignUp = () => {
                       Name
                     </label>
                     <input
-                      // {...register("name")}
+                      {...register("name")}
                       placeholder="John"
                       required
                       type="text"
@@ -72,7 +84,7 @@ const SignUp = () => {
                       E-mail
                     </label>
                     <input
-                      // {...register("email")}
+                      {...register("email")}
                       placeholder="john.doe@example.org"
                       required
                       type="text"
@@ -89,7 +101,7 @@ const SignUp = () => {
                       Password
                     </label>
                     <input
-                      // {...register("password")}
+                      {...register("password")}
                       placeholder="john.doe@example.org"
                       required
                       type="password"
@@ -119,8 +131,12 @@ const SignUp = () => {
                   //   onClick={handleGoogleLogin}
                   className="bg-slate-200 mt-2 w-full  py-3 font-bold font-serif rounded flex justify-evenly items-center"
                 >
-                  <img className="h-[36px] w-[70px] rounded-md " src={gIcon} alt="" />
-                 <span> Google Login</span>
+                  <img
+                    className="h-[36px] w-[70px] rounded-md "
+                    src={gIcon}
+                    alt=""
+                  />
+                  <span> Google Login</span>
                 </button>
               </div>
             </div>

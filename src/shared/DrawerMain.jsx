@@ -39,6 +39,14 @@ const DrawerMain = ({ isOpen, toggleDrawer }) => {
               {" "}
               Login{" "}
             </Link>
+            <Link
+              onClick={toggleDrawer}
+              to="/register"
+              className="text-text1 shadow-2xl py-2"
+            >
+              {" "}
+              Sign Up{" "}
+            </Link>
           </section>
           <div onClick={toggleDrawer} className="text-white ">
             

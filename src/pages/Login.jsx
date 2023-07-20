@@ -2,9 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../assets/main/bg1.svg";
 import useTitle from "../hooks/useTitle";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const Login = () => {
   useTitle("Login");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    toast(` Login the ${data?.email}`)
+  };
   return (
     <div>
       <div className="relative  mx-auto mt-3">
@@ -39,57 +51,59 @@ const Login = () => {
                   <h3 className="mb-4 text-4xl font-bold text-center sm:mb-6 sm:text-4xl">
                     Log In
                   </h3>
-                  <form
-                  // onSubmit={handleSubmit(onSubmit)}
-                  >
-                    <div className="mb-1 sm:mb-2">
-                      <label
-                        htmlFor="email"
-                        className="inline-block mb-1 font-medium"
-                      >
-                        E-mail
-                      </label>
-                      <input
-                        //   {...register("email")}
-                        placeholder="john.doe@example.org"
-                        required
-                        type="text"
-                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                        id="email"
-                        name="email"
-                      />
-                    </div>
-                    <div className="mb-1 sm:mb-2">
-                      <label
-                        htmlFor="password"
-                        className="inline-block mb-1 font-medium"
-                      >
-                        Password
-                      </label>
-                      <input
-                        //   {...register("password")}
-                        placeholder="john.doe@example.org"
-                        required
-                        type="password"
-                        className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                        id="password"
-                        name="password"
-                      />
-                    </div>
+                  <form onSubmit={handleSubmit(onSubmit)}>
+                
+                  <div className="mb-1 sm:mb-2">
+                    <label
+                      htmlFor="email"
+                      className="inline-block mb-1 font-medium"
+                    >
+                      E-mail
+                    </label>
+                    <input
+                      {...register("email")}
+                      placeholder="john.doe@example.org"
+                      required
+                      type="text"
+                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                      id="email"
+                      name="email"
+                    />
+                  </div>
+                  <div className="mb-1 sm:mb-2">
+                    <label
+                      htmlFor="password"
+                      className="inline-block mb-1 font-medium"
+                    >
+                      Password
+                    </label>
+                    <input
+                      {...register("password")}
+                      placeholder="john.doe@example.org"
+                      required
+                      type="password"
+                      className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                      id="password"
+                      name="password"
+                    />
+                  </div>
 
-                    {/* {
-                      isError && <span className="text-red-500 font-mono ">{error}</span>
-                    } */}
-
-                    <div className="mt-4 mb-2 sm:mb-4">
-                      <button
-                        type="submit"
-                        className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md bg-deep-purple-accent-400 bg-primary text-white hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                      >
-                        Login
-                      </button>
-                    </div>
-                  </form>
+                  {/* {
+                        isError && <span className="text-red-500 font-mono ">{error}</span>
+                      } */}
+                  <div className="mt-4 mb-2 sm:mb-4">
+                    <button
+                      type="submit"
+                      className="inline-flex  items-center justify-center w-full h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md bg-deep-purple-accent-400 bg-primary text-white hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    >
+                      Log In
+                    </button>
+                  </div>
+                  <p className="text-xs font-[400] font-mono text-gray-600 sm:text-sm">
+                    Already Sign Up ?
+                    <Link to="/login"> Log in , please ....</Link>
+                  </p>
+                </form>
                   <p className="text-xs flex items-center justify-between font-[400] font-mono text-gray-600 sm:text-sm">
                     <marquee behavior="scroll" direction="right">
                       {" "}
