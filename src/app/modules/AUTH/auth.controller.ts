@@ -10,6 +10,38 @@ import { authServices } from './auth.sevices';
 import ApiError from '../../../errors/ApiError';
 import httpStatus from 'http-status';
 
+const signupController = catchAsync(async (req: Request, res: Response) => {
+  const { ...user } = req.body;
+  // console.log(user, 'from controller=================');
+
+  const result1 = await authServices.SighUpAuthServices(user);
+
+  const result = await authServices.authLoginServices(user);
+
+  const { refreshToken, ...others } = result;
+  console.log(
+    '🚀 ~ file: auth.controller.ts:25 ~ signupController ~ others:',
+    others
+  );
+
+  const cookieOption = {
+    secure: config.env === 'production',
+    httpOnly: true,
+  };
+
+  res.cookie('refreshToken', refreshToken, cookieOption);
+
+  if (result1) {
+    sendResponse(res, {
+      success: true,
+      message: 'successfully SIgn Up',
+      statusCode: 200,
+      data: result1,
+    });
+    // next()
+  }
+});
+
 const loginController = catchAsync(async (req: Request, res: Response) => {
   const { ...loginData } = req.body;
 
@@ -36,7 +68,6 @@ const loginController = catchAsync(async (req: Request, res: Response) => {
   }
 });
 
-
 const refreshTokenController = catchAsync(
   async (req: Request, res: Response) => {
     const refreshToken = req.headers.authorization;
@@ -60,10 +91,14 @@ const refreshTokenController = catchAsync(
     sendResponse<IRefreshTokenResponse>(res, {
       statusCode: 200,
       success: true,
-      message: 'User lohggedin successfully !',
+      message: 'User loggedIn successfully !',
       data: result || null,
     });
   }
 );
 
-export const authController = { loginController, refreshTokenController };
+export const authController = {
+  loginController,
+  refreshTokenController,
+  signupController,
+};

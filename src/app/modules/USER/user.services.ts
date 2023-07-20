@@ -22,8 +22,8 @@ const getSingleUser = async (id: string): Promise<IUser | null> => {
 };
 
 const deleteUser = async (id: string): Promise<IUser | null> => {
-  const result = await User.findByIdAndDelete(id)
-  
+  const result = await User.findByIdAndDelete(id);
+
   return result;
 };
 
@@ -31,21 +31,18 @@ const updateUser = async (
   id: string,
   payload: Partial<IUser>
 ): Promise<IUser | null> => {
-
   const result = await User.findOneAndUpdate({ _id: id }, payload, {
     new: true,
   });
   return result;
 };
 
-
-const myProfileServices = async (id: string): Promise< Partial<IUser> | null> => {
-  const result = await User.findById(id).select('name phoneNumber address')
-
+const myProfileServices = async (
+  id: string
+): Promise<Partial<IUser> | null> => {
+  const result = await User.findById(id).select('name email ');
   return result;
 };
-
-
 
 const updateMyProfile = async (
   id: string,
@@ -53,19 +50,24 @@ const updateMyProfile = async (
 ): Promise<Partial<IUser> | null> => {
   console.log(payload);
 
-
   const result = await User.findOneAndUpdate({ _id: id }, payload, {
     new: true,
   });
-  let responseData =null
-  if(result){
-    responseData= {
-      name:result?.name,
-      phoneNumber:result?.phoneNumber,
-      address:result?.address
-    }
+  let responseData = null;
+  if (result) {
+    responseData = {
+      name: result?.name,
+      email: result?.email,
+    };
   }
   return responseData;
 };
 
-export const UserService = { createUserServices, getSingleUser ,deleteUser,updateUser,myProfileServices ,updateMyProfile} ;
+export const UserService = {
+  createUserServices,
+  getSingleUser,
+  deleteUser,
+  updateUser,
+  myProfileServices,
+  updateMyProfile,
+};

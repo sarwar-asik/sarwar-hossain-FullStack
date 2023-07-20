@@ -40,7 +40,7 @@ const updateUser = (id, payload) => __awaiter(void 0, void 0, void 0, function* 
     return result;
 });
 const myProfileServices = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    const result = yield user_model_1.User.findById(id).select('name phoneNumber address');
+    const result = yield user_model_1.User.findById(id).select('name email ');
     return result;
 });
 const updateMyProfile = (id, payload) => __awaiter(void 0, void 0, void 0, function* () {
@@ -52,10 +52,16 @@ const updateMyProfile = (id, payload) => __awaiter(void 0, void 0, void 0, funct
     if (result) {
         responseData = {
             name: result === null || result === void 0 ? void 0 : result.name,
-            phoneNumber: result === null || result === void 0 ? void 0 : result.phoneNumber,
-            address: result === null || result === void 0 ? void 0 : result.address
+            email: result === null || result === void 0 ? void 0 : result.email,
         };
     }
     return responseData;
 });
-exports.UserService = { createUserServices, getSingleUser, deleteUser, updateUser, myProfileServices, updateMyProfile };
+exports.UserService = {
+    createUserServices,
+    getSingleUser,
+    deleteUser,
+    updateUser,
+    myProfileServices,
+    updateMyProfile,
+};

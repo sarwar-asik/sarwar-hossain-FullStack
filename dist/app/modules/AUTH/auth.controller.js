@@ -30,6 +30,28 @@ const config_1 = __importDefault(require("../../../config"));
 const auth_sevices_1 = require("./auth.sevices");
 const ApiError_1 = __importDefault(require("../../../errors/ApiError"));
 const http_status_1 = __importDefault(require("http-status"));
+const signupController = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const user = __rest(req.body, []);
+    // console.log(user, 'from controller=================');
+    const result1 = yield auth_sevices_1.authServices.SighUpAuthServices(user);
+    const result = yield auth_sevices_1.authServices.authLoginServices(user);
+    const { refreshToken } = result, others = __rest(result, ["refreshToken"]);
+    console.log("🚀 ~ file: auth.controller.ts:25 ~ signupController ~ others:", others);
+    const cookieOption = {
+        secure: config_1.default.env === 'production',
+        httpOnly: true,
+    };
+    res.cookie('refreshToken', refreshToken, cookieOption);
+    if (result1) {
+        (0, sendResponce_1.default)(res, {
+            success: true,
+            message: 'successfully SIgn Up',
+            statusCode: 200,
+            data: result1,
+        });
+        // next()
+    }
+}));
 const loginController = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const loginData = __rest(req.body, []);
     // console.log(loginData,"asdfsd");
@@ -65,8 +87,8 @@ const refreshTokenController = (0, catchAsync_1.default)((req, res) => __awaiter
     (0, sendResponce_1.default)(res, {
         statusCode: 200,
         success: true,
-        message: 'User lohggedin successfully !',
+        message: 'User loggedIn successfully !',
         data: result || null,
     });
 }));
-exports.authController = { loginController, refreshTokenController };
+exports.authController = { loginController, refreshTokenController, signupController };

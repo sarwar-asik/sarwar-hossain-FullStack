@@ -24,35 +24,19 @@ const bcrypt_1 = __importDefault(require("bcrypt"));
 // }
 const UserSchema = new mongoose_1.Schema({
     password: { type: String, required: true },
-    role: { type: String, required: true, enum: ['buyer', 'seller', 'admin'] },
-    name: {
-        firstName: { type: String, required: true },
-        lastName: { type: String, required: true },
-    },
-    phoneNumber: { type: String, required: true, unique: true },
-    address: { type: String, required: true },
-    budget: {
-        type: Number,
-        required: function () {
-            return this.role === 'buyer';
-        },
-    },
-    income: {
-        type: Number,
-        required: function () {
-            return this.role === 'seller';
-        },
-    },
+    role: { type: String, required: true, default: "user", enum: ['admin', 'user'] },
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
 }, {
     timestamps: true,
     toJSON: {
         virtuals: true,
     },
 });
-UserSchema.statics.isUserExistsMethod = function (phoneNumber) {
+UserSchema.statics.isUserExistsMethod = function (email) {
     return __awaiter(this, void 0, void 0, function* () {
         // console.log("hitted isUserExistsMethod");
-        const user = yield exports.User.findOne({ phoneNumber }, { phoneNumber: 1, password: 1, role: 1, _id: 1 });
+        const user = yield exports.User.findOne({ email }, { email: 1, password: 1, role: 1, _id: 1 });
         return user;
     });
 };
@@ -61,16 +45,6 @@ UserSchema.statics.isPasswordMatchMethod = function (givenPassword, savedPasswor
         return yield bcrypt_1.default.compare(givenPassword, savedPassword);
     });
 };
-UserSchema.pre('save', function (next) {
-    if (this.role === 'buyer') {
-        console.log(this.budget, 'from prehook');
-        this.income = 0;
-    }
-    else if (this.role === 'seller') {
-        this.budget = 0;
-    }
-    next();
-});
 UserSchema.pre('save', function (next) {
     return __awaiter(this, void 0, void 0, function* () {
         const user = this;

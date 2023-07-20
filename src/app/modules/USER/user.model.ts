@@ -9,31 +9,16 @@ import bcrypt from 'bcrypt';
 // const Roles = {
 //   Seller : "seller",
 //   Buyer :"buyer",
+
 // }
 
 
 const UserSchema: Schema<IUser> = new Schema<IUser>(
   {
     password: { type: String, required: true },
-    role: { type: String, required: true, enum: ['buyer', 'seller', 'admin'] },
-    name: {
-      firstName: { type: String, required: true },
-      lastName: { type: String, required: true },
-    },
-    phoneNumber: { type: String, required: true, unique: true },
-    address: { type: String, required: true },
-    budget: {
-      type: Number,
-      required: function (this: IUser) {
-        return this.role === 'buyer';
-      },
-    },
-    income: {
-      type: Number,
-      required: function (this: IUser) {
-        return this.role === 'seller';
-      },
-    },
+    role: { type: String, required: true, default:"user", enum: [ 'admin','user'] },
+    name: { type: String, required: true },
+    email: { type: String, required: true ,unique:true},
   },
   {
     timestamps: true,
@@ -44,12 +29,12 @@ const UserSchema: Schema<IUser> = new Schema<IUser>(
 );
 
 UserSchema.statics.isUserExistsMethod = async function (
-  phoneNumber: string
-): Promise<Pick<IUser, 'password' | 'role' | 'phoneNumber'> | null> {
+  email: string
+): Promise<Pick<IUser, 'password'|'email'|'name'|'role'|'_id'> | null> {
   // console.log("hitted isUserExistsMethod");
   const user = await User.findOne(
-    { phoneNumber },
-    { phoneNumber: 1, password: 1, role: 1, _id: 1 }
+    { email },
+    { email: 1, password: 1, role: 1, _id: 1 }
   );
   return user;
 };
@@ -61,16 +46,7 @@ UserSchema.statics.isPasswordMatchMethod = async function (
   return await bcrypt.compare(givenPassword, savedPassword);
 };
 
-UserSchema.pre<IUser>('save', function (next) {
-  if (this.role === 'buyer') {
-    console.log(this.budget, 'from prehook');
 
-    this.income = 0;
-  } else if (this.role === 'seller') {
-    this.budget = 0;
-  }
-  next();
-});
 
 UserSchema.pre('save', async function (next) {
   const user = this;

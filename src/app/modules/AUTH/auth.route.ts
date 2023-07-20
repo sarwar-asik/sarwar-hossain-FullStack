@@ -4,20 +4,22 @@ import express from 'express'
 import validateRequest from '../../middlesWare/validateUserRequest'
 import { AuthValidation } from './auth.validation'
 import { authController } from './auth.controller'
-import { UserValidation } from '../users/user.validation'
-import { createUserAuthController } from './signup.controller'
+
+
+
 
 
 const router = express.Router()
 
 router.post(
     '/signup',
-    validateRequest(UserValidation.createUserZodSchema),
-    createUserAuthController
+    validateRequest(AuthValidation.signUpZodSchema),
+    authController.signupController
   )
+
 router.post(
 '/login',
-validateRequest(AuthValidation.createUserZodSchema),
+validateRequest(AuthValidation.LoginZodSchema),
 authController.loginController
 )
 

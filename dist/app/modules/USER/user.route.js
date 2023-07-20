@@ -12,9 +12,7 @@ const auth_1 = __importDefault(require("../../middlesWare/auth"));
 const router = express_1.default.Router();
 // it is optional
 router.post('/create-user', (0, validateUserRequest_1.default)(user_validation_1.UserValidation.createUserZodSchema), (0, auth_1.default)("admin" /* ENUM_USER_ROLE.ADMIN */), user_controller_1.userController.createUser);
-router.get('/my-profile', 
-// auth(ENUM_USER_ROLE.ADMIN),
-user_controller_1.userController.myProfileController);
+router.get('/my-profile', (0, auth_1.default)("admin" /* ENUM_USER_ROLE.ADMIN */), user_controller_1.userController.myProfileController);
 router.get('/:id', (0, auth_1.default)("admin" /* ENUM_USER_ROLE.ADMIN */), user_controller_1.userController.getSingleUser);
 router.get('/', (0, auth_1.default)("admin" /* ENUM_USER_ROLE.ADMIN */), user_controller_1.userController.getALLUser);
 router.delete('/:id', (0, auth_1.default)("admin" /* ENUM_USER_ROLE.ADMIN */), user_controller_1.userController.deleteUser);

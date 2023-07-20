@@ -6,42 +6,32 @@ const createUserZodSchema = zod_1.z.object({
     body: zod_1.z.object({
         role: zod_1.z.string({
             required_error: 'role is required',
+        }).optional(),
+        email: zod_1.z.string({
+            required_error: 'email is required',
         }),
-        phoneNumber: zod_1.z.string({
-            required_error: 'PhoneNumber is required',
+        name: zod_1.z.string({
+            required_error: 'name is required',
         }),
-        address: zod_1.z.string({
-            required_error: 'Address is required',
-        }),
-        name: zod_1.z.object({
-            firstName: zod_1.z.string(),
-            lastName: zod_1.z.string().optional(),
+        password: zod_1.z.string({
+            required_error: 'password is required',
         }),
     }),
 });
 const updateUserZodSchema = zod_1.z.object({
     body: zod_1.z.object({
-        role: zod_1.z
-            .string({
+        role: zod_1.z.string({
             required_error: 'role is required',
-        })
-            .optional(),
-        phoneNumber: zod_1.z
-            .string({
-            required_error: 'PhoneNumber is required',
-        })
-            .optional(),
-        address: zod_1.z
-            .string({
-            required_error: 'Address is required',
-        })
-            .optional(),
-        name: zod_1.z
-            .object({
-            firstName: zod_1.z.string(),
-            lastName: zod_1.z.string().optional(),
-        })
-            .optional(),
+        }).optional(),
+        email: zod_1.z.string({
+            required_error: 'email is required',
+        }).optional(),
+        name: zod_1.z.string({
+            required_error: 'name is required',
+        }).optional(),
+        password: zod_1.z.string({
+            required_error: 'password is required',
+        }).optional(),
     }),
 });
 exports.UserValidation = {

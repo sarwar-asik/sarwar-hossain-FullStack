@@ -21,10 +21,19 @@ require("colors");
 const jwtHelpers_1 = require("../../../helpers/jwtHelpers");
 const config_1 = __importDefault(require("../../../config"));
 const user_model_1 = require("../USER/user.model");
+const SighUpAuthServices = (user) => __awaiter(void 0, void 0, void 0, function* () {
+    // console.log(user, 'from services');
+    const createdUser = yield user_model_1.User.create(user);
+    if (!createdUser) {
+        throw new ApiError_1.default(400, 'Failed to create new User');
+    }
+    return createdUser;
+    return null;
+});
 const authLoginServices = (payload) => __awaiter(void 0, void 0, void 0, function* () {
-    const { phoneNumber, password } = payload;
-    const isUserExist = yield user_model_1.User.isUserExistsMethod(phoneNumber);
-    // console.log(isUserExist,"isUserExits");
+    const { email, password } = payload;
+    const isUserExist = yield user_model_1.User.isUserExistsMethod(email);
+    console.log(isUserExist, "isUserExits");
     if (!isUserExist) {
         throw new ApiError_1.default(http_status_1.default.NOT_FOUND, 'User does not match');
     }
@@ -33,10 +42,10 @@ const authLoginServices = (payload) => __awaiter(void 0, void 0, void 0, functio
         throw new ApiError_1.default(http_status_1.default.NOT_FOUND, 'Password is not correct');
     }
     // console.log(isUserExist,"isUserExist");
-    const { role, _id, phoneNumber: existphoneNumber } = isUserExist;
+    const { role, _id, email: existEmail } = isUserExist;
     //   jwt part ///
-    const accessToken = jwtHelpers_1.jwtHelpers.createToken({ _id, role, phoneNumber: existphoneNumber }, config_1.default.jwt.secret, config_1.default.jwt.expires_in);
-    const refreshToken = jwtHelpers_1.jwtHelpers.createToken({ _id, role, phoneNumber: existphoneNumber }, config_1.default.jwt.refresh_secret, config_1.default.jwt.refresh_expires_in);
+    const accessToken = jwtHelpers_1.jwtHelpers.createToken({ _id, role, email: existEmail }, config_1.default.jwt.secret, config_1.default.jwt.expires_in);
+    const refreshToken = jwtHelpers_1.jwtHelpers.createToken({ _id, role, email: existEmail }, config_1.default.jwt.refresh_secret, config_1.default.jwt.refresh_expires_in);
     // eslint-disable-next-line no-console
     console.log('accessToken', accessToken, 'refreshToken', refreshToken, 'refreshToken');
     return {
@@ -55,10 +64,10 @@ const refreshTokenServices = (token) => __awaiter(void 0, void 0, void 0, functi
     catch (error) {
         throw new ApiError_1.default(http_status_1.default.FORBIDDEN, 'Invalid your refreshToken');
     }
-    const { phoneNumber, role, _id } = verifiedToken;
-    const newAccessToken = jwtHelpers_1.jwtHelpers.createToken({ role, _id, phoneNumber }, config_1.default.jwt.refresh_secret, config_1.default.jwt.expires_in);
+    const { email, role, _id } = verifiedToken;
+    const newAccessToken = jwtHelpers_1.jwtHelpers.createToken({ role, _id, email }, config_1.default.jwt.refresh_secret, config_1.default.jwt.expires_in);
     return {
         accessToken: newAccessToken,
     };
 });
-exports.authServices = { authLoginServices, refreshTokenServices };
+exports.authServices = { authLoginServices, refreshTokenServices, SighUpAuthServices };

@@ -14,10 +14,11 @@ router.post(
   validateRequest(UserValidation.createUserZodSchema),
   auth(ENUM_USER_ROLE.ADMIN),
   userController.createUser
-);
+)
+
 router.get(
   '/my-profile',
-  // auth(ENUM_USER_ROLE.ADMIN),
+  auth(ENUM_USER_ROLE.ADMIN),
   userController.myProfileController
 );
 

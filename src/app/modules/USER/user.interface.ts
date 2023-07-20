@@ -2,25 +2,19 @@
 import { Model, Types } from 'mongoose';
 
 export type IUser = {
-  _id?:Types.ObjectId,
+  _id?:Types.ObjectId
   password: string;
-  role: 'buyer' | 'seller' | 'admin';
-  name: {
-    firstName: string;
-    lastName: string;
-  };
-  phoneNumber: string;
-  address: string;
-  budget?: number;
-  income?: number;
+  role: 'admin' | 'user';
+  name: string;
+  email: string;
 };
 
 // export type UserModel =Model<IUser,Record<string,unknown>>
 
 export type UserModel = {
   isUserExistsMethod(
-    phoneNumber: string
-  ): Promise<Pick<IUser, 'password' | 'role' | 'phoneNumber'|'_id'>>;
+    email: string
+  ): Promise<Pick<IUser, 'password'|'email'|'name'|'role'|'_id'>>;
   isPasswordMatchMethod(
     givenPassword: string,
     savedPassword: string

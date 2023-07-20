@@ -4,17 +4,17 @@ const createUserZodSchema = z.object({
   body: z.object({
     role: z.string({
       required_error: 'role is required',
+    }).optional(),
+    email: z.string({
+      required_error: 'email is required',
     }),
-    phoneNumber: z.string({
-      required_error: 'PhoneNumber is required',
+    name: z.string({
+      required_error: 'name is required',
     }),
-    address: z.string({
-      required_error: 'Address is required',
+    password: z.string({
+      required_error: 'password is required',
     }),
-    name: z.object({
-      firstName: z.string(),
-      lastName: z.string().optional(),
-    }),
+   
   }),
 });
 
@@ -22,27 +22,18 @@ const createUserZodSchema = z.object({
 
 const updateUserZodSchema = z.object({
   body: z.object({
-    role: z
-      .string({
-        required_error: 'role is required',
-      })
-      .optional(),
-    phoneNumber: z
-      .string({
-        required_error: 'PhoneNumber is required',
-      })
-      .optional(),
-    address: z
-      .string({
-        required_error: 'Address is required',
-      })
-      .optional(),
-    name: z
-      .object({
-        firstName: z.string(),
-        lastName: z.string().optional(),
-      })
-      .optional(),
+    role: z.string({
+      required_error: 'role is required',
+    }).optional(),
+    email: z.string({
+      required_error: 'email is required',
+    }).optional(),
+    name: z.string({
+      required_error: 'name is required',
+    }).optional(),
+    password: z.string({
+      required_error: 'password is required',
+    }).optional(),
   }),
 });
 
