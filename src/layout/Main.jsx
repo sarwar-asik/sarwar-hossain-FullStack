@@ -30,26 +30,30 @@ const Main = () => {
 
   return (
     <div className="">
-      
-        <main className="lg:w-[98%] mx-auto  relative px- z-40  ">
-          <nav>
+      <main className="lg:w-[98%] mx-auto  relative px- z-40  ">
+        <nav>
+          {/* ---- drawer start ---- */}
+          <DrawerMain
+            toggleDrawer={toggleDrawer}
+            isOpen={isOpen}
+            key={1234e1234}
+          ></DrawerMain>
 
-
-
-     
-       {/* ---- drawer start ---- */}
-     <DrawerMain toggleDrawer={toggleDrawer} isOpen={isOpen} key={1234e1234} ></DrawerMain>
-
-
-            <Navbar toggleDrawer={toggleDrawer} key={2222}/>
-          </nav>
-          {isLoading ? <MainLoader></MainLoader> :
-          <section onClick={()=>setIsOpen(false)} className={`${isOpen && "opacity-[0.5] transition-opacity ease-in duration-700"} w-full absolute lg:top-[4.3rem] bg-bg1`}>
-          <Outlet />
+          <Navbar toggleDrawer={toggleDrawer} key={2222} />
+        </nav>
+        {isLoading ? (
+          <MainLoader></MainLoader>
+        ) : (
+          <section
+            onClick={() => setIsOpen(false)}
+            className={`${
+              isOpen && "opacity-[0.5] transition-opacity ease-in duration-700"
+            } w-full absolute lg:top-[4.3rem] bg-bg1`}
+          >
+            <Outlet />
           </section>
+        )}
 
-          }
-        
         {/* <footer className="
        
         ">
@@ -57,26 +61,25 @@ const Main = () => {
           <Footer />
         </footer> */}
         {/* <Footer></Footer> */}
-          <section className="">
-            <SmNavbar toggleDrawer={toggleDrawer} key={1111} />
-          </section>
+        <section className="">
+          <SmNavbar toggleDrawer={toggleDrawer} key={1111} />
+        </section>
 
-          <ToTop />
+        <ToTop />
 
-          <ToastContainer
-            position="top-center"
-            autoClose={1000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-          />
-        </main>
-     
+        <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+      </main>
     </div>
   );
 };

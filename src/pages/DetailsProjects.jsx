@@ -5,8 +5,11 @@ import BackRoutes from "../shared/BackRoutes/BackRoutes";
 const DetailsProjects = () => {
   const { state } = useLocation();
 
-  const { name, time, image1, image2, image3, tech, live, source, img } = state;
+  const { name, time, tech, live, source, img } = state;
+
+
   // console.log(state, "form");
+
   // if (name === "Used Car Depo") {
   //   image1 = "https://i.ibb.co/4sWMBr4/usedCars.png";
   //   image2 = "https://i.ibb.co/NLnjkm5/car2.png";
@@ -15,9 +18,10 @@ const DetailsProjects = () => {
   //   image2="https://i.ibb.co/x6q19zT/car1.png"
   // }
 
+
   const location = useLocation();
   // console.log(location);
-  console.log(image1, image2);
+;
 
   return (
     <main className="container mx-auto py-3 my-4">

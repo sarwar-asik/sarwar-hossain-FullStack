@@ -5,13 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 const Project = () => {
   const [data] = useGetData(
-    `https://sarwar-hossain-server.vercel.app/projectDetail`
+    // `https://sarwar-hossain-server.vercel.app/projectDetail`
+    `https://sarwarserver.vercel.app/api/v2/projects`
   );
   // console.log(data);
 
   const navigate = useNavigate();
 
-  const allProjects = data;
+  const allProjects = data?.data;
 
   //   console.log(data, "from data");
   return (
@@ -25,7 +26,7 @@ const Project = () => {
         There are some my projects those I created recently. <br />
         You can explore my projects click by live{" "}
       </p>
-      {allProjects.length < 1 && <Loader />}
+      {allProjects?.length < 1 && <Loader />}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {allProjects?.map((project) => {
           // console.log(project);
