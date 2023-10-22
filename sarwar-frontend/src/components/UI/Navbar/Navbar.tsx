@@ -1,5 +1,5 @@
 "use client";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import React from "react";
 import { Layout, Menu } from "antd";
 import SideBar from "./Sidebar";
@@ -9,15 +9,13 @@ const { Header } = Layout;
 
 const Navbar = () => {
   return (
-    <div>
-      <Header className="bg-white text-black shadow-xl lg:px-2 px-1 flex justify-between">
-      <h2>Sarwar</h2>
+    <nav>
+      <Header className="bg-white fixed w-full top-0 backdrop-blur-xl  z-10 text-black shadow-xl lg:px-2 px-1 flex justify-between">
+        <h2>Sarwar</h2>
         <div className="flex justify-between items-center gap-2">
           <section className="flex justify-between lg:hidden">
             <SideBar items={NavItems("sidebar")}></SideBar>
-          
           </section>
-          
         </div>
         <Menu
           className="hidden lg:flex"
@@ -26,12 +24,13 @@ const Navbar = () => {
           items={NavItems("nav")}
           disabledOverflow
         />
-     
       </Header>
-    </div>
+    </nav>
   );
 };
 
-export default dynamic(() => Promise.resolve(Navbar), {
-  ssr: false,
-});
+// export default dynamic(() => Promise.resolve(Navbar), {
+//   ssr: false,
+// });
+
+export default Navbar;

@@ -2,10 +2,13 @@ import Navbar from "@/components/UI/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <div className="">
-      <Navbar />
-      <section className="container min-h-screen">
-        <h3>Home page</h3>
+    <div>
+      <section className="relative">
+        <Navbar />
+      </section>
+      <section className="container  mt-20 min-h-screen">
+        <h3>Home page1</h3>
+        <h3>Home page2</h3>
       </section>
     </div>
   );

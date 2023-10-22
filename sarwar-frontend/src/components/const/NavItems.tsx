@@ -1,6 +1,6 @@
 import type { MenuProps } from "antd";
 import Link from "next/link";
-import { ProfileOutlined, TableOutlined, ThunderboltOutlined, HomeOutlined, ShoppingCartOutlined, ShopOutlined, MessageOutlined, DatabaseOutlined, ControlOutlined, UsergroupAddOutlined, ContainerOutlined, TabletOutlined, QuestionOutlined, PlusSquareOutlined, } from "@ant-design/icons";
+import { ProfileOutlined, TableOutlined, ThunderboltOutlined, HomeOutlined,  MessageOutlined, DatabaseOutlined, ControlOutlined, UsergroupAddOutlined, ContainerOutlined, TabletOutlined, QuestionOutlined, PlusSquareOutlined, } from "@ant-design/icons";
 
 const NavItems = (type:"nav" | "sidebar") => {
   const NavbarItems: MenuProps["items"] = [
@@ -46,7 +46,7 @@ const NavItems = (type:"nav" | "sidebar") => {
     {
       label: <Link href={`/blogs`}> blogs</Link>,
       key: `/blogs`,
-      icon: <TableOutlined />,
+      icon: <ControlOutlined/>,
     },
     {
       label: <Link href={`/contact`}> contact</Link>,
