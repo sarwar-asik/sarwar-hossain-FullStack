@@ -20,22 +20,23 @@ const SideBar = ({ items }: { items?: any }) => {
         {!open ? <MenuOutlined onClick={showDrawer} /> : <CloseOutlined />}
       </Space>
       <Drawer
-        className="bg-secondary"
+        className="bg-primary text-white"
         placement={"left"}
         width={400}
         onClose={onClose}
         open={open}
         extra={
           <Space>
-            <Button className="bg-secondary border-none " onClick={onClose}>
+            <Button className="bg-primary text-white border-none " onClick={onClose}>
               <h2>Sarwar</h2>
             </Button>
           </Space>
         }
       >
         <Menu
-          className="bg-secondary"
+          className="bg-primary text-white"
           defaultSelectedKeys={["1"]}
+          onClick={()=>setOpen(false)}
           mode="inline"
           items={items}
         />

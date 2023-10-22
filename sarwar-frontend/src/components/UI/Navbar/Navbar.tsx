@@ -10,7 +10,7 @@ const { Header } = Layout;
 const Navbar = () => {
   return (
     <nav>
-      <Header className="bg-white fixed w-full top-0 backdrop-blur-xl  z-10 text-black shadow-xl lg:px-2 px-1 flex justify-between">
+      <Header className="fixed bg-primary text-white w-full top-0 backdrop-blur-xl  z-10  shadow-xl lg:px-2 px-1 flex justify-between">
         <h2>Sarwar</h2>
         <div className="flex justify-between items-center gap-2">
           <section className="flex justify-between lg:hidden">
@@ -18,7 +18,7 @@ const Navbar = () => {
           </section>
         </div>
         <Menu
-          className="hidden lg:flex"
+          className="hidden bg-primary text-white lg:flex"
           defaultSelectedKeys={["1"]}
           mode="horizontal"
           items={NavItems("nav")}
