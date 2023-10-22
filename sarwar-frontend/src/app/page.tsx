@@ -1,5 +1,9 @@
 import HeaderPage from "@/components/HOME/Header";
+import Stack from "@/components/HOME/Stack";
 import Navbar from "@/components/UI/Navbar/Navbar";
+import Projects from "./(public)/projects/page";
+import ServicesPage from "@/components/HOME/Service";
+import ContactMe from "./(public)/contact/page";
 
 export default function Home() {
   return (
@@ -7,10 +11,12 @@ export default function Home() {
       <section className="relative">
         <Navbar />
       </section>
-      <section className="container  mt-20 min-h-screen">
-        <HeaderPage/>
-        <h3>Home page1</h3>
-        <h3>Home page2</h3>
+      <section className="container mx-auto  mt-20 min-h-screen">
+        <HeaderPage />
+        <Stack />
+        <Projects />
+        <ServicesPage/>
+        <ContactMe></ContactMe>
       </section>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Drawer, Menu, Space } from "antd";
 
 import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 const SideBar = ({ items }: { items?: any }) => {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,7 @@ const SideBar = ({ items }: { items?: any }) => {
         extra={
           <Space>
             <Button className="bg-primary text-white border-none " onClick={onClose}>
-              <h2>Sarwar</h2>
+              <Link href='/'>Sarwar</Link>
             </Button>
           </Space>
         }
