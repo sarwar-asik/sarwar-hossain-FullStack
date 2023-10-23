@@ -17,7 +17,7 @@ const Stack = () => {
     {
       name: "MERN Stack Developing",
       details: "",
-    },
+    }
   ];
   return (
     <div className="block lg:flex items-cente gap-5 my-5 px-2 rounded-b-full">

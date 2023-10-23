@@ -31,7 +31,7 @@ const Navbar = () => {
       <Header
         className={`  px-3 rounded-b-lg ${
           top
-            ? "bg-slate-300 text-slate-700 backdrop-blur-xl"
+            ? "bg-secondary text-white backdrop-blur-xl"
             : "bg-primary text-white"
         } w-full fixed top-0 z-10  flex justify-between items-center`}
       >
@@ -39,13 +39,11 @@ const Navbar = () => {
         <section className="flex justify-between lg:hidden">
           <SideBar items={NavItems("sidebar")}></SideBar>
         </section>
-        {/* <div className="flex  justify-between items-center gap-2">
-          
-        </div> */}
+     
         <Menu
           className={`hidden  lg:flex  ${
             top
-              ? "bg-slate-300 text-slate-700 backdrop-blur-xl"
+              ? "bg-secondary text-white backdrop-blur-xl"
               : "bg-primary text-white"
           } `}
           defaultSelectedKeys={["1"]}
