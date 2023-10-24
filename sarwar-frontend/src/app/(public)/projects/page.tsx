@@ -3,10 +3,13 @@ import { Image } from "antd";
 import Link from "next/link";
 
 const Projects = async () => {
-  const res = await fetch("https://sarwarserver.vercel.app/api/v2/projects");
+  const res = await fetch("https://sarwarserver.vercel.app/api/v2/projects", {
+    cache: "no-cache",
+  });
   const data = await res.json();
   //   console.log(data);
   const allProjects = data?.data;
+  // console.log(allProjects,"p");
   return (
     <div>
       <div className=" lg:my-10 px-1 " style={{ overflow: "hidden" }}>
@@ -20,7 +23,7 @@ const Projects = async () => {
         {allProjects?.length < 1 && <h2>Loading .......</h2>}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {allProjects?.map((project: any) => {
-            // console.log(project);
+            // console.log(project.img,"im");
             return (
               <div className=" shadow-2xl " key={project?.name}>
                 <Image
