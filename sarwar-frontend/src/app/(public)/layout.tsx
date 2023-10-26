@@ -3,9 +3,9 @@ import React from "react";
 
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div className="bg-secondary text-white">
       {/* <Navbar></Navbar> */}
-     <section className="min-h-screen mt-[10rem]">
+     <section className="min-h-screen ">
      {children}
      </section>
     </div>

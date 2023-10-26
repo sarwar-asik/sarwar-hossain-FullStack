@@ -1,9 +1,11 @@
 "use client";
 import NavItems from "@/v2Components/const/NavItems";
+import banner from "@/assets/professionalRemoveBg.png";
 
 import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import React from "react";
+import Image from "next/image";
 
 const Sidebar = () => {
   return (
@@ -30,10 +32,23 @@ const Sidebar = () => {
           // background:"",
         }}
       >
-        <h2 className="my-5">Sarwar Img</h2>
+        {/* <h2 className="my-5">Sarwar Img</h2> */}
+      <section className="bg-red-40 flex justify-center py-7">
+      <Image
+          className="text-center w-[12rem] rounded-full mx-auto p-2"
+          style={{
+            border:"6px solid #252734"
+          }}
+          height={100}
+          width={100}
+          src={banner}
+          alt="banner"
+        />
+      </section>
+
         <Menu
           // theme="light"
-          className="bg-primary text-white"
+          className="bg-primary text-white mt-10"
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={NavItems("sidebar")}

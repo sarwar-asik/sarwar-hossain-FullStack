@@ -30,7 +30,7 @@ const HeaderPage = () => {
 
         <div className="py-3 flex gap-5 justify-center bg-red-40">
           <Link href="/" className="no-underline ">
-            <FacebookFilled className="text-[2.8rem] text-slate-500 bg-white " />
+          <FacebookFilled  className="text-[2.8rem] text-slate-500 bg-white " />
           </Link>
           <Link href="/" className="no-underline ">
             <LinkedinFilled className="text-[2.8rem] text-slate-500 bg-white " />

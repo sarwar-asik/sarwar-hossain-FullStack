@@ -8,9 +8,9 @@ const { Header } = Layout;
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="mb-[10rem]">
       <Header
-        className={`bg-primary text-white  px-3 w-full fixed top-0 z-10  flex lg:hidden justify-between items-center`}
+        className={`bg-primary text-white  px-3 w-full sticky top-0 z-10  flex lg:hidden justify-between items-center `}
       >
         <h2></h2>
         <section className="flex justify-between lg:hidden">
