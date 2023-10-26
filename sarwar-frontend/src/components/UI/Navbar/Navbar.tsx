@@ -31,7 +31,7 @@ const Navbar = () => {
       <Header
         className={`  px-3 rounded-b-lg ${
           top
-            ? "bg-secondary text-white backdrop-blur-xl"
+            ? "bg-secondary text-white  backdrop-blur-xl"
             : "bg-primary text-white"
         } w-full fixed top-0 z-10  flex justify-between items-center`}
       >

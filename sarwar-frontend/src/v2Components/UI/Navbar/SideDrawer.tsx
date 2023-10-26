@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { Button, Drawer, Menu, Space } from "antd";
 
@@ -28,8 +29,11 @@ const SideBar = ({ items }: { items?: any }) => {
         open={open}
         extra={
           <Space>
-            <Button className="bg-primary text-white border-none " onClick={onClose}>
-              <Link href='/'>Sarwar</Link>
+            <Button
+              className="bg-primary text-white border-none "
+              onClick={onClose}
+            >
+              <Link href="/">Sarwar</Link>
             </Button>
           </Space>
         }
@@ -37,7 +41,7 @@ const SideBar = ({ items }: { items?: any }) => {
         <Menu
           className="bg-primary text-white"
           defaultSelectedKeys={["1"]}
-          onClick={()=>setOpen(false)}
+          onClick={() => setOpen(false)}
           mode="inline"
           items={items}
         />
