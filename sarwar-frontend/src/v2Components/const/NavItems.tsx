@@ -41,7 +41,7 @@ const NavItems = (type: "nav" | "sidebar") => {
 
   const SidebarItems: MenuProps["items"] = [
     {
-      label: <Link href={`/`}> Home</Link>,
+      label: <Link href={`/`} className=""> Home</Link>,
       key: `/Home`,
       icon: <HomeOutlined />,
     },
@@ -69,7 +69,7 @@ const NavItems = (type: "nav" | "sidebar") => {
     {
       label: <Link href={`/testominal`}> Testominal</Link>,
       key: `/testominal`,
-      icon: <MessageOutlined />,
+      icon: <TabletOutlined/>,
     },
   ];
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="bg-secondary   px- text-white flex flex-col justify-center items-center">
+    <div className="bg-secondar   px- text-white flex flex-col justify-center items-center">
       <div className="block lg:flex   gap-5 items-center px-1  lg:mt-[11rem] ">
         <section className="w-full lg:w-[55%] mx-auto  pl-5 space-y-3">
           <h2 className="text-[2.3rem] font-semibold">Who am I?</h2>

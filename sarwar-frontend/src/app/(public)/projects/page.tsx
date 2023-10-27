@@ -26,14 +26,14 @@ const Projects = async () => {
               You can explore my projects click by live
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2  gap-8 mt-8 xl:mt-12 xl:gap-2 lg:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap mt-8 lg:grid-cols-3">
               {allProjects?.map((item: any, i: number) => {
                 // console.log(item);
                 const { img, name, time, source, live } = item;
                 return (
                   <div
                     key={i}
-                    className="overflow-hidden bg-cover rounded-lg cursor-pointer mx-auto h-96 lg:w-[28rem] group "
+                    className="overflow-hidden bg-cover rounded-lg cursor-pointer mx-auto h-[20rem] w-[24rem] group mt-3"
                     style={{
                       backgroundImage: `url(${img})`,
                       // width:"28rem",
@@ -43,7 +43,7 @@ const Projects = async () => {
                       <h2 className="mt-4 text-[2rem] font-semibold text-gray-800 capitalize dark:text-white">
                         {name}
                       </h2>
-                      <p className="mt-2 text-[0.8rem] tracking-wider text-blue-500 uppercase dark:text-blue-400">
+                      <p className="mt-2 text-[0.6rem] tracking-wider text-slate-100 uppercase ">
                         created : {time}
                       </p>
                     </div>
@@ -58,7 +58,7 @@ const Projects = async () => {
                         >
                           <LinkOutlined className="text-2xl font-bold" />
                         </Link>
-                        <Link className="text-blue-300 font-mono " href="/">
+                        <Link className="text-blue-300 font-mono " href={source}>
                           <GithubFilled className="text-2xl font-bold" />
                         </Link>
                       </div>

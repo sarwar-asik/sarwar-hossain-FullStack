@@ -6,20 +6,21 @@ import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="hidden lg:flex bg-primary text-white">
+    <div className="hidden lg:flex ">
       <Sider
         // collapsible
-        className="bg-primary  text-white"
+        className="bg-primary "
         //   collapsed={collapsed}
         //   onCollapse={(value) => setCollapsed(value)}
         width={300}
         style={{
           overflow: "auto",
           height: "110vh",
-          position: "sticky",
+          position: "fixed",
           zIndex: 40,
           left: 0,
           top: 0,
@@ -33,7 +34,7 @@ const Sidebar = () => {
         }}
       >
         {/* <h2 className="my-5">Sarwar Img</h2> */}
-      <section className="bg-red-40 flex justify-center py-7">
+      <Link href="/" className="bg-red-40 flex justify-center py-7">
       <Image
           className="text-center w-[12rem] rounded-full mx-auto p-2"
           style={{
@@ -44,11 +45,11 @@ const Sidebar = () => {
           src={banner}
           alt="banner"
         />
-      </section>
+      </Link>
 
         <Menu
           // theme="light"
-          className="bg-primary text-white mt-10"
+          className="bg-primary text-white mt-10 font-[700]"
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={NavItems("sidebar")}

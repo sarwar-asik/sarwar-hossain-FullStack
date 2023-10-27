@@ -52,7 +52,6 @@ const TestimonialPage = () => {
 
   return (
     <div>
-    
       <TestimonialsSection testimonials={testimonials}/>
     </div>
   );

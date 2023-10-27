@@ -39,17 +39,23 @@ export default function RootLayout({
             style={{
               display: "flex",
               justifyContent: "space-between",
+              overflow: "hidden",
             }}
           >
             <Sidebar />
-            <section
+            <main
+            className="flex-1 lg:ml-[21%]"
               style={{
-                width:"100%",
-                // marginInline: "auto",
+                // flex: 1, // Take up remaining width
+                // marginLeft: "21%", // Set the width of the sidebar
+                position: "sticky",
+                right: 0,
+                overflowY: "auto", // Allow vertical scrolling for the content
+                overflowX: "hidden", // Hide horizontal scrollbar for the content
               }}
             >
               {children}
-            </section>
+            </main>
           </main>
         </Providers>
       </body>
