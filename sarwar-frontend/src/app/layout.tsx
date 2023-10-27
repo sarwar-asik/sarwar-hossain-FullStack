@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/lib/Provider";
 import Navbar from "@/v2Components/UI/Navbar/Navbar";
-import SideBar from "@/v2Components/UI/Navbar/SideDrawer";
+
 import Sidebar from "@/v2Components/UI/Navbar/SideBar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,12 +21,37 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="">
-        <Navbar />
+        {/* <Navbar />
 
-        <main style={{ display: "flex" }}>
+        <main
+        //  style={{ display: "flex",justifyContent:"start",marginInline:"auto" }}
+         >
           <Sidebar />
-          <Providers>{children}</Providers>
-        </main>
+          <Providers>
+            {children}
+            
+            </Providers>
+        </main> */}
+
+        <Providers>
+          <Navbar />
+          <main
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <Sidebar />
+            <section
+              style={{
+                width:"100%",
+                // marginInline: "auto",
+              }}
+            >
+              {children}
+            </section>
+          </main>
+        </Providers>
       </body>
     </html>
   );

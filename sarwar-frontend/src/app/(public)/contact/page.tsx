@@ -13,7 +13,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12 block lg:flex justify-between items-center shadow border-2 my-5 border-separate border-primary">
+    <div className="block lg:flex justify-between gap-4 pt-[5rem] px-3">
       <section>
         <h3 className="text-text1 text-[3em] font-bold "> Reach Me,</h3>
         <p className=" text-[1rem] text-slate-500  mt-2 mb-3">
@@ -41,7 +41,7 @@ const ContactMe = () => {
         </div>
       </section>
 
-      <section className="py-3 lg:px-[40px] lg:w-[80%] ">
+      <section className="py-3 mt-3 lg:px-[40px] lg:w-[80%] ">
         <h1 className="text-text1 text-[3em] font-bold mb-5">Send Message</h1>
         <Form className="font-serif" action="" onFinish={onSubmit}>
           <div className="text-white">

@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="bg-secondary   mt-16 px- text-white flex flex-col justify-center items-center">
-      <div className="block lg:flex  gap-5 items-center px-1   ">
+    <div className="bg-secondary   px- text-white flex flex-col justify-center items-center">
+      <div className="block lg:flex   gap-5 items-center px-1  lg:mt-[11rem] ">
         <section className="w-full lg:w-[55%] mx-auto  pl-5 space-y-3">
           <h2 className="text-[2.3rem] font-semibold">Who am I?</h2>
           <p className="text-[1.2rem] text-slate-500">
-            I am Aaron Smith, a full-stack web developer with experience in
-            developing websites, web applications, mobile games (Android & iOS),
-            and Flutter mobile applications.
+            I am Sarwar Hossain, a full-stack web developer with experience in
+            developing websites, web applications both frontend and backend
+            development.
           </p>
           <div className="mt-10">
             <h3 className="text-[1.1rem] font-[500] my-4">Details:</h3>

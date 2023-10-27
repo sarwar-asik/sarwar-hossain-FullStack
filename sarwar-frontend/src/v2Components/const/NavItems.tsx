@@ -33,7 +33,7 @@ const NavItems = (type:"nav" | "sidebar") => {
       icon: <HomeOutlined />,
     },
     {
-      label: "projects",
+      label: <Link href={`/projects`}> Projects</Link>,
       key: "projects",
       icon: <ProfileOutlined />,
     },
