@@ -12,8 +12,8 @@ const Projects = async () => {
   // console.log(allProjects,"p");
   return (
     <div>
-      <div className=" lg:my-10 px-1 " style={{ overflow: "hidden" }}>
-        <h1 className="text-text1 text-5xl my-5 font-bold font-serif ">
+      <div className="px-1 bg-secondary text-white" >
+        <h1 className="text-text1 text-5xl my-5 font-bold">
           My Projects ,
         </h1>
         <p className="font-normal lg:text-xl mt-2 sm:text-lg  mb-8">

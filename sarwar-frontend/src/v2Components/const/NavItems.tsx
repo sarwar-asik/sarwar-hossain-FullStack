@@ -1,8 +1,21 @@
 import type { MenuProps } from "antd";
 import Link from "next/link";
-import { ProfileOutlined, TableOutlined, ThunderboltOutlined, HomeOutlined,  MessageOutlined, DatabaseOutlined, ControlOutlined, UsergroupAddOutlined, ContainerOutlined, TabletOutlined, QuestionOutlined, PlusSquareOutlined, } from "@ant-design/icons";
+import {
+  ProfileOutlined,
+  TableOutlined,
+  ThunderboltOutlined,
+  HomeOutlined,
+  MessageOutlined,
+  DatabaseOutlined,
+  ControlOutlined,
+  UsergroupAddOutlined,
+  ContainerOutlined,
+  TabletOutlined,
+  QuestionOutlined,
+  PlusSquareOutlined,
+} from "@ant-design/icons";
 
-const NavItems = (type:"nav" | "sidebar") => {
+const NavItems = (type: "nav" | "sidebar") => {
   const NavbarItems: MenuProps["items"] = [
     {
       label: <Link href={`/`}> Home</Link>,
@@ -46,11 +59,16 @@ const NavItems = (type:"nav" | "sidebar") => {
     {
       label: <Link href={`/blogs`}> blogs</Link>,
       key: `/blogs`,
-      icon: <ControlOutlined/>,
+      icon: <ControlOutlined />,
     },
     {
       label: <Link href={`/contact`}> contact</Link>,
       key: `/contact`,
+      icon: <MessageOutlined />,
+    },
+    {
+      label: <Link href={`/testominal`}> Testominal</Link>,
+      key: `/testominal`,
       icon: <MessageOutlined />,
     },
   ];
@@ -59,5 +77,4 @@ const NavItems = (type:"nav" | "sidebar") => {
   else if (type === "sidebar") return SidebarItems;
 };
 
-
-export default NavItems
+export default NavItems;
