@@ -1,7 +1,7 @@
 import React from "react";
 import { Image } from "antd";
 import Link from "next/link";
-import { LinkOutlined } from "@ant-design/icons";
+import { GithubFilled, LinkOutlined } from "@ant-design/icons";
 
 const Projects = async () => {
   const res = await fetch("https://sarwarserver.vercel.app/api/v2/projects", {
@@ -40,22 +40,16 @@ const Projects = async () => {
                     }}
                   >
                     <div className="w-full px-8 py-4 overflow-hidden  backdrop-blur-sm bg-white/60 dark:bg-gray-800/60">
-                      <h2 className="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white">
+                      <h2 className="mt-4 text-[2rem] font-semibold text-gray-800 capitalize dark:text-white">
                         {name}
                       </h2>
-                      <p className="mt-2 text-sm tracking-wider text-blue-500 uppercase dark:text-blue-400">
+                      <p className="mt-2 text-[0.8rem] tracking-wider text-blue-500 uppercase dark:text-blue-400">
                         created : {time}
                       </p>
                     </div>
 
                     <div className="flex flex-col gap-4 px-3  items-center  w-full h-full  py-2 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
-                      <Link
-                        href={`/projects/${item?._id}`}
-                        className="no-underline text-xl mt-12 text-white  font-bold bg-slate-600 p-2  rounded-md"
-                      >
-                        Details
-                      </Link>
-                      <div className="bg-red- flex gap-5  justify-around items-center w-full mx-auto">
+                      <div className="bg-red- flex gap-5  justify-around items-center w-full mx-auto mt-5">
                         <Link
                           className="text-blue-300 font-mono "
                           href={live}
@@ -65,9 +59,15 @@ const Projects = async () => {
                           <LinkOutlined className="text-2xl font-bold" />
                         </Link>
                         <Link className="text-blue-300 font-mono " href="/">
-                          Source
+                          <GithubFilled className="text-2xl font-bold" />
                         </Link>
                       </div>
+                      <Link
+                        href={`/projects/${item?._id}`}
+                        className="no-underline text-xl mt-12 text-white  font-bold bg-slate-600 p-2  rounded-md"
+                      >
+                        Details
+                      </Link>
                     </div>
                   </div>
                 );
