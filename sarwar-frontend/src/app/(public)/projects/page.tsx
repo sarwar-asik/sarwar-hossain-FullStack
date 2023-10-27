@@ -1,6 +1,7 @@
 import React from "react";
 import { Image } from "antd";
 import Link from "next/link";
+import { LinkOutlined } from "@ant-design/icons";
 
 const Projects = async () => {
   const res = await fetch("https://sarwarserver.vercel.app/api/v2/projects", {
@@ -12,61 +13,68 @@ const Projects = async () => {
   // console.log(allProjects,"p");
   return (
     <div>
-      <div className="px-1 bg-secondary text-white" >
-        <h1 className="text-text1 text-5xl my-5 font-bold">
-          My Projects ,
-        </h1>
-        <p className="font-normal lg:text-xl mt-2 sm:text-lg  mb-8">
-          There are some my projects those I created recently. <br />
-          You can explore my projects click by live
-        </p>
+      <div className="px-1 bg-secondary text-white">
         {allProjects?.length < 1 && <h2>Loading .......</h2>}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {allProjects?.map((project: any) => {
-            // console.log(project.img,"im");
-            return (
-              <div className=" shadow-2xl " key={project?.name}>
-                <Image
-                  src={project?.img}
-                  // width={"250px"}
-                  className="h-[25rem] w-[24rem]  mx-auto rounded-lg"
-                  alt=""
-                />
 
-                <h1 className="text-3xl font-bold  text-center mt-2 text-text1 font-serif">
-                  {project?.name}
-                </h1>
-                <div className="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
-                  <a
-                    className="text-xl font-semibold font-mono bg-primary  py-1 px-3  rounded-lg text-slate-200  hover:bg-slate-300 shadow-xl   hover:text-primary  transition duration-500 ease-in-out cursor-alias"
-                    href={project?.live}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Live site
-                  </a>
-                  <a
-                    className="text-xl font-semibold font-mono bg-primary py-1 px-3  rounded-lg hover:text-primary text-slate-200 hover:bg-slate-300 shadow-xl  transition duration-500 ease-in-out cursor-alias"
-                    href={project?.source}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Github
-                  </a>
-                </div>
-                <Link href={`/projects/${project?._id}`}>
-                  <button className="w-full my-5 py-4 bg-slate-300 font-bold text-[1.3rem]  hover:bg-  hover:text-w  rounded-tl-[100%] rounded-tr-[2%] rounded-bl-[2%] rounded-br-[100%] cursor-help">
-                    Details
-                  </button>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+        <section className="bg-white dark:bg-gray-900">
+          <div className="container px-6 py-10 mx-auto">
+            <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+              My Portfolio
+            </h1>
+            <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-8">
+              There are some my projects those I created recently. <br />
+              You can explore my projects click by live
+            </p>
 
-        <div className="text-center text-[1rem] font-[500] bg-primary rounded text-text1 px-3 py-3  w-[90%]   mt-2 rounded-br-[50%] rounded-bl-[50%] mx-auto cursor-pointer ">
-          See All
-        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-8 mt-8 xl:mt-12 xl:gap-2 lg:grid-cols-2">
+              {allProjects?.map((item: any, i: number) => {
+                // console.log(item);
+                const { img, name, time, source, live } = item;
+                return (
+                  <div
+                    key={i}
+                    className="overflow-hidden bg-cover rounded-lg cursor-pointer mx-auto h-96 lg:w-[28rem] group "
+                    style={{
+                      backgroundImage: `url(${img})`,
+                      // width:"28rem",
+                    }}
+                  >
+                    <div className="w-full px-8 py-4 overflow-hidden  backdrop-blur-sm bg-white/60 dark:bg-gray-800/60">
+                      <h2 className="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white">
+                        {name}
+                      </h2>
+                      <p className="mt-2 text-sm tracking-wider text-blue-500 uppercase dark:text-blue-400">
+                        created : {time}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col gap-4 px-3  items-center  w-full h-full  py-2 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
+                      <Link
+                        href={`/projects/${item?._id}`}
+                        className="no-underline text-xl mt-12 text-white  font-bold bg-slate-600 p-2  rounded-md"
+                      >
+                        Details
+                      </Link>
+                      <div className="bg-red- flex gap-5  justify-around items-center w-full mx-auto">
+                        <Link
+                          className="text-blue-300 font-mono "
+                          href={live}
+                          target="_blank"
+                          referrerPolicy="no-referrer"
+                        >
+                          <LinkOutlined className="text-2xl font-bold" />
+                        </Link>
+                        <Link className="text-blue-300 font-mono " href="/">
+                          Source
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
