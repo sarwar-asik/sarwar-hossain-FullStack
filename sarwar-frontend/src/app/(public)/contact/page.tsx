@@ -1,94 +1,143 @@
 "use client";
-import React from "react";
-import { Form, Input, Button } from "antd";
+
+import { Row, Col, Typography, Form, Input, Checkbox, Button } from "antd";
+
+const { Title, Paragraph } = Typography;
 import {
   FacebookFilled,
+  GithubFilled,
   LinkedinFilled,
   TwitterSquareFilled,
 } from "@ant-design/icons";
+import { useForm } from "antd/es/form/Form";
 
 const ContactMe = () => {
-  const onSubmit = (data: any) => {
+  const form = useForm();
+  const onFinish = (data: any) => {
     console.log(data);
   };
 
   return (
-    <div className="block lg:flex justify-between gap-4 pt-[5rem] px-3">
-      <section>
-        <h3 className="text-text1 text-[3em] font-bold "> Reach Me,</h3>
-        <p className=" text-[1rem] text-slate-500  mt-2 mb-3">
-          You can contact with me for any query about me. With my Social media
-          and Contact form. I am glad to your to your message
-        </p>
-        <div className="flex gap-5 text-2xl">
-          <a
-            className="text-white"
-            href="https://web.facebook.com/people/Sarwar-Asik/pfbid02sgLP9m9SYR6PCtejfmX5uE8pA55pGXmRpnmmX7boQwMi78Xmdt2VTt1sMNL4wMGMl/"
-            target="_blank"
-          >
-            <FacebookFilled />
-          </a>
-          <a
-            className="text-white"
-            href="https://bd.linkedin.com/in/sarwar-hossain-a29660257"
-            target="_blank"
-          >
-            <LinkedinFilled />
-          </a>
-          <a className="text-white" href="https://twitter.com/sarwar_asik">
-            <TwitterSquareFilled />
-          </a>
-        </div>
-      </section>
+    <section
+      id="contact"
+      className="relative w-full min-h-screen my-5 bg-secondary text-white"
+    >
+      <h1 className="text-4xl p-4 text-left font-bold tracking-wide">
+        Reach me?
+      </h1>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary h-32 w-full"></div>
 
-      <section className="py-3 mt-3 lg:px-[40px] lg:w-[80%] ">
-        <h1 className="text-text1 text-[3em] font-bold mb-5">Send Message</h1>
-        <Form className="font-serif" action="" onFinish={onSubmit}>
-          <div className="text-white">
-            <label htmlFor="" className="my-2">
-              Type Your Gmail
-            </label>
+      <div className="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
+        <div className="w-full md:w-1/2 p-5 md:px-0 mx-5">
+          <div
+            className="bg-gray-900  w-full lg:w-1/2 h-full pl-3  lg:p-7 pt-8"
+            style={{
+              border: "2px solid white",
+            }}
+          >
+            <h3 className="text-2xl font-semibold mb-5">My Social Media</h3>
+
+            <div className="flex flex-col gap-3">
+              <a
+                href="#"
+                className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
+              >
+                <GithubFilled className="text-[1.6rem]" />
+                Github
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
+              >
+                <LinkedinFilled className="text-[1.6rem]" />
+                Linked In
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
+              >
+                <FacebookFilled className="text-[1.6rem]" />
+                Facebook
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
+              >
+                <TwitterSquareFilled className="text-[1.6rem]" />
+                Twitter
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <Form
+          name="contact"
+          className="w-full md:w-1/2 p-6 bg-gray-900"
+          onFinish={onFinish}
+          style={{
+            border: "2px solid white",
+          }}
+        >
+          <h1 className="text-[1.6rem] pb-3 text-white font-semibold">
+            Send Message
+          </h1>
+          <div>
             <Form.Item
-              name="email"
+              name="name"
               rules={[
-                { required: true, message: "Please enter your email" },
-                { type: "email", message: "Please enter a valid email" },
+                {
+                  required: true,
+                  message: "Please enter your name",
+                },
               ]}
             >
               <Input
-                type="email"
-                placeholder="Your email"
-                className="w-full rounded mt-2 outline-none py-3 bg-slate-300 px-3 text-primary"
+                type="text"
+                id="name"
+                className="px-3 py-4 bg-gray-800 border border-gray-900 focus:border-primary focus:outline-none focus:bg-gray-800 focus:text-primary"
               />
             </Form.Item>
-          </div>
-
-          <div className="mt-5 text-white">
-            <label htmlFor="" className="my-2">
-              Your Message
-            </label>
             <Form.Item
-              name="message"
-              rules={[{ required: true, message: "Please enter your message" }]}
+              name="email"
+              rules={[
+                {
+                  required: true,
+                  type: "email",
+                  message: "Please enter a valid email address",
+                },
+              ]}
             >
+              <Input
+                type="text"
+                id="email"
+                className="px-3 py-4 bg-gray-800 border border-gray-900 focus:border-primary focus:outline-none focus:bg-gray-800 focus:text-primary"
+              />
+            </Form.Item>
+            <Form.Item name="message">
               <Input.TextArea
-                placeholder="Your Message"
-                className="w-full rounded px-5 mt-2 outline-none py-3 bg-slate-300 text-primary"
+                rows={4}
+                id="message"
+                className="px-3 py-4 bg-gray-800 border border-gray-900 focus:border-primary focus:outline-none focus:bg-gray-800 focus:text-primary"
               />
             </Form.Item>
           </div>
-          <div className="">
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="text-[1em] py-2 rounded bg-slate-500 text-white font-bold"
-            >
-              Send Message
-            </Button>
+          <div className="w-full pt-3">
+            <Form.Item shouldUpdate>
+              {() => (
+                <button
+                  // type="primary"
+                  // htmlType="submit"
+                  type="submit"
+                  className="w-full bg-secondary border border-white px-4 py-4 transition duration-50 focus:outline-none font-semibold hover:bg-primary text-white  hover:text-white text-[1rem] cursor-pointer"
+                >
+                  Send
+                </button>
+              )}
+            </Form.Item>
           </div>
         </Form>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

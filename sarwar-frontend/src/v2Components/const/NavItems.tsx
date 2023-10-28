@@ -13,6 +13,7 @@ import {
   TabletOutlined,
   QuestionOutlined,
   PlusSquareOutlined,
+  ExperimentFilled,
 } from "@ant-design/icons";
 
 const NavItems = (type: "nav" | "sidebar") => {
@@ -65,6 +66,11 @@ const NavItems = (type: "nav" | "sidebar") => {
       label: <Link href={`/contact`}> contact</Link>,
       key: `/contact`,
       icon: <MessageOutlined />,
+    },
+    {
+      label: <Link href={`/skills`}> skills</Link>,
+      key: `/skills`,
+      icon: <ExperimentFilled />,
     },
     {
       label: <Link href={`/testominal`}> Testominal</Link>,
