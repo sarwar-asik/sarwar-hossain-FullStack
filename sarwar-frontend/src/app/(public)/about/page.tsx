@@ -1,51 +1,91 @@
 import React from "react";
 import banner from "@/assets/professionalRemoveBg.png";
-import Image from "next/image";
+
 
 const About = () => {
+  
   return (
-    <div className="bg-secondar   px- text-white flex flex-col justify-center items-center">
-      <div className="block lg:flex   gap-5 items-center px-1  lg:mt-[11rem] ">
-        <section className="w-full lg:w-[55%] mx-auto  pl-5 space-y-3">
-          <h2 className="text-[2.3rem] font-semibold">Who am I?</h2>
-          <p className="text-[1.2rem] text-slate-500">
-            I am Sarwar Hossain, a full-stack web developer with experience in
-            developing websites, web applications both frontend and backend
-            development.
-          </p>
-          <div className="mt-10">
-            <h3 className="text-[1.1rem] font-[500] my-4">Details:</h3>
-            <ul className="mt-2 list-disc list-inside space-y-3">
-              <li>
-                <strong>Full Name:</strong> Sarwar Hossain
-              </li>
-              <li>
-                <strong>Age:</strong> 24 Years
-              </li>
-              <li>
-                <strong>Nationality:</strong> BanglaDesh
-              </li>
-              <li>
-                <strong>Languages:</strong> English, Bangla
-              </li>
-              <li>
-                <strong>Address:</strong> Chattagram , Bangladesh
-              </li>
-              <li>
-                <strong>Freelance:</strong> Available
-              </li>
-            </ul>
+    <div className="container">
+      <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50">
+        <div className="flex flex-row-reverse md:contents">
+          <div className="bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+            <h3 className="font-semibold text-lg mb-1">Lorem ipsum</h3>
+            <p className="leading-tight text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              quaerat?
+            </p>
           </div>
-        </section>
-        <section className="w-full lg:w-[45%] mx-auto ">
-          <Image
-            //   height={300}
-            //   width={300}
-            src={banner} // Add your image source
-            alt="Sarwar Smith"
-            className="w-[100%]"
-          />
-        </section>
+          <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+            <div className="h-full w-6 flex items-center justify-center">
+              <div className="h-full w-1 bg-blue-800 pointer-events-none"></div>
+            </div>
+            <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
+          </div>
+        </div>
+
+        <div className="flex md:contents">
+          <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+            <div className="h-full w-6 flex items-center justify-center">
+              <div className="h-full w-1 bg-blue-800 pointer-events-none"></div>
+            </div>
+            <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
+          </div>
+          <div className="bg-blue-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+            <h3 className="font-semibold text-lg mb-1">Lorem ipsum</h3>
+            <p className="leading-tight text-justify">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
+              facilis.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-row-reverse md:contents">
+          <div className="bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+            <h3 className="font-semibold text-lg mb-1">Lorem ipsum</h3>
+            <p className="leading-tight text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              quaerat?
+            </p>
+          </div>
+          <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+            <div className="h-full w-6 flex items-center justify-center">
+              <div className="h-full w-1 bg-blue-800 pointer-events-none"></div>
+            </div>
+            <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
+          </div>
+        </div>
+
+        <div className="flex flex-row-reverse md:contents">
+          <div className="bg-blue-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
+            <h3 className="font-semibold text-lg mb-1">Lorem ipsum</h3>
+            <p className="leading-tight text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+              quaerat?
+            </p>
+          </div>
+          <div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
+            <div className="h-full w-6 flex items-center justify-center">
+              <div className="h-full w-1 bg-blue-800 pointer-events-none"></div>
+            </div>
+            <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
+          </div>
+        </div>
+
+        <div className="flex md:contents">
+          <div className="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+            <div className="h-full w-6 flex items-center justify-center">
+              <div className="h-full w-1 bg-blue-800 pointer-events-none"></div>
+            </div>
+            <div className="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-blue-500 shadow"></div>
+          </div>
+          <div className="bg-blue-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
+            <h3 className="font-semibold text-lg mb-1">Lorem ipsum</h3>
+            <p className="leading-tight text-justify">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
+              facilis.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
