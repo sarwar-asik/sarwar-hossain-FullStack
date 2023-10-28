@@ -1,6 +1,6 @@
 "use client";
 
-import { Row, Col, Typography, Form, Input, Checkbox, Button } from "antd";
+import { Row, Col, Typography, Form, Input, Checkbox, Button, message } from "antd";
 
 const { Title, Paragraph } = Typography;
 import {
@@ -12,9 +12,11 @@ import {
 import { useForm } from "antd/es/form/Form";
 
 const ContactMe = () => {
-  const form = useForm();
+  const [form] = useForm();
   const onFinish = (data: any) => {
     console.log(data);
+    message.success("Sent Message")
+    form.resetFields()
   };
 
   return (
@@ -23,7 +25,7 @@ const ContactMe = () => {
       className="relative w-full min-h-screen my-5 bg-secondary text-white"
     >
       <h1 className="text-4xl p-4 text-left font-bold tracking-wide">
-        Reach me?
+        Reach me ?
       </h1>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary h-32 w-full"></div>
 
@@ -74,6 +76,7 @@ const ContactMe = () => {
           name="contact"
           className="w-full md:w-1/2 p-6 bg-gray-900"
           onFinish={onFinish}
+          form={form}
           style={{
             border: "2px solid white",
           }}
