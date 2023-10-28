@@ -42,7 +42,12 @@ const NavItems = (type: "nav" | "sidebar") => {
 
   const SidebarItems: MenuProps["items"] = [
     {
-      label: <Link href={`/`} className=""> Home</Link>,
+      label: (
+        <Link href={`/`} className="">
+          {" "}
+          Home
+        </Link>
+      ),
       key: `/Home`,
       icon: <HomeOutlined />,
     },
@@ -52,21 +57,16 @@ const NavItems = (type: "nav" | "sidebar") => {
       icon: <ProfileOutlined />,
     },
     {
-      label: <Link href={`/about`}> about</Link>,
-      key: `/about`,
-      icon: <ThunderboltOutlined />,
-    },
-
-    {
       label: <Link href={`/blogs`}> blogs</Link>,
       key: `/blogs`,
       icon: <ControlOutlined />,
     },
     {
-      label: <Link href={`/contact`}> contact</Link>,
-      key: `/contact`,
-      icon: <MessageOutlined />,
+      label: <Link href={`/about`}> about</Link>,
+      key: `/about`,
+      icon: <ThunderboltOutlined />,
     },
+
     {
       label: <Link href={`/skills`}> skills</Link>,
       key: `/skills`,
@@ -75,7 +75,12 @@ const NavItems = (type: "nav" | "sidebar") => {
     {
       label: <Link href={`/testominal`}> Testominal</Link>,
       key: `/testominal`,
-      icon: <TabletOutlined/>,
+      icon: <TabletOutlined />,
+    },
+    {
+      label: <Link href={`/contact`}> contact</Link>,
+      key: `/contact`,
+      icon: <MessageOutlined />,
     },
   ];
 
