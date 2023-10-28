@@ -21,17 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="">
-        {/* <Navbar />
-
-        <main
-        //  style={{ display: "flex",justifyContent:"start",marginInline:"auto" }}
-         >
-          <Sidebar />
-          <Providers>
-            {children}
-            
-            </Providers>
-        </main> */}
+     
 
         <Providers>
           <Navbar />
@@ -50,8 +40,8 @@ export default function RootLayout({
                 // marginLeft: "21%", // Set the width of the sidebar
                 position: "sticky",
                 right: 0,
-                overflowY: "auto", // Allow vertical scrolling for the content
-                overflowX: "hidden", // Hide horizontal scrollbar for the content
+                overflowY: "auto",
+                overflowX: "hidden", 
               }}
             >
               {children}
