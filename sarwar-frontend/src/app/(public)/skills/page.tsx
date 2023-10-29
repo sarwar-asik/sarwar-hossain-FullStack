@@ -86,11 +86,11 @@ const SkillsPage = () => {
           </div>
         </div>
       </div> */}
-      <div className="max-w-md mx-auto bg-red ">
+      <div className="max-w-[80%]   lg:max-w-[80%] px-12 lg:px-3 mx-auto bg-red overflow-hidden z-40">
         {/* Day- 1*/}
-        <div className="flex flex-no-wrap lg:flex-row flex-row-reverse px-5 lg:px-1 justify-center pt-10 ">
+        <div className="bg-green- flex flex-no-wrap lg:flex-row flex-row-reverse  justify-center pt-10 ">
           {/* content */}
-          <section className="w-full lg:w-2/5 flex-none p-2 bg-">
+          <section className="w-full lg:w-2/5 flex-none p-2 bg-blue-">
             <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
               React{" "}
             </h3>
@@ -111,23 +111,24 @@ const SkillsPage = () => {
             </h3>
           </section>
 
-          <div className="w-1/5 sm:1/3 flex-none float-left ">
+          <div className="w-1/5 sm:1/3 flex-none float-left bg-red- ">
             <div className="bg-primary p-1 h-full w-1 mx-auto">
-              <button className="h-24 w-24 mt-56 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
+              
+              <button className="h-24 w-24 mt-20 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
                 Frontend Skills
               </button>
             </div>
           </div>
 
-          <div className="w-2/5 flex-none p-2 hidden lg:block"></div>
+          <div className="w-2/5 flex-none p-2  hidden lg:block"></div>
         </div>
         {/* Day- 2*/}
-        <div className="flex flex-no-wrap sm:flex-row-reverse1 px-5 lg:px-1 justify-center">
+        <div className="flex flex-no-wrap sm:flex-row-reverse1  justify-center">
           <div className="w-2/5 sm:2/3 flex-none p-2 hidden lg:block"></div>
 
           <div className="w-1/5 sm:1/3 flex-none float-left">
             <div className="bg-primary p-1 h-full w-1 mx-auto">
-              <button className="h-24 w-24 mt-56 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
+              <button className="h-24 w-24 mt-20 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
                 Backend Skills
               </button>
             </div>
@@ -165,7 +166,7 @@ const SkillsPage = () => {
           </div>
         </div>
         {/* Day- 3*/}
-        <div className="flex flex-no-wrap lg:flex-row flex-row-reverse px-5 lg:px-1 justify-center">
+        <div className="flex flex-no-wrap lg:flex-row flex-row-reverse justify-center">
         <section className="w-full lg:w-2/5 flex-none p-2 bg-">
             <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
               Agile
@@ -189,7 +190,7 @@ const SkillsPage = () => {
 
           <div className="w-1/5 sm:1/3 flex-none float-left">
             <div className="bg-primary p-1 h-full w-1 mx-auto">
-            <button className="h-24 w-24 mt-56 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
+            <button className="h-24 w-24 mt-20 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
                 Tools
               </button>
             </div>
