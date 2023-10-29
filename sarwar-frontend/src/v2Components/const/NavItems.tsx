@@ -57,28 +57,28 @@ const NavItems = (type: "nav" | "sidebar") => {
       icon: <ProfileOutlined />,
     },
     {
-      label: <Link href={`/blogs`}> blogs</Link>,
+      label: <Link href={`/blogs`}> Blogs</Link>,
       key: `/blogs`,
       icon: <ControlOutlined />,
     },
     {
-      label: <Link href={`/about`}> about</Link>,
-      key: `/about`,
+      label: <Link href={`/service`}> Service</Link>,
+      key: `/service`,
       icon: <ThunderboltOutlined />,
     },
 
     {
-      label: <Link href={`/skills`}> skills</Link>,
+      label: <Link href={`/skills`}> Skills</Link>,
       key: `/skills`,
       icon: <ExperimentFilled />,
     },
     {
-      label: <Link href={`/testominal`}> Testominal</Link>,
+      label: <Link href={`/testominal`}> Testimonial</Link>,
       key: `/testominal`,
       icon: <TabletOutlined />,
     },
     {
-      label: <Link href={`/contact`}> contact</Link>,
+      label: <Link href={`/contact`}> Contact</Link>,
       key: `/contact`,
       icon: <MessageOutlined />,
     },
