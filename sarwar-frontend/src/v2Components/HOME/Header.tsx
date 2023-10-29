@@ -37,7 +37,7 @@ const HeaderPage = () => {
             <FacebookFilled className="text-[2.8rem] text-slate-500 bg-white " />
           </Link>
           <Link
-            href="www.linkedin.com/in/sarwar-asik"
+            href="https://www.linkedin.com/in/sarwar-asik"
             target="_blank"
             className="no-underline "
           >
@@ -51,7 +51,7 @@ const HeaderPage = () => {
             <GithubFilled className="text-[2.8rem] text-slate-500 bg-white rounded-full" />
           </Link>
           <Link
-            href="www.linkedin.com/in/sarwar-asik"
+            href="https://www.linkedin.com/in/sarwar-asik"
             target="_blank"
             className="no-underline "
           >

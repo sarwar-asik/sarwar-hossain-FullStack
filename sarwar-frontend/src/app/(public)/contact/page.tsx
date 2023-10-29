@@ -62,7 +62,7 @@ const ContactMe = () => {
                 Github
               </Link>
               <Link
-                 href="www.linkedin.com/in/sarwar-asik" target="_blank" 
+                 href="https://www.linkedin.com/in/sarwar-asik" target="_blank" 
                 className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
               >
                 <LinkedinFilled className="text-[1.6rem]" />
@@ -76,7 +76,7 @@ const ContactMe = () => {
                 Facebook
               </Link>
               <Link
-                href="www.linkedin.com/in/sarwar-asik" target="_blank" 
+                href="https://www.linkedin.com/in/sarwar-asik" target="_blank" 
                 className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
               >
                 <TwitterSquareFilled className="text-[1.6rem]" />
