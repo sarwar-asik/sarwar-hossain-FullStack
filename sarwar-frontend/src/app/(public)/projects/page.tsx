@@ -33,7 +33,7 @@ const Projects = async () => {
                 return (
                   <div
                     key={i}
-                    className="overflow-hidden bg-cover rounded-lg cursor-pointer mx-auto h-[20rem] w-[24rem] group mt-3"
+                    className="overflow-hidden bg-cover rounded-lg cursor-pointer mx-auto h-[20rem] w-full lg:w-[22rem] group mt-3"
                     style={{
                       backgroundImage: `url(${img})`,
                       // width:"28rem",
