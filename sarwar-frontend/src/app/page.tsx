@@ -1,4 +1,5 @@
-import HeaderPage from "@/components/HOME/Header";
+import HeaderPage from "@/v2Components/HOME/Header";
+
 
 export default function Home() {
   return (

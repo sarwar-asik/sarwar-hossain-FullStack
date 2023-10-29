@@ -62,11 +62,11 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
             </h2>
 
             <p className="mt-4 text-slate-500">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
-              veritatis illo placeat harum porro optio fugit a culpa sunt id!
+              After servicing my best support my client have given the testimonial
+
             </p>
 
-            <div className="hidden lg:mt-8 lg:flex lg:gap-4">
+            <div className="hidden lg:mt-8 lg:flex lg:gap-4 lg:pl-2">
               <button
                 aria-label="Previous slide"
                 id="keen-slider-previous-desktop"

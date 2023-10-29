@@ -90,7 +90,13 @@ const About = () => {
 
     <div className="">
       {/* <h1>My Service </h1> */}
-      <h2 className="text-center text-[2rem] px-3 mt-5">My Services </h2>
+      <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white mt-3">
+              My Service [spine the cards 👇🏾]
+            </h1>
+            <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-2">
+              There are some my services those I am expertise. <br />
+              You can connect with to get the best.
+            </p>
       <div className="wrapper ">
         <div className="scene bg-blue-">
           <div className="carousel keen-slider bg-red-" ref={sliderRef}>

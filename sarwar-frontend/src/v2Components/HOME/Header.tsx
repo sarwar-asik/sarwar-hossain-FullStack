@@ -1,49 +1,64 @@
 import React from "react";
 
 import banner from "@/assets/professionalRemoveBg.png";
-import Image from "next/image";
+
+import {
+  FacebookFilled,
+  FacebookOutlined,
+  GithubFilled,
+  LinkedinFilled,
+  LinkedinOutlined,
+  TwitterCircleFilled,
+  TwitterOutlined,
+  YoutubeOutlined,
+} from "@ant-design/icons";
+import Link from "next/link";
 
 const HeaderPage = () => {
   return (
-    <div>
-      <div className="bg-primary text-white py-10 lg:py-20">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                Sarwar Hossain
-              </h1>
-              <p className="text-lg lg:text-xl mb-4">
-                Full Stack Web Developer
-              </p>
-              <p className=" mb-8">
-                {" "}
-                I am a Full Stack Developer working with <br /> passionate . My
-                goal is achieve success by <br />
-                Hard working .
-              </p>
-              <a
-                href="https://drive.google.com/file/d/1j1D-pT8J5klHsF-SeSOyD1DkUF45kg0T/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-white text-primary  px-6 py-3 rounded-md text-lg  transition duration-300 ease-in-out "
-              >
-                Download Resume
-              </a>
-            </div>
+    <div className=" min-h-screen flex flex-col justify-center">
+      <section className="text-center space-y-4">
+        <h2 className="text-[3rem] font-[900]">
+          Hi, I am Sarwar Hossain {"<  />"}
+        </h2>
+        <p className=" text-slate-500 text-[1.1rem] ">
+          I am full stack web developer. I have Experience in Developing
+          Websites, Web Applications .
+          <br />
+          Have been worked both Frontend and Backend Api integration .
+        </p>
 
-            <div className="text-center">
-              <Image
-                width={300}
-                height={300}
-                src={banner}
-                alt="Your Image"
-                className="max-w-full mx-auto rounded-[30%] shadow-lg"
-              />
-            </div>
-          </div>
+        <div className="py-3 flex gap-5 justify-center bg-red-40">
+          <Link
+            href="https://www.facebook.com/profile.php?id=100087624802395"
+            target="_blank"
+            className="no-underline "
+          >
+            <FacebookFilled className="text-[2.8rem] text-slate-500 bg-white " />
+          </Link>
+          <Link
+            href="www.linkedin.com/in/sarwar-asik"
+            target="_blank"
+            className="no-underline "
+          >
+            <LinkedinFilled className="text-[2.8rem] text-slate-500 bg-white " />
+          </Link>
+          <Link
+            href="https://github.com/sarwar-asik"
+            target="_blank"
+            className="no-underline "
+          >
+            <GithubFilled className="text-[2.8rem] text-slate-500 bg-white rounded-full" />
+          </Link>
+          <Link
+            href="www.linkedin.com/in/sarwar-asik"
+            target="_blank"
+            className="no-underline "
+          >
+            <TwitterCircleFilled className="text-[2.8rem] text-slate-500 bg-white rounded-full" />
+          </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

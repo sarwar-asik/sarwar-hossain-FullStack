@@ -1,4 +1,3 @@
-
 import { Image } from "antd";
 import React from "react";
 
@@ -56,9 +55,13 @@ const BlogsPage = () => {
       <section>
         <section className="flex flex-col justify-center max-w-6xl min-h-screen px-4 py-10 mx-auto sm:px-6">
           <div className="flex flex-wrap items-center justify-between mb-8">
-            <h2 className="mr-10 text-4xl font-bold leading-none md:text-5xl">
+            <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
               My Blogs
-            </h2>
+            </h1>
+            <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-4">
+              There are some my blogs those write about technology of today programming. <br />
+              You can explore the blogs .
+            </p>
             <a
               href="#"
               className="block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600"
@@ -82,7 +85,7 @@ const BlogsPage = () => {
                 author,
                 createdAt,
                 readingTime,
-                author_img
+                author_img,
               } = item;
               return (
                 <div key={i + 1} className="w-full mx-auto">
@@ -190,7 +193,7 @@ const BlogsPage = () => {
                                 href=""
                                 className="font-semibold text-gray-700 hover:underline"
                               >
-                               {author}
+                                {author}
                               </a>
                               <span className="mx-1 text-xs text-gray-600">
                                 {createdAt}
@@ -198,7 +201,7 @@ const BlogsPage = () => {
                             </div>
                           </div>
                           <p className="mt-1 text-xs text-gray-600">
-                           {readingTime} minutes read
+                            {readingTime} minutes read
                           </p>
                         </div>
                       </section>
