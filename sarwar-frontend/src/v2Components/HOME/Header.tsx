@@ -1,7 +1,4 @@
 import React from "react";
-
-import banner from "@/assets/professionalRemoveBg.png";
-
 import {
   FacebookFilled,
   FacebookOutlined,
@@ -16,12 +13,18 @@ import Link from "next/link";
 
 const HeaderPage = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center">
+    <div className="min-h-screen  flex flex-col justify-center">
       <section className="text-center space-y-4">
-        <h2 className="text-[3rem] font-[900]">
+        <h2
+     
+          style={{ marginBottom: "0.75rem", fontSize: "3rem" }}
+        >
           Hi, I am Sarwar Hossain {"<  />"}
         </h2>
-        <p className=" text-slate-500 text-[1.1rem] ">
+        <p
+        
+          style={{ marginBottom: "0.75rem", fontSize: "1.2rem" }}
+        >
           I am full stack web developer. I have Experience in Developing
           Websites, Web Applications .
           <br />
@@ -34,28 +37,56 @@ const HeaderPage = () => {
             target="_blank"
             className="no-underline "
           >
-            <FacebookFilled className="text-[2.8rem] text-slate-500 bg-white " />
+            <FacebookFilled
+              // className="text-[2.8rem] text-slate-500 bg-white "
+              style={{
+                fontSize: "2.8rem",
+                color: "rgb(100 116 139)",
+                background: "white",
+              }}
+            />
           </Link>
           <Link
             href="https://www.linkedin.com/in/sarwar-asik"
             target="_blank"
             className="no-underline "
           >
-            <LinkedinFilled className="text-[2.8rem] text-slate-500 bg-white " />
+            <LinkedinFilled
+              // className="text-[2.8rem] text-slate-500 bg-white "
+              style={{
+                fontSize: "2.8rem",
+                color: "rgb(100 116 139)",
+                background: "white",
+              }}
+            />
           </Link>
           <Link
             href="https://github.com/sarwar-asik"
             target="_blank"
             className="no-underline "
           >
-            <GithubFilled className="text-[2.8rem] text-slate-500 bg-white rounded-full" />
+            <GithubFilled
+              // className="text-[2.8rem] text-slate-500 bg-white "
+              style={{
+                fontSize: "2.8rem",
+                color: "rgb(100 116 139)",
+                background: "white",
+              }}
+            />
           </Link>
           <Link
             href="https://www.linkedin.com/in/sarwar-asik"
             target="_blank"
             className="no-underline "
           >
-            <TwitterCircleFilled className="text-[2.8rem] text-slate-500 bg-white rounded-full" />
+            <TwitterCircleFilled
+              // className="text-[2.8rem] text-slate-500 bg-white "
+              style={{
+                fontSize: "2.8rem",
+                color: "rgb(100 116 139)",
+                background: "white",
+              }}
+            />
           </Link>
         </div>
       </section>

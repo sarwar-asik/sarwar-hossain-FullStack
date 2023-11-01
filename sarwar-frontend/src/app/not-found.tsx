@@ -267,12 +267,12 @@ const NotFoundPage = () => {
                 </defs>
               </svg>
             </div>
-            <p className="text-sm md:text-base text-yellow-300 p-2 mb-4">
+            <p className="text-sm md:text-base text-blue-300 p-2 mb-4">
               The stuff you were looking for doesnt exist
             </p>
             <Link
               href="/"
-              className="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
+              className="bg-transparent hover:bg-blue-300 text-blue-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent"
             >
               Back Home
             </Link>
