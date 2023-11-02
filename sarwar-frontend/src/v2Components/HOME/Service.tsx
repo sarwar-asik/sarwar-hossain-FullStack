@@ -25,7 +25,8 @@ const ServicesPage = () => {
       no: 3,
       name: "Management Website",
       img: feature3,
-      detail: "I have some created Management Website projects these are ready to sell .",
+      detail:
+        "I have some created Management Website projects these are ready to sell .",
       color: "#F6B443",
     },
     {
@@ -34,7 +35,7 @@ const ServicesPage = () => {
       img: feature4,
       detail: "Developed Company site Also service is best  provided by me .",
       color: "#ED3833",
-    }
+    },
   ];
   return (
     <div className="lg:my-8 px-[15px] ">
@@ -52,7 +53,7 @@ const ServicesPage = () => {
           My every projects is implement by my Skills
         </p>
       </header>
-      <main className="my-4 grid grid-cols-1 gap-[36px] md:grid-cols-2 lg:grid-cols-2  ">
+      <main className="my-1 grid grid-cols-1 gap-[36px] md:grid-cols-2 lg:grid-cols-2  ">
         {servicesData?.map((feature) => {
           const { name, img, detail, color } = feature;
           return (
@@ -65,22 +66,21 @@ const ServicesPage = () => {
             >
               {/* <figure className="bg-slate-300 rounded-xl py-3 h-[100px] pl-2">
             </figure> */}
-             <aside className="flex gap-12">
-             <Image
-                src={img}
-                height={90}
-                width={100}
-                className="h-[90px] px-3 w-[100px] -mt-[5rem] bg-primary rounded
+              <aside className="flex gap-12">
+                <Image
+                  src={img}
+                  height={90}
+                  width={100}
+                  className="h-[90px] px-3 w-[100px] -mt-[5rem] bg-primary rounded
                 translate-x-0 transition duration-1000 ease-in-out hover:translate-x-10"
-                alt=""
-              />
-              <span className="-mt-3 text-primary font-serif">{name}</span>
-             </aside>
+                  alt=""
+                />
+                <span className="-mt-3 text-primary font-serif">{name}</span>
+              </aside>
 
               <p className="font-normal text-[0.8em] font-mono mt-2 text-slate-600 mb-2 ">
                 {detail} Lorem, ipsum dolor sit amet consectetur adipisicing
                 elit.
-              
               </p>
               <h6 className="text-slate-500 text-[0.6em]"> See more ...</h6>
             </div>

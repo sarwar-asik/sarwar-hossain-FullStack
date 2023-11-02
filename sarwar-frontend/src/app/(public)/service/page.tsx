@@ -1,10 +1,17 @@
 "use client";
 import React from "react";
-import banner from "@/assets/professionalRemoveBg.png";
+
 import Image from "next/image";
 import "./service.css";
 import { useKeenSlider, KeenSliderPlugin } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import webImg from "@/assets/services/web-Developer.jpg";
+import frontendImg from "@/assets/services/frontend.jpg";
+import backendImg from "@/assets/services/backend.jpg";
+import databaseImg from "@/assets/services/database.jpg";
+import eCommerceImg from "@/assets/services/e-commerce.jpg";
+import mobileImg from "@/assets/services/mobile_friendly.jpg";
+import webSecurityImg from "@/assets/services/web_security.jpg";
 
 const About = () => {
   const carousel: KeenSliderPlugin = (slider) => {
@@ -37,67 +44,65 @@ const About = () => {
     {
       id: 1,
       name: "Web Application Development",
-      img: "https://example.com/web-development-image.jpg",
+      img: webImg,
       details:
         "Building custom web applications tailored to your specific business needs using the latest web technologies and frameworks.",
     },
     {
       id: 2,
       name: "Frontend Development",
-      img: "https://example.com/frontend-development-image.jpg",
+      img: frontendImg,
       details:
         "Creating responsive and user-friendly user interfaces with HTML, CSS, and JavaScript, ensuring an exceptional user experience.",
     },
     {
       id: 3,
       name: "Backend Development",
-      img: "https://example.com/backend-development-image.jpg",
+      img: backendImg,
       details:
         "Developing server-side applications and APIs, handling data storage, user authentication, and ensuring the security of your web services.",
     },
     {
       id: 4,
       name: "Database Design and Management",
-      img: "https://example.com/database-design-image.jpg",
+      img: databaseImg,
       details:
         "Designing efficient and scalable database systems, optimizing queries, and managing your data using SQL and NoSQL databases.",
     },
     {
       id: 5,
       name: "Mobile-Friendly Websites",
-      img: "https://example.com/mobile-website-image.jpg",
+      img: mobileImg,
       details:
         "Adapting your web applications to be mobile-friendly, ensuring they work seamlessly on various devices and screen sizes.",
     },
     {
       id: 6,
       name: "E-commerce Solutions",
-      img: "https://example.com/ecommerce-solutions-image.jpg",
+      img: eCommerceImg,
       details:
         "Creating online shopping platforms with secure payment gateways, product catalog management, and order processing.",
     },
     {
       id: 7,
       name: "Web Security and Testing",
-      img: "https://example.com/web-security-image.jpg",
+      img: webSecurityImg,
       details:
         "Implementing security measures, performing regular testing, and ensuring protection against common web vulnerabilities.",
     },
   ];
 
   return (
-
-
     <div className="">
       {/* <h1>My Service </h1> */}
       <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white mt-3">
-              My Services [spine the cards 👇🏾]
-            </h1>
-            <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-2">
-              There are some my services those I am expertise. <br />
-              You can connect with to get the best.
-            </p>
-      <div className="wrapper ">
+        My Services [spine the cards 👇🏾]
+      </h1>
+      <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-2">
+        There are some my services those I am expertise. <br />
+        You can connect with to get the best.
+      </p>
+      <div className="wrapper bg-red-">
         <div className="scene bg-blue-">
           <div className="carousel keen-slider bg-red-" ref={sliderRef}>
             {servicesData?.map((item: any, i: number) => {
@@ -124,12 +129,11 @@ const About = () => {
                         {item?.name}
                       </h3>
                       <div className="z-10 p-2 text-primary">
-                      
                         <Image
                           height={96}
                           width={96}
-                          src={banner}
-                          alt="service-1"
+                          src={item?.img}
+                          alt="service-img"
                         />
                       </div>
                       <div className="z-10 p-2 text-sm text-center text-gray-500">
