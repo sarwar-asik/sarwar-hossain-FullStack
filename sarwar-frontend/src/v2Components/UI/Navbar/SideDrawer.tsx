@@ -44,6 +44,7 @@ const SideBar = ({ items }: { items?: any }) => {
           onClick={() => setOpen(false)}
           mode="inline"
           items={items}
+        
         />
       </Drawer>
     </>
