@@ -1,5 +1,4 @@
 import React from "react";
-import { Image } from "antd";
 import Link from "next/link";
 import { GithubFilled, LinkOutlined } from "@ant-design/icons";
 
@@ -58,7 +57,11 @@ const Projects = async () => {
                         >
                           <LinkOutlined className="text-2xl font-bold" />
                         </Link>
-                        <Link className="text-blue-300 font-mono " href={source}>
+                        <Link
+                          className="text-blue-300 font-mono "
+                          href={source}
+                          target="_blank"
+                        >
                           <GithubFilled className="text-2xl font-bold" />
                         </Link>
                       </div>
