@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import {
   FacebookFilled,
   FacebookOutlined,
@@ -10,21 +10,17 @@ import {
   YoutubeOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import ParticlesBg from "../UI/Particles";
 
 const HeaderPage = () => {
   return (
     <div className="min-h-screen  flex flex-col justify-center">
-      <section className="text-center space-y-4">
-        <h2
-     
-          style={{ marginBottom: "0.75rem", fontSize: "3rem" }}
-        >
+      <ParticlesBg />
+      <section className="text-center space-y-4 z-10">
+        <h2 style={{ marginBottom: "0.75rem", fontSize: "3rem" }}>
           Hi, I am Sarwar Hossain {"<  />"}
         </h2>
-        <p
-        
-          style={{ marginBottom: "0.75rem", fontSize: "1.2rem" }}
-        >
+        <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem" }}>
           I am full stack web developer. I have Experience in Developing
           Websites, Web Applications .
           <br />

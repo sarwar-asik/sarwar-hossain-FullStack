@@ -34,7 +34,7 @@ export default function RootLayout({
           >
             <Sidebar />
             <main
-            className="flex-1 lg:ml-[21%]"
+            className="flex-1 lg:ml-[23%]"
               style={{
                 // flex: 1, // Take up remaining width
                 // marginLeft: "21%", // Set the width of the sidebar
@@ -44,6 +44,7 @@ export default function RootLayout({
                 overflowX: "hidden", 
               }}
             >
+              
               {children}
             </main>
           </main>

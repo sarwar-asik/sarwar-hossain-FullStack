@@ -45,7 +45,7 @@ const NavItems = (type: "nav" | "sidebar") => {
     },
     {
       label: <Link href={`/projects`}> Projects</Link>,
-      key: "projects",
+      key: "/projects",
       icon: <ProfileOutlined />,
     },
     {
