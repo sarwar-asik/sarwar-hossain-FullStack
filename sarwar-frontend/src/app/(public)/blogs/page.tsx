@@ -1,4 +1,5 @@
 import { Image } from "antd";
+import Link from "next/link";
 import React from "react";
 
 const BlogsPage = () => {
@@ -51,23 +52,24 @@ const BlogsPage = () => {
   ];
 
   return (
-    <div className="bg-secondary   text-white flex flex-col justify-center items-center w-full ">
+    <div className="bg-seconda   text-white flex flex-col justify-center items-center w-full ">
       <section>
         <section className="flex flex-col justify-center max-w-6xl min-h-screen px-4 py-10 mx-auto sm:px-6">
           <div className="flex flex-wrap items-center justify-between mb-8">
             <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
               My Blogs
             </h1>
-            <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-4">
-              There are some my blogs those write about technology of today programming. <br />
+            <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-4">
+              There are some my blogs those write about technology of today
+              programming. <br />
               You can explore the blogs .
             </p>
-            <a
-              href="#"
+            <Link
+              href="/contact"
               className="block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600"
             >
               Go to insights
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-3">

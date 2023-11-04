@@ -32,14 +32,13 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen my-5 bg-secondary text-white"
+      className="relative w-full min-h-screen my-5 bg-secondar text-white"
     >
       <h1 className="text-2xl font-semibold text-center capitalize lg:text-3xl text-white">
-       Reach Me 
+        Reach Me
       </h1>
-      <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-8">
-        You can easy reach me for any query. 
-        
+      <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-8">
+        You can easy reach me for any query.
       </p>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary h-32 w-full"></div>
 
@@ -55,28 +54,32 @@ const ContactMe = () => {
 
             <div className="flex flex-col gap-3">
               <Link
-                href="https://github.com/sarwar-asik" target="_blank" 
+                href="https://github.com/sarwar-asik"
+                target="_blank"
                 className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
               >
                 <GithubFilled className="text-[1.6rem]" />
                 Github
               </Link>
               <Link
-                 href="https://www.linkedin.com/in/sarwar-asik" target="_blank" 
+                href="https://www.linkedin.com/in/sarwar-asik"
+                target="_blank"
                 className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
               >
                 <LinkedinFilled className="text-[1.6rem]" />
                 Linked In
               </Link>
               <Link
-               href="https://www.facebook.com/profile.php?id=100087624802395" target="_blank" 
+                href="https://www.facebook.com/profile.php?id=100087624802395"
+                target="_blank"
                 className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
               >
                 <FacebookFilled className="text-[1.6rem]" />
                 Facebook
               </Link>
               <Link
-                href="https://www.linkedin.com/in/sarwar-asik" target="_blank" 
+                href="https://www.linkedin.com/in/sarwar-asik"
+                target="_blank"
                 className="flex items-center gap-3 no-underline py-3 text-white  hover:bg-black px-2"
               >
                 <TwitterSquareFilled className="text-[1.6rem]" />

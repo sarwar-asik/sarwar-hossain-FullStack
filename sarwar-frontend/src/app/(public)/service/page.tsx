@@ -14,6 +14,7 @@ import mobileImg from "@/assets/services/mobile_friendly.jpg";
 import webSecurityImg from "@/assets/services/web_security.jpg";
 import ParticlesBg from "@/v2Components/UI/Particles";
 import { optionParticlesService } from "@/v2Components/const/particles/optionParticlesService";
+import { optionParticlesHeader } from "@/v2Components/const/particles/optionParticlesHeader";
 
 const About = () => {
   const carousel: KeenSliderPlugin = (slider) => {
@@ -95,61 +96,64 @@ const About = () => {
   ];
 
   return (
-    <div className="">
-      {/* <ParticlesBg option={optionParticlesService}/> */}
-     
-      <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white mt-5">
-        My Services [spine the cards 👇🏾]
-      </h1>
-      <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-2">
-        There are some my services those I am expertise. <br />
-        You can connect with to get the best.
-      </p>
-      <div className="wrapper bg-red- z-10">
-        <div className="scene bg-blue-">
-          <div className="carousel keen-slider bg-red-" ref={sliderRef}>
-            {servicesData?.map((item: any, i: number) => {
-              return (
-                <div key={i + 1} className={`carousel__cell number-slide1`}>
-                  <div className="flex  p-6 w-full bg-gray-200 shadow-lg rounded-lg overflow-hidden mx-auto">
-                    <div
-                      className="relative flex flex-col items-center justify-around p-4 mr-4 w-[28rem] h-[25rem] rounded-2xl "
-                      style={{ transform: "translate(0px, 0px)", opacity: 1 }}
-                    >
+    <div className="min-h-screen relative overflow-hidden">
+        {/* <ParticlesBg option={optionParticlesService} /> */}
+      <section className="z-40 relative">
+
+        {/* <ParticlesBg option={optionParticlesHeader} /> */}
+        <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white mt-5">
+          My Services [spine the cards 👇🏾]
+        </h1>
+        <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-2">
+          There are some my services those I am expertise. <br />
+          You can connect with to get the best.
+        </p>
+        <div className="wrapper bg-red- z-10">
+          <div className="scene bg-blue-">
+            <div className="carousel keen-slider bg-red-" ref={sliderRef}>
+              {servicesData?.map((item: any, i: number) => {
+                return (
+                  <div key={i + 1} className={`carousel__cell number-slide1`}>
+                    <div className="flex  p-6 w-full bg-gray-200 shadow-lg rounded-lg overflow-hidden mx-auto">
                       <div
-                        className="absolute z-0 w-full h-full text-white transform scale-x-105 scale-y-95 bg-primary rounded-xl -rotate-2 "
-                        style={{ zIndex: -1 }}
-                      ></div>
-                      <div
-                        className="absolute z-0 w-full h-full text-white transform scale-x-105 scale-y-95 bg-primary rounded-xl rotate-2 "
-                        style={{ zIndex: -1 }}
-                      ></div>
-                      <div
-                        className="absolute z-0 w-full h-full transform scale-x-105 scale-y-95 bg-white rounded-xl "
-                        style={{ zIndex: -1 }}
-                      ></div>
-                      <h3 className="z-10 p-2 text-2xl mt-2 font-semibold text-primary">
-                        {item?.name}
-                      </h3>
-                      <div className="z-10 p-2 text-primary">
-                        <Image
-                          height={96}
-                          width={96}
-                          src={item?.img}
-                          alt="service-img"
-                        />
-                      </div>
-                      <div className="z-10 p-2 text-sm text-center text-gray-500">
-                        {item?.details}
+                        className="relative flex flex-col items-center justify-around p-4 mr-4 w-[28rem] h-[25rem] rounded-2xl "
+                        style={{ transform: "translate(0px, 0px)", opacity: 1 }}
+                      >
+                        <div
+                          className="absolute z-0 w-full h-full text-white transform scale-x-105 scale-y-95 bg-primary rounded-xl -rotate-2 "
+                          style={{ zIndex: -1 }}
+                        ></div>
+                        <div
+                          className="absolute z-0 w-full h-full text-white transform scale-x-105 scale-y-95 bg-primary rounded-xl rotate-2 "
+                          style={{ zIndex: -1 }}
+                        ></div>
+                        <div
+                          className="absolute z-0 w-full h-full transform scale-x-105 scale-y-95 bg-white rounded-xl "
+                          style={{ zIndex: -1 }}
+                        ></div>
+                        <h3 className="z-10 p-2 text-2xl mt-2 font-semibold text-primary">
+                          {item?.name}
+                        </h3>
+                        <div className="z-10 p-2 text-primary">
+                          <Image
+                            height={96}
+                            width={96}
+                            src={item?.img}
+                            alt="service-img"
+                          />
+                        </div>
+                        <div className="z-10 p-2 text-sm text-center text-gray-500">
+                          {item?.details}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

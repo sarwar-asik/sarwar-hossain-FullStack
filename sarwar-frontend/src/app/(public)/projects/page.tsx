@@ -12,7 +12,7 @@ const Projects = async () => {
   // console.log(allProjects,"p");
   return (
     <div>
-      <div className="px-1 bg-secondary text-white">
+      <div className="px-1 bg-secondar text-white">
         {allProjects?.length < 1 && <h2>Loading .......</h2>}
 
         <section className="">
@@ -20,19 +20,19 @@ const Projects = async () => {
             <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
               My Portfolio
             </h1>
-            <p className="font-normal  mt-2 text-[1em] text-center text-slate-500 mb-8">
+            <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-8">
               There are some my projects those I created recently. <br />
               You can explore my projects click by live
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2  lg:gap-3 mt-8 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:gap-5 mt-8 lg:grid-cols-3">
               {allProjects?.map((item: any, i: number) => {
                 // console.log(item);
                 const { img, name, time, source, live } = item;
                 return (
                   <div
                     key={i}
-                    className="overflow-hidden bg-cover rounded-lg cursor-pointer mx-auto h-[20rem] w-full lg:w-[22rem] group mt-3"
+                    className="overflow-hidden bg-cover rounded-lg cursor-pointer mx-auto h-[28rem] w-full lg:w-[20rem] group mt-3"
                     style={{
                       backgroundImage: `url(${img})`,
                       // width:"28rem",
@@ -67,7 +67,7 @@ const Projects = async () => {
                       </div>
                       <Link
                         href={`/projects/${item?._id}`}
-                        className="no-underline text-xl mt-12 text-white  font-bold bg-slate-600 p-2  rounded-md"
+                        className="no-underline text-xl mt-16 text-white  font-bold bg-slate-600 p-1  rounded-md"
                       >
                         Details
                       </Link>

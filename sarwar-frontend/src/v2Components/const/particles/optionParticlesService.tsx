@@ -6,85 +6,137 @@ const fullScreenData = {
 };
 
 export const optionParticlesService = {
-  pauseOnBlur: false,
+  pauseOnBlur: true,
   fullScreen: {
     enable: true,
     zIndex: 1,
   },
+  fpsLimit: 60,
+  particles: {
+    number: {
+      value: 40,
+      limit: 60,
+      density: {
+        enable: true,
+        value_area: 300
+      }
+    },
+    color: {
+      value: "#ffffff"
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#000000"
+      },
+      polygon: {
+        nb_sides: 5
+      },
+      image: {
+        src: "images/github.svg",
+        width: 100,
+        height: 100
+      }
+    },
+    opacity: {
+      value: 0.5,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 1,
+        opacity_min: 0.5,
+        sync: false
+      }
+    },
+    size: {
+      value: 10,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 10,
+        size_min: 10,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 100,
+      color: "#ffffff",
+      opacity: 1,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
   interactivity: {
+    detect_on: "canvas",
     events: {
       onHover: {
         enable: true,
         mode: "bubble",
+        parallax: {
+          enable: false,
+          force: 60,
+          smooth: 10
+        }
       },
-      resize: true,
+      onClick: {
+        enable: true,
+        mode: "push"
+      },
+      resize: true
     },
     modes: {
+      grab: {
+        distance: 400,
+        lineLinked: {
+          opacity: 1
+        }
+      },
       bubble: {
-        distance: 40,
+        distance: 400,
+        size: 50,
         duration: 2,
-        opacity: 8,
-        size: 6,
-        speed: 3,
+        opacity: 1,
+        speed: 2
       },
-    },
-  },
-  particles: {
-    color: {
-      value: ["#4285f4", "#34A853", "#FBBC05", "#EA4335"],
-    },
-    links: {
-      color: "random",
-      distance: 40,
-      enable: true,
-      opacity: 0.8,
-      width: 1,
-    },
-    move: {
-      direction: "none",
-      enable: true,
-      outMode: "bounce",
-      speed: 1,
-    },
-    number: {
-      value: 200,
-    },
-    opacity: {
-      animation: {
-        enable: true,
-        speed: 2,
-        sync: false,
+      repulse: {
+        distance: 200
       },
-      value: { min: 0.3, max: 0.8 },
-    },
-    shape: {
-      type: "circle",
-    },
-    size: {
-      value: 1,
-    },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
   },
-  polygon: {
-    draw: {
-      enable: true,
-      lineColor: "rgba(255,255,255,0.2)",
-      lineWidth: 1,
-    },
-    enable: true,
-    move: {
-      radius: 5,
-    },
-    position: {
-      x: 30,
-      y: 10,
-    },
-    inline: {
-      arrangement: "equidistant",
-    },
-    scale: 1,
-    type: "inline",
-    url: "https://particles.js.org/images/google.svg",
+  backgroundMask: {
+    // enable: true,
+    // cover: {
+    //   color: {
+    //     value: {
+    //       r: 0,
+    //       g: 0,
+    //       b: 0
+    //     }
+    //   }
+    // }
   },
+  retina_detect: true,
+  fps_limit: 30,
   background: {
     color: "#252734",
     image: "",

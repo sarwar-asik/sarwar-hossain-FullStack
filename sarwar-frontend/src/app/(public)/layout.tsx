@@ -19,7 +19,6 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
       className="bg-secondary  text-white w-full  min-h-screen overflow-y-auto overflow-x-hidden z-10 
     "
     >
-   
       <FloatButton.Group
         trigger="click"
         type="primary"
@@ -41,16 +40,9 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
 
       {/* <section className="min-h-screen w-full bg-secondary">
         </section> */}
-      
 
-      <section
-        style={{
-          zIndex: "20",
-        }}
-      >
- <ParticlesBg option={optionParticlesService} />
-        {children}
-      </section>
+      <ParticlesBg option={optionParticlesService} />
+      <section className="z-40 relative">{children}</section>
     </div>
   );
 };

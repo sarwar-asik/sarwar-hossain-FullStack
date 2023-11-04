@@ -53,7 +53,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   }, [keenSlider]);
 
   return (
-    <section className="bg-secondary text-white ">
+    <section className="bg-sec text-white ">
       <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24 ">
         <div className="grid grid-cols-1 gap-8  lg:grid-cols-3 lg:items-center lg:gap-16 lg:mt- min-h-screen">
           <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
@@ -61,9 +61,9 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               How is the client satisfying ?
             </h2>
 
-            <p className="mt-4 text-slate-500">
-              After servicing my best support my client have given the testimonial
-
+            <p className="mt-4 text-slate-400">
+              After servicing my best support my client have given the
+              testimonial
             </p>
 
             <div className="hidden lg:mt-8 lg:flex lg:gap-4 lg:pl-2">
