@@ -11,7 +11,7 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import ParticlesBg from "../UI/Particles";
-import { optionParticlesHeader } from "../const/optionParticlesHeader";
+import { optionParticlesHeader } from "../const/particles/optionParticlesHeader";
 
 
 const HeaderPage = () => {

@@ -12,6 +12,8 @@ import databaseImg from "@/assets/services/database.jpg";
 import eCommerceImg from "@/assets/services/e-commerce.jpg";
 import mobileImg from "@/assets/services/mobile_friendly.jpg";
 import webSecurityImg from "@/assets/services/web_security.jpg";
+import ParticlesBg from "@/v2Components/UI/Particles";
+import { optionParticlesService } from "@/v2Components/const/particles/optionParticlesService";
 
 const About = () => {
   const carousel: KeenSliderPlugin = (slider) => {
@@ -94,7 +96,8 @@ const About = () => {
 
   return (
     <div className="">
-      {/* <h1>My Service </h1> */}
+      {/* <ParticlesBg option={optionParticlesService}/> */}
+     
       <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white mt-5">
         My Services [spine the cards 👇🏾]
       </h1>
@@ -102,7 +105,7 @@ const About = () => {
         There are some my services those I am expertise. <br />
         You can connect with to get the best.
       </p>
-      <div className="wrapper bg-red-">
+      <div className="wrapper bg-red- z-10">
         <div className="scene bg-blue-">
           <div className="carousel keen-slider bg-red-" ref={sliderRef}>
             {servicesData?.map((item: any, i: number) => {

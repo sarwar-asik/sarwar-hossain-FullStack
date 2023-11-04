@@ -15,7 +15,7 @@ const Projects = async () => {
       <div className="px-1 bg-secondary text-white">
         {allProjects?.length < 1 && <h2>Loading .......</h2>}
 
-        <section className="bg-white dark:bg-gray-900">
+        <section className="">
           <div className="container px-6 py-10 mx-auto">
             <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
               My Portfolio
@@ -25,7 +25,7 @@ const Projects = async () => {
               You can explore my projects click by live
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2  gap mt-8 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:gap-3 mt-8 lg:grid-cols-3">
               {allProjects?.map((item: any, i: number) => {
                 // console.log(item);
                 const { img, name, time, source, live } = item;
