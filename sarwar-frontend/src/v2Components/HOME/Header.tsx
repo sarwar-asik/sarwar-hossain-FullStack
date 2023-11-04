@@ -11,12 +11,14 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import ParticlesBg from "../UI/Particles";
+import { optionParticlesHeader } from "../const/optionParticlesHeader";
+
 
 const HeaderPage = () => {
   return (
     <div className="min-h-screen  flex flex-col justify-center">
-      <ParticlesBg />
       <section className="text-center space-y-4 z-10">
+        <ParticlesBg option={optionParticlesHeader} />
         <h2 style={{ marginBottom: "0.75rem", fontSize: "3rem" }}>
           Hi, I am Sarwar Hossain {"<  />"}
         </h2>
