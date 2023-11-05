@@ -91,29 +91,35 @@ const SkillsPage = () => {
         <div className="bg-green- flex flex-no-wrap lg:flex-row flex-row-reverse  justify-center pt-10 ">
           {/* content */}
           <section className="w-full lg:w-2/5 flex-none p-2 bg-blue-">
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-              React{" "}
-            </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
               Next js{" "}
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
               Redux
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+              React{" "}
+            </h3>
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+              TypeScript
+            </h3>
+
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
               CSS
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
               Ant Design
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
               Tailwind CSS
+            </h3>
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+              Firebase 
             </h3>
           </section>
 
           <div className="w-1/5 sm:1/3 flex-none float-left bg-red- ">
             <div className="bg-primary p-1 h-full w-1 mx-auto">
-              
               <button className="h-24 w-24 mt-20 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
                 Frontend Skills
               </button>
@@ -138,59 +144,59 @@ const SkillsPage = () => {
             {/* <div className="text-gray-700 float-left border-2 rounded border-green-200 bg-green-200 shadow-lg px-2"></div> */}
 
             <section className="w-full float-left border-2 rounded shadow-lg px-2">
-              <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-               Node js 
+              <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+                Node js
               </h3>
-              <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-               Express Js 
+              <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+                Express Js
               </h3>
-              <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-              Prisma ORM
+              <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+                Prisma ORM
               </h3>
-              <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+              <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
                 PostgreSQL
               </h3>
-              <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-               Mongoose
+              <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+                Mongoose
               </h3>
-              <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-               MongoDB 
+              <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+                MongoDB
               </h3>
-              <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-               TypeScript 
+              <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+                TypeScript
               </h3>
-              <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-               JWT 
+              <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+                JWT
               </h3>
             </section>
           </div>
         </div>
         {/* Day- 3*/}
         <div className="flex flex-no-wrap lg:flex-row flex-row-reverse justify-center">
-        <section className="w-full lg:w-2/5 flex-none p-2 bg-">
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+          <section className="w-full lg:w-2/5 flex-none p-2 bg-">
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
               Agile
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-              Figma 
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+              Figma
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
               Vercel
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-            AWS
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+              AWS
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
               Supebase
             </h3>
-            <h3 className="p-3 text-[1.5rem] bg-slate-500 m-1 rounded text-center">
-           Trello
+            <h3 className="p-2  text-[1.3rem] bg-slate-600 font-mono m-1 rounded text-center">
+              Trello
             </h3>
           </section>
 
           <div className="w-1/5 sm:1/3 flex-none float-left">
             <div className="bg-primary p-1 h-full w-1 mx-auto">
-            <button className="h-24 w-24 mt-20 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
+              <button className="h-24 w-24 mt-20 bg-primary hover:bg-slate-200 hover:text-black text-white font-bold rounded-full -ml-12">
                 Tools
               </button>
             </div>

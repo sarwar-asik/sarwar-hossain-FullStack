@@ -1,13 +1,18 @@
-import { Image } from "antd";
+// import { Image } from "antd";
 import Link from "next/link";
 import React from "react";
+import aiImg from "@/assets/services/database.jpg";
+import DataImg from "@/assets/services/backend.jpg";
+import NetworkingImg from "@/assets/services/web_security.jpg";
+import Image from "next/image";
+import author from "@/assets/professionalRemoveBg.png"
 
 const BlogsPage = () => {
   const blogs = [
     {
       title: "The Future of Artificial Intelligence",
       category: "AI programming",
-      img: "https://buildfire.com/wp-content/uploads/2017/04/marketing-blogs-1200x900.jpg",
+      img: aiImg,
       likes: 235,
       comments: 42,
       views: 1278,
@@ -17,12 +22,12 @@ const BlogsPage = () => {
       createdAt: "2023-05-15",
       readingTime: "8 minutes",
       author_img:
-        "https://lh3.googleusercontent.com/a/ACg8ocKhVGfwkn1rZok-dIAoABC3X0OmbkOwRiFbDZWwRKz89g=s360-c-no",
+       author,
     },
     {
       title: "Blockchain and Its Impact on Finance",
       category: "Data Analysis",
-      img: "https://www.constantcontact.com/blog/wp-content/uploads/2021/04/Social-4.jpg",
+      img: DataImg,
       likes: 198,
       comments: 31,
       views: 1037,
@@ -32,12 +37,12 @@ const BlogsPage = () => {
       createdAt: "2023-06-02",
       readingTime: "6 minutes",
       author_img:
-        "https://lh3.googleusercontent.com/a/ACg8ocKhVGfwkn1rZok-dIAoABC3X0OmbkOwRiFbDZWwRKz89g=s360-c-no",
+       author,
     },
     {
       title: "The Rise of 5G Technology",
       category: "Networking",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIFEHly5nR5lxwYP3mqXBIXRVctFiTmhJsUi1TTD_wxp2SR7d1_OjN2XD1rbjccIhSp2Y&usqp=CAU",
+      img: NetworkingImg,
       likes: 312,
       comments: 56,
       views: 1520,
@@ -47,7 +52,7 @@ const BlogsPage = () => {
       createdAt: "2023-06-20",
       readingTime: "7 minutes",
       author_img:
-        "https://lh3.googleusercontent.com/a/ACg8ocKhVGfwkn1rZok-dIAoABC3X0OmbkOwRiFbDZWwRKz89g=s360-c-no",
+       author,
     },
   ];
 
@@ -62,7 +67,7 @@ const BlogsPage = () => {
             <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-4">
               There are some my blogs those write about technology of today
               programming. <br />
-              You can explore the blogs .
+              You can explore these to improve web idea.
             </p>
             <Link
               href="/contact"
@@ -95,8 +100,10 @@ const BlogsPage = () => {
                     <div className="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                       <div className="md:flex-shrink-0">
                         <Image
+                        width={200}
+                        height={224}
                           src={img}
-                          preview={false}
+                          // preview={false}
                           alt="Blog Cover"
                           className="object-fill w-full rounded-lg rounded-b-none md:h-56"
                         />
