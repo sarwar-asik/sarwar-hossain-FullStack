@@ -10,7 +10,7 @@ import routes from './app/routes';
 import sendResponse from './shared/sendResponce';
 import cookieParser from 'cookie-parser';
 
-// import { createUser } from './app/modules/users/users.services'
+
 
 const app: Application = express();
 // const port = 3000
