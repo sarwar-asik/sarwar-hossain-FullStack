@@ -41,7 +41,7 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
       {/* <section className="min-h-screen w-full bg-secondary">
         </section> */}
 
-      <ParticlesBg option={optionParticlesService} />
+      {/* <ParticlesBg option={optionParticlesService} /> */}
       <section className="z-40 relative">{children}</section>
     </div>
   );

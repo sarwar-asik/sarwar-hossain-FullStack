@@ -41,7 +41,7 @@ export default function RootLayout({
                 position: "sticky",
                 right: 0,
                 overflowY: "auto",
-                overflowX: "hidden", 
+                overflowX: "hidden",  
               }}
             >
               
