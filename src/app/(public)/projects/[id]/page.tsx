@@ -14,7 +14,7 @@ const ProjectDetailsPage = async ({
   const { data } = await response.json();
   
   return (
-   <div className="bg-blue-300">
+   <div className=" min-h-screen">
 
 
     <ProjectDetails data={data}/>
