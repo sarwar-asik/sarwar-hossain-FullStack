@@ -20,7 +20,7 @@ const Sidebar = () => {
         style={{
           overflow: "auto",
           height: "110vh",
-          position: "fixed",
+          // position: "fixed",
           zIndex: 40,
           left: 0,
           top: 0,
@@ -28,6 +28,7 @@ const Sidebar = () => {
           //   padding: "10px 0 0 0",
           padding: "10px 15px",
           textAlign: "left",
+          overflowY: "hidden",
           // width: "70vw",
           // background: "red",
           // background:"",

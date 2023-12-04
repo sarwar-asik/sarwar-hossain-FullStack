@@ -28,19 +28,23 @@ export default function RootLayout({
           <main
             style={{
               display: "flex",
-              justifyContent: "space-between",
+              // justifyContent: "space-between",
+             
               overflow: "hidden",
+              // background:"red"
             }}
           >
             <Sidebar />
             <main
-            className="flex-1 lg:ml-[23%]"
+            // className="flex-1 lg:ml-[23%]"
+
               style={{
                 // flex: 1, // Take up remaining width
                 // marginLeft: "21%", // Set the width of the sidebar
-                position: "sticky",
-                right: 0,
-                overflowY: "auto",
+                // position: "sticky",
+                // right: 0,
+                width:"100%",
+                overflowY: "auto",             
                 overflowX: "hidden",  
               }}
             >
