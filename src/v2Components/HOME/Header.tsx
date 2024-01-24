@@ -31,7 +31,7 @@ const HeaderPage = () => {
       <section className="text-center space-y-4 z-10">
         <ParticlesBg option={optionParticlesHeader} />
         {/* /! card section */}
-        <div className=" duration-300  hover:-rotate-0 [transform:rotate3d(1_,-1,_1,_60deg)] group  border-sky-900 border-4  overflow-hidden rounded-2xl relative h-52 w-72 bg-sky-800 p-5 flex flex-col items-start gap-4 mx-auto">
+        <div className=" duration-300 hover:-rotate-0 [transform:rotate3d(1_,-1,_1,_60deg)] group  border-sky-900 border-4  overflow-hidden rounded-2xl relative h-52 w-72 bg-sky-800 p-5 flex flex-col items-start gap-4 mx-auto">
           <div className="text-gray-50">
             <span className="font-bold text-5xl">Junior</span>
             <p className="text-xs">Full Stack Developer</p>
