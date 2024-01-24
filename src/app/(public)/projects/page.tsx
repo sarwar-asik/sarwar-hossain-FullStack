@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { GithubFilled, LinkOutlined } from "@ant-design/icons";
+import Loading from "@/v2Components/UI/Loading";
 
 const Projects = async () => {
   const res = await fetch("https://sarwarserver.vercel.app/api/v2/projects", {
@@ -13,7 +14,7 @@ const Projects = async () => {
   return (
     <div>
       <div className="px-1 bg-secondar text-white">
-        {allProjects?.length < 1 && <h2>Loading .......</h2>}
+        {allProjects?.length < 1 && <Loading />}
 
         <section className="">
           <div className="container px-6 py-10 mx-auto">
