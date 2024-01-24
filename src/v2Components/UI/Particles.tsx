@@ -5,9 +5,9 @@ import Particles from "react-tsparticles";
 
 import { loadSlim } from "tsparticles-slim";
 
-const ParticlesBg = ({option}:{option:any}) => {
+const ParticlesBg = ({ option }: { option: any }) => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
+    // console.log(engine);
 
     await loadSlim(engine);
   }, []);
@@ -22,8 +22,8 @@ const ParticlesBg = ({option}:{option:any}) => {
   return (
     <Particles
       id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
+      init={particlesInit}
+      loaded={particlesLoaded}
       options={option}
     />
   );

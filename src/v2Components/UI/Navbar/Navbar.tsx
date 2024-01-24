@@ -8,7 +8,7 @@ const { Header } = Layout;
 
 const Navbar = () => {
   return (
-    <nav className="mb-[10rem]">
+    <nav className="mb-[10rem] z-40">
       <Header
         className={`bg-primary text-white  px-3 w-full sticky top-0 z-10  flex lg:hidden justify-between items-center `}
       >

@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="hidden lg:flex ">
+    <div className="hidden lg:flex">
       <Sider
         // collapsible
         className="bg-primary "

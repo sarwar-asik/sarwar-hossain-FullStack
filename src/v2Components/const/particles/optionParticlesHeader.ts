@@ -6,7 +6,7 @@ const fullScreenData = {
 };
 export const optionParticlesHeader = {
   fullScreen: {
-    enable: true,
+    enable: false,
     zIndex: -1,
   },
   fpsLimit: 60,
@@ -127,10 +127,11 @@ export const optionParticlesHeader = {
   },
   retina_detect: true,
   background: {
-    color: "#252734",
-    image: "",
-    position: "50% 50%",
-    repeat: "no-repeat",
-    size: "cover",
+    // color: "#252734",
+    // image: "",
+    // position: "50% 50%",
+    // repeat: "no-repeat",
+    // size: "cover",
+  
   },
 };
