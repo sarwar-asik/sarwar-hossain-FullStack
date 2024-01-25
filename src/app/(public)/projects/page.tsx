@@ -7,6 +7,7 @@ import SIngleProject from "@/v2Components/project/SIngleProject";
 const Projects = async () => {
   const res = await fetch("https://sarwarserver.vercel.app/api/v2/projects", {
     cache: "no-cache",
+
   });
   const data = await res.json();
   //   console.log(data);
@@ -27,10 +28,17 @@ const Projects = async () => {
               You can explore my projects click by live
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2  lg:gap-5 mt-8 lg:grid-cols-3">
-              {allProjects?.map((item: any, i: number) => {
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:gap-5 mt-8 lg:grid-cols-3 ">
+              {allProjects?.sort((a: any, b: any) => {
+                // Assuming 'time' property is a string, you might want to parse it to compare
+                const timeA = new Date(a.createdAt).getTime();
+                const timeB = new Date(b.createdAt).getTime();
+                // console.log(timeA,'tttttt')
+
+                return timeB - timeA;
+              })?.map((item: any, i: number) => {
                 // console.log(item);
-                const { img, name, time, source, live } = item;
+                // const { img, name, time, source, live } = item;
                 return (
                   // <div
                   //   key={i}
@@ -76,7 +84,7 @@ const Projects = async () => {
                   //   </div>
                   // </div>
                   <div className="" key={i}>
-                    <SIngleProject />
+                    <SIngleProject projectData={item} />
                   </div>
                 );
               })}

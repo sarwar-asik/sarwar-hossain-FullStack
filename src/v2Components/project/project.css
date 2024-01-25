@@ -1,8 +1,8 @@
 .card {
   position: relative;
   width: 380px;
-  height: 400px;
-  margin: 20px;
+  height: 420px;
+  margin: 20px auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -32,7 +32,7 @@
   left: 0;
   width: 100%;
   padding: 20px;
-  background-color: #fff;
+  background-color: #1b1a1a;
   transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -51,7 +51,7 @@
 .card__button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #000;
+  background-color: #104054;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -60,9 +60,27 @@
 .card:hover {
   transform: translateY(-10px);
 }
+.source {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding:10px 20px;
+}
 
 .card:hover .card__image img {
   transform: scale(1.2);
+}
+
+.card:hover .source {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  background-color: #104054;
+
 }
 
 .card:hover .card__content {
@@ -70,8 +88,18 @@
 }
 
 .card__image {
-  height: 400px;
+  height: 420px;
   width: 380px;
   background-color: #000;
   /* you can put img url here  */
+}
+
+.categories__btn {
+  text-decoration: none;
+  color: rgb(216, 213, 213);
+  font-size: 0.8em;
+  background-color: rgb(73, 71, 71);
+  padding: 3px 6px;
+  border-radius: 15px;
+  margin-inline: 0 2px;
 }
