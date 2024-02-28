@@ -24,7 +24,7 @@ export default function RootLayout({
 
 
         <Providers>
-          {/* <Navbar /> */}
+          <Navbar />
           <main
             style={{
               display: "flex",
