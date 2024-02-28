@@ -16,10 +16,10 @@ import { optionParticlesHeader } from "@/v2Components/const/particles/optionPart
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
-      className="bg-secondary  text-white w-full  min-h-screen overflow-y-auto overflow-x-hidden z-10 
+      className="bg-secondary  text-white w-full   min-h-screen overflow-y-auto overflow-x-hidden z-10 
     "
     >
-      <FloatButton.Group
+      {/* <FloatButton.Group
         trigger="click"
         type="primary"
         style={{ right: 24 }}
@@ -36,13 +36,13 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
             </Link>
           }
         />
-      </FloatButton.Group>
+      </FloatButton.Group> */}
 
       {/* <section className="min-h-screen w-full bg-secondary">
         </section> */}
 
       {/* <ParticlesBg option={optionParticlesService} /> */}
-      <section className="z-40 relative">{children}</section>
+      <div className="z-40 relative ">{children}</div>
     </div>
   );
 };

@@ -10,13 +10,11 @@ import {
 import { FloatButton } from "antd";
 import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <section className="bg-secondary text-white  min-h-fit">
-
-     
+    <div className="bg-secondary w-full text-white  min-h-fit">
       <HeaderPage />
-      <FloatButton.Group
+      {/* <FloatButton.Group
         trigger="click"
         type="primary"
         style={{ right: 24 }}
@@ -30,7 +28,7 @@ export default function Home() {
             </Link>
           }
         />
-      </FloatButton.Group>
-    </section>
+      </FloatButton.Group> */}
+    </div>
   );
 }

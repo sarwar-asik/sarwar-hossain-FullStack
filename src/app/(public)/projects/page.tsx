@@ -15,10 +15,10 @@ const Projects = async () => {
   // console.log(allProjects,"p");
   return (
     <div>
-      <div className="px-1 bg-secondar text-white">
+      <div className="px-1  text-white">
         {allProjects?.length < 1 && <Loading />}
 
-        <section className="">
+        <div className="">
           <div className="container px-6 py-10 mx-auto">
             <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
               My Project
@@ -90,7 +90,7 @@ const Projects = async () => {
               })}
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ const HeaderPage = () => {
     <div className="min-h-screen  flex flex-col justify-center">
 
       <section className="text-center space-y-4 z-10">
-        <ParticlesBg option={optionParticlesHeader} />
+        {/* <ParticlesBg option={optionParticlesHeader} /> */}
         {/* /! card section */}
         {/* <div className="card duration-300 hover:-rotate-0 transform rotate-3d(1,-1,1,60deg) group border-sky-900 border-4 overflow-hidden rounded-2xl relative h-52 w-72 bg-sky-800 p-5 flex flex-col items-start gap-4 mx-auto">
           <div className="text-gray-50 bg-red-300">
