@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="hidden lg:flex">
+    <div className="hidden lg:flex ">
       <Sider
         // collapsible
         className="bg-primary "
@@ -48,7 +48,7 @@ const Sidebar = () => {
           />
         </svg> */}
         {/* <h2 className="my-5">Sarwar Img</h2> */}
-        <Link href="/" className="bg-red-40 flex justify-center py-7">
+        <Link href="/" className="bg-red-4 flex justify-center py-7 mt-7 border-b-4 border-gray-500">
           <Image
             className="text-center w-[12rem] rounded-full mx-auto p-2"
             style={{
@@ -63,7 +63,7 @@ const Sidebar = () => {
 
         <Menu
           // theme="light"
-          className="bg-primary text-white mt-10 font-[700]"
+          className="bg-primary text-white mt-10 font-[800]"
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={NavItems("sidebar")}

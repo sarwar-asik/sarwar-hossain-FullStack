@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="bg-secondary w-full text-white  min-h-fit">
+    <div className="bg-secondary w-full text-white  min-h-fi overflow-hidden">
       <HeaderPage />
       {/* <FloatButton.Group
         trigger="click"

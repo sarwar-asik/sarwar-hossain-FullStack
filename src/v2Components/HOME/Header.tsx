@@ -77,7 +77,7 @@ const HeaderPage = () => {
             Hi, I am Sarwar Hossain {"<  />"}
           </h2>
 
-          <p className="text-lg lg:text-xl">
+          <p className="text-lg lg:text-xl font-mono">
             I am full stack web developer. I have Experience in Developing
             Websites, Web Applications .
             <br />
