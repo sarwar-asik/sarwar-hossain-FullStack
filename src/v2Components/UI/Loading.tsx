@@ -1,8 +1,8 @@
-import Loading from '@/v2Components/UI/Loading';
-import React from 'react';
-
-
-const LoadingPage = () => {
+import React from 'react'
+import loaderImg from "@/assets/Loader.gif"
+import Image from 'next/image';
+import "./loading.css"
+export default function Loading() {
     return (
         // <div style={{
         //     height:"100vh",
@@ -15,10 +15,10 @@ const LoadingPage = () => {
         //         // width:"50%"
         //     }} src={loaderImg} alt='loader'/>
         // </div>
-        <div className="">
-            <Loading />
+        <div className="py-3">
+            <div className="loader">
+                <span></span>
+            </div>
         </div>
-    );
-};
-
-export default LoadingPage;
+    )
+}

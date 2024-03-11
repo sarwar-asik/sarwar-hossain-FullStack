@@ -32,25 +32,38 @@ const Sidebar = () => {
           // width: "70vw",
           // background: "red",
           // background:"",
+          position: "relative"
         }}
       >
+        {/* <svg
+          className="absolute inset-0 w-full h-full text-white"
+      
+          preserveAspectRatio="none"
+          viewBox="0 0 309 800"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M268.487 0H0V800H247.32C207.957 725 207.975 492.294 268.487 367.647C329 243 314.906 53.4314 268.487 0Z"
+          />
+        </svg> */}
         {/* <h2 className="my-5">Sarwar Img</h2> */}
-      <Link href="/" className="bg-red-40 flex justify-center py-7">
-      <Image
-          className="text-center w-[12rem] rounded-full mx-auto p-2"
-          style={{
-            border:"6px solid #252734"
-          }}
-          height={100}
-          width={100}
-          src={banner}
-          alt="banner"
-        />
-      </Link>
+        <Link href="/" className="bg-red-4 flex justify-center py-7 mt-7 border-b-4 border-gray-500">
+          <Image
+            className="text-center w-[12rem] rounded-full mx-auto p-2"
+            style={{
+              border: "6px solid #252734"
+            }}
+            height={100}
+            width={100}
+            src={banner}
+            alt="banner"
+          />
+        </Link>
 
         <Menu
           // theme="light"
-          className="bg-primary text-white mt-10 font-[700]"
+          className="bg-primary text-white mt-10 font-[800]"
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={NavItems("sidebar")}

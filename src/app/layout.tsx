@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="">
-     
+
 
         <Providers>
           <Navbar />
@@ -29,26 +29,29 @@ export default function RootLayout({
             style={{
               display: "flex",
               // justifyContent: "space-between",
-             
               overflow: "hidden",
-              // background:"red"
+              // background: "red",
+              // position: "relative",
+
             }}
+            className="bg-blue-30"
           >
             <Sidebar />
             <main
-            // className="flex-1 lg:ml-[23%]"
-
+              // className="flex-1 lg:ml-[23%]"
+              className="bg-red-40 w-full p-"
               style={{
                 // flex: 1, // Take up remaining width
                 // marginLeft: "21%", // Set the width of the sidebar
                 // position: "sticky",
                 // right: 0,
-                width:"100%",
-                overflowY: "auto",             
-                overflowX: "hidden",  
+                // width: "100%",
+                overflowY: "auto",
+                overflowX: "hidden",
+                // background: "yellow",
               }}
             >
-              
+
               {children}
             </main>
           </main>
