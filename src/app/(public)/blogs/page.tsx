@@ -70,6 +70,7 @@ const BlogsPage = () => {
             </p>
             <Link
               href="https://dev.to/sarwarasik"
+              target="_blank"
               className="block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600"
             >
               Go to insights

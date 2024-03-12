@@ -27,9 +27,9 @@
 }
 
 .scene {
-  width: 390px;
-  height: 70px;
-  perspective: 3000px;
+  width: 290px;
+  height: 100px;
+  perspective: 1000px;
   position: relative;
   align-self: center;
 }
@@ -44,9 +44,9 @@
 }
 .carousel__cell {
   position: absolute;
-  width: 270px;
+  width: 290px;
   left: 10px;
-  height: 280px;
+  height: 250px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
