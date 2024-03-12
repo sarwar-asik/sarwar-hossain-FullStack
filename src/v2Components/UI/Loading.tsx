@@ -15,7 +15,7 @@ export default function Loading() {
         //         // width:"50%"
         //     }} src={loaderImg} alt='loader'/>
         // </div>
-        <div className="py-3">
+        <div className="py-3 ">
             <div className="loader">
                 <span></span>
             </div>

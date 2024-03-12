@@ -101,10 +101,10 @@ const About = () => {
       <section className="z-40 relative">
 
         {/* <ParticlesBg option={optionParticlesHeader} /> */}
-        <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white mt-9">
+        <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white mt-9">
           My Services [ spine the cards ]
         </h1>
-        <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-2">
+        <p className="font-normal  mt-2 text-[1.5em] text-center text-slate-400 mb-2">
           There are some my services those I am expertise. <br />
           You can connect with to get the best.
         </p>

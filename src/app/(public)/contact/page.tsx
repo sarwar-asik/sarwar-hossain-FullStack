@@ -32,12 +32,12 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen my-5 bg-secondar text-white "
+      className="relative w-full min-h-screen mt-[4rem] bg-secondar text-white  "
     >
-      <h1 className="text-2xl font-semibold text-center capitalize lg:text-3xl text-white">
+      <h1 className="text-2xl font-semibold text-center capitalize lg:text-4xl text-white">
         Reach Me
       </h1>
-      <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-8">
+      <p className="font-normal  mt-2 text-[2em] text-center text-slate-400 mb-8">
         You can easy reach me for any query.
       </p>
       <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary h-[10rem] w-full "></div>
