@@ -15,7 +15,7 @@ const LoadingPage = () => {
         //         // width:"50%"
         //     }} src={loaderImg} alt='loader'/>
         // </div>
-        <div className="">
+        <div className="min-h-screen">
             <Loading />
         </div>
     );

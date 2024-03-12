@@ -40,7 +40,7 @@ const ContactMe = () => {
       <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-8">
         You can easy reach me for any query.
       </p>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary h-32 w-full"></div>
+      <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary h-[10rem] w-full "></div>
 
       <div className="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
         <div className="w-full md:w-1/2 p-5 md:px-0 mx-5">
@@ -88,7 +88,6 @@ const ContactMe = () => {
             </div>
           </div>
         </div>
-
         <Form
           name="contact"
           className="w-full md:w-1/2 p-6 bg-gray-900"
