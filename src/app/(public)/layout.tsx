@@ -42,7 +42,7 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
         </section> */}
 
       {/* <ParticlesBg option={optionParticlesService} /> */}
-      <div className="z-40 relative ">{children}</div>
+      <div className="z-40 relative ml-0 lg:ml-[18rem] ">{children}</div>
     </div>
   );
 };

@@ -20,8 +20,8 @@ const Sidebar = () => {
         style={{
           overflow: "auto",
           height: "110vh",
-          // position: "fixed",
-          zIndex: 40,
+          position: "fixed",
+          zIndex: 60,
           left: 0,
           top: 0,
           bottom: 0,
@@ -32,7 +32,8 @@ const Sidebar = () => {
           // width: "70vw",
           // background: "red",
           // background:"",
-          position: "relative"
+          // position: "static",
+          // top: 0
         }}
       >
         {/* <svg

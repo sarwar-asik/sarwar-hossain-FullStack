@@ -32,7 +32,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen my-5 bg-secondar text-white"
+      className="relative w-full min-h-screen my-5 bg-secondar text-white "
     >
       <h1 className="text-2xl font-semibold text-center capitalize lg:text-3xl text-white">
         Reach Me
