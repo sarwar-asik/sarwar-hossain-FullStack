@@ -10,51 +10,50 @@ import author from "@/assets/professionalRemoveBg.png"
 const BlogsPage = () => {
   const blogs = [
     {
-      title: "The Future of Artificial Intelligence",
-      category: "AI programming",
+      title: "Building Scalable Web Applications with Next.js",
+      category: "JavaScript Web Development",
       img: aiImg,
       likes: 235,
       comments: 42,
       views: 1278,
       content:
-        "Artificial Intelligence (AI) is shaping the future in ways we couldn't have imagined a few decades ago...",
+        "Next.js is a powerful framework for building server-side rendered React applications. Learn how to leverage its features for building scalable and efficient web applications.",
       author: "John Smith",
       createdAt: "2023-05-15",
       readingTime: "8 minutes",
-      author_img:
-       author,
+      author_img: author,
     },
     {
-      title: "Blockchain and Its Impact on Finance",
-      category: "Data Analysis",
-      img: DataImg,
+      title: "State Management with Redux",
+      category: "JavaScript Web Development",
+      img: NetworkingImg,
       likes: 198,
       comments: 31,
       views: 1037,
       content:
-        "Blockchain technology has disrupted the financial sector, offering transparency, security, and decentralization...",
+        "Redux is a state management library commonly used in conjunction with React. Explore its principles and best practices for managing application state in complex web projects.",
       author: "Sarah Johnson",
       createdAt: "2023-06-02",
       readingTime: "6 minutes",
-      author_img:
-       author,
+      author_img: author,
     },
     {
-      title: "The Rise of 5G Technology",
-      category: "Networking",
-      img: NetworkingImg,
+      title: "Building APIs with Node.js and MongoDB",
+      category: "JavaScript Web Development",
+      img: DataImg,
       likes: 312,
       comments: 56,
       views: 1520,
       content:
-        "5G technology is revolutionizing communication and connectivity, enabling faster data transfer and IoT applications...",
+        "Node.js and MongoDB are a powerful combination for building scalable and efficient APIs. Learn how to create RESTful APIs and perform CRUD operations with Node.js and MongoDB.",
       author: "Michael Anderson",
       createdAt: "2023-06-20",
       readingTime: "7 minutes",
-      author_img:
-       author,
+      author_img: author,
     },
   ];
+
+
 
   return (
     <div className="bg-seconda   text-white flex flex-col justify-center items-center w-full ">
@@ -70,7 +69,7 @@ const BlogsPage = () => {
               You can explore these to improve web idea.
             </p>
             <Link
-              href="/contact"
+              href="https://dev.to/sarwarasik"
               className="block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600"
             >
               Go to insights
@@ -100,8 +99,8 @@ const BlogsPage = () => {
                     <div className="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                       <div className="md:flex-shrink-0">
                         <Image
-                        width={200}
-                        height={224}
+                          width={200}
+                          height={224}
                           src={img}
                           // preview={false}
                           alt="Blog Cover"
