@@ -176,11 +176,13 @@ const BlogsPage = () => {
                       </div>
                       <hr className="border-gray-300" />
                       <div className="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
-                        <a href="#" className="hover:underline no-underline">
+                        <Link href="https://dev.to/sarwarasik"
+                          target="_blank" rel="noopener"
+                          className="hover:underline no-underline">
                           <h2 className="text-2xl font-bold tracking-normal text-gray-800">
                             {title}
                           </h2>
-                        </a>
+                        </Link>
                       </div>
                       <hr className="border-gray-300" />
                       <p className="px-2 text-sm text-justify text-gray-500">
