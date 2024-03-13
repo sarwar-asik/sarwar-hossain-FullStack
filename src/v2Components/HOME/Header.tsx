@@ -31,7 +31,7 @@ const HeaderPage = () => {
       <div className="text-center my-3">
         <a href="https://git.io/typing-svg">
           <Image
-            src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&center=true&vCenter=true&multiline=true&width=560&lines=Full+Stack+Web+Developer&lines=Sarwar+Hossain"
+            src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&center=true&vCenter=true&multiline=true&width=560&lines=Full+Stack+Web+Developer&lines=Sarwar+Hossain+Github"
             alt="Typing SVG"
           />
         </a>

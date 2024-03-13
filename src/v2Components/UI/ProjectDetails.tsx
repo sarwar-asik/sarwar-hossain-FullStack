@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 import "./project.css";
+import Image from "next/image";
 
 const ProjectDetails = ({ data }: { data: any }) => {
   const { name, time, tech, live, source, img, photo } = data;
@@ -31,7 +32,7 @@ const ProjectDetails = ({ data }: { data: any }) => {
       <div className="blog-slider__wrp swiper-wrapper">
         <div className="blog-slider__item swiper-slide">
           <div className="blog-slider__img">
-            <img
+            <Image
               src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp"
               alt=""
             />
@@ -50,7 +51,7 @@ const ProjectDetails = ({ data }: { data: any }) => {
         </div>
         <div className="blog-slider__item swiper-slide">
           <div className="blog-slider__img">
-            <img
+            <Image
               src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp"
               alt=""
             />
@@ -70,7 +71,7 @@ const ProjectDetails = ({ data }: { data: any }) => {
 
         <div className="blog-slider__item swiper-slide">
           <div className="blog-slider__img">
-            <img
+            <Image
               src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
               alt=""
             />

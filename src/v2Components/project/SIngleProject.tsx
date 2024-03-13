@@ -9,9 +9,9 @@ import Image from 'next/image';
 
 export default function SIngleProject({ projectData }: { projectData: IProjectData }) {
 
-//     // <a href="https://ibb.co/992vPxZ"><img src="https://i.ibb.co/BVjPkhn/nextjs-icon-512x512-y563b8iq.png" alt="nextjs-icon-512x512-y563b8iq" border="0"></a>
-// <a href="https://ibb.co/gmspVjV"><img src="https://i.ibb.co/17H56v6/redux.png" alt="redux" border="0"></a>
-// <a href="https://ibb.co/LdSTj5V"><img src="https://i.ibb.co/Mknzw6F/ts.png" alt="ts" border="0"></a>
+    //     // <a href="https://ibb.co/992vPxZ"><img src="https://i.ibb.co/BVjPkhn/nextjs-icon-512x512-y563b8iq.png" alt="nextjs-icon-512x512-y563b8iq" border="0"></a>
+    // <a href="https://ibb.co/gmspVjV"><img src="https://i.ibb.co/17H56v6/redux.png" alt="redux" border="0"></a>
+    // <a href="https://ibb.co/LdSTj5V"><img src="https://i.ibb.co/Mknzw6F/ts.png" alt="ts" border="0"></a>
     // console.log("🚀SIngleProject ~ projectData:", projectData)
 
     return (
@@ -32,11 +32,11 @@ export default function SIngleProject({ projectData }: { projectData: IProjectDa
                         {/* <a className="categories__btn" href="#">Typescript</a>
                         <a className="categories__btn" href="#">Redux</a> */}
                         {
-                            projectData?.tech?.map((te: string) => <img className='categories__btn' key={te} src={te}
-                            //  height={20} width={20} 
-                             style={{
-                                height: '24px', width: "30px"
-                            }} alt='tech' />)
+                            projectData?.tech?.map((te: string) => <ImageAnt className='categories__btn' key={te} src={te}
+                                //  height={20} width={20} 
+                                style={{
+                                    height: '24px', width: "30px"
+                                }} alt='tech' />)
                         }
                     </span>
                 </p>
