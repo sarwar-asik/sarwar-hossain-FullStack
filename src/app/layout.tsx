@@ -5,6 +5,8 @@ import Providers from "@/lib/Provider";
 import Navbar from "@/v2Components/UI/Navbar/Navbar";
 
 import Sidebar from "@/v2Components/UI/Navbar/SideBar";
+import FloatWhatsApp from "@/components/UI/Navbar/shared/FloatWhatsApp";
+// import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta name="Sarwar asik" content="web developer" />
+      <meta name="Sarwar portfolio" content="Full stack developer" />
       <body className="">
 
 
@@ -37,6 +41,7 @@ export default function RootLayout({
             className="bg-blue-30"
           >
             <Sidebar />
+
             <main
               // className="flex-1 lg:ml-[23%]"
               className="bg-red-40 w-full p- "
@@ -51,9 +56,10 @@ export default function RootLayout({
                 // background: "yellow",
               }}
             >
+              <FloatWhatsApp />
 
               {children}
-            </main>
+              </main>
           </main>
         </Providers>
       </body>
