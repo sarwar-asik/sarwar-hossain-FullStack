@@ -14,7 +14,7 @@ const Navbar = () => {
       >
         <h2></h2>
         <section className="flex justify-between lg:hidden">
-          <SideDrawer items={NavItems("sidebar")}></SideDrawer>
+          <SideDrawer items={NavItems("sidebar")} ></SideDrawer>
         </section>
       </Header>
     </nav>

@@ -39,12 +39,12 @@ const SideBar = ({ items }: { items?: any }) => {
         }
       >
         <Menu
-          className="bg-primary text-white"
+          className="bg-primary text-white  font-[800] text-xl flex flex-col gap-3"
           defaultSelectedKeys={["1"]}
           onClick={() => setOpen(false)}
           mode="inline"
           items={items}
-        
+
         />
       </Drawer>
     </>

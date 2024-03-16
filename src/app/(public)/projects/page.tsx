@@ -1,10 +1,9 @@
 import React from "react";
-import Link from "next/link";
-import { GithubFilled, LinkOutlined } from "@ant-design/icons";
 import Loading from "@/v2Components/UI/Loading";
 import SIngleProject from "@/v2Components/project/SIngleProject";
 
 const Projects = async () => {
+
   const res = await fetch("https://sarwarserver.vercel.app/api/v2/projects", {
     cache: "no-cache",
 
@@ -20,10 +19,10 @@ const Projects = async () => {
 
         <div className="">
           <div className="container px-6 py-10 mx-auto">
-            <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
-              My Project
+            <h1 className="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white">
+              My Projects
             </h1>
-            <p className="font-normal  mt-2 text-[1em] text-center text-slate-400 mb-8">
+            <p className="font-normal  mt-2 text-[1.5em] text-center text-slate-400 mb-8">
               There are some my projects those I created recently. <br />
               You can explore my projects click by live
             </p>

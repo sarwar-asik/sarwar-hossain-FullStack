@@ -20,8 +20,8 @@ const Sidebar = () => {
         style={{
           overflow: "auto",
           height: "110vh",
-          // position: "fixed",
-          zIndex: 40,
+          position: "fixed",
+          zIndex: 60,
           left: 0,
           top: 0,
           bottom: 0,
@@ -32,7 +32,8 @@ const Sidebar = () => {
           // width: "70vw",
           // background: "red",
           // background:"",
-          position: "relative"
+          // position: "static",
+          // top: 0
         }}
       >
         {/* <svg
@@ -48,14 +49,14 @@ const Sidebar = () => {
           />
         </svg> */}
         {/* <h2 className="my-5">Sarwar Img</h2> */}
-        <Link href="/" className="bg-red-4 flex justify-center py-7 mt-7 border-b-4 border-gray-500">
+        <Link href="/" className="bg-red-4 flex justify-center py-3  border-b-4 border-gray-500 mt-5">
           <Image
-            className="text-center w-[12rem] rounded-full mx-auto p-2"
+            className="text-center w-[12rem] rounded-[8px] mx-auto px-"
             style={{
               border: "6px solid #252734"
             }}
-            height={100}
-            width={100}
+            height={180}
+            width={170}
             src={banner}
             alt="banner"
           />
@@ -63,7 +64,7 @@ const Sidebar = () => {
 
         <Menu
           // theme="light"
-          className="bg-primary text-white mt-10 font-[800]"
+          className="bg-primary text-white mt-10 font-[800] text-xl flex flex-col gap-3"
           defaultSelectedKeys={["1"]}
           mode="inline"
           items={NavItems("sidebar")}

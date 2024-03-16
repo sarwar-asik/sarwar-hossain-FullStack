@@ -13,6 +13,7 @@ import Link from "next/link";
 import ParticlesBg from "../UI/Particles";
 import { optionParticlesHeader } from "../const/particles/optionParticlesHeader";
 import "./header.css"
+import { Image } from "antd";
 
 
 const HeaderPage = () => {
@@ -27,8 +28,15 @@ const HeaderPage = () => {
   };
   return (
     <div className="min-h-screen  flex flex-col justify-center">
-
-      <section className="text-center space-y-4 z-10">
+      <div className="text-center my-3">
+        <a href="https://git.io/typing-svg">
+          <Image
+            src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=33&pause=1000&center=true&vCenter=true&multiline=true&width=560&lines=Full+Stack+Web+Developer&lines=Sarwar+Hossain+Github"
+            alt="Typing SVG"
+          />
+        </a>
+      </div>
+      <section className="text-center space-y-4 z-10 mt-3">
         {/* <ParticlesBg option={optionParticlesHeader} /> */}
         {/* /! card section */}
         {/* <div className="card duration-300 hover:-rotate-0 transform rotate-3d(1,-1,1,60deg) group border-sky-900 border-4 overflow-hidden rounded-2xl relative h-52 w-72 bg-sky-800 p-5 flex flex-col items-start gap-4 mx-auto">
@@ -48,11 +56,17 @@ const HeaderPage = () => {
           <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" className="group-hover:scale-125 duration-200 absolute -bottom-0.5 -right-20 w-48 h-48 z-10 -my-2 fill-gray-50 stroke-sky-700"><path strokeWidth="2" strokeMiterlimit="10" d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z" data-name="layer1"></path></svg>
         </div> */}
 
+        <div className="">
+
+          <div className="github-container">
+            <Image className="center" src="https://github-readme-streak-stats.herokuapp.com/?user=sarwar-asik&theme=dark&hide_border=true" alt="Streak Stats" />
+          </div>
+        </div>
         <div className="card-container">
           <div className="title">
-            <span className="font-bold">Fullstack</span>
+            <span className="font-bold text-nowrap">Sarwar Hossain</span>
           </div>
-          <p className="subtitle">Web Developer</p>
+          <p className="subtitle">Full Stack Developer</p>
           <button onClick={handleDownload} className="button">
             Dowload CV
             <svg className="icon icon-fill icon-stroke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
@@ -70,19 +84,21 @@ const HeaderPage = () => {
           </div>
         </button> */}
 
-        <div className="mt-3">
+        <div className="mt-3 ">
           {/* </div> */}
 
-          <h2 style={{ marginBottom: "0.75rem", fontSize: "3rem" }}>
+          {/* <h2 style={{ marginBottom: "0.75rem", fontSize: "3rem" }}>
             Hi, I am Sarwar Hossain {"<  />"}
-          </h2>
+          </h2> */}
 
-          <p className="text-lg lg:text-xl font-mono">
+
+
+          {/* <p className="text-lg lg:text-xl font-mono">
             I am full stack web developer. I have Experience in Developing
             Websites, Web Applications .
             <br />
             Have been worked both Frontend and Backend Api integration .
-          </p>
+          </p> */}
 
 
           <div className="socials-container mt-3">

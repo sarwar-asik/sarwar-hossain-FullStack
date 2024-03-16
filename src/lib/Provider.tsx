@@ -11,15 +11,16 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
         theme={{
           token: {
             // Seed Token
-            colorPrimary: "#023047",
+            colorPrimary: "red",
             borderRadius: 2,
-            
+
 
             // Alias Token
             colorBgContainer: "#f6ffed",
-            
+            // colorBorderBg: 'white',
+
           },
-        
+
         }}
       >
         {children}
