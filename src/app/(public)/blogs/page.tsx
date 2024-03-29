@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // import { Image } from "antd";
 import Link from "next/link";
 import React from "react";
@@ -10,45 +11,79 @@ import author from "@/assets/professionalRemoveBg.png"
 const BlogsPage = () => {
   const blogs = [
     {
-      title: "Building Scalable Web Applications with Next.js",
-      category: "JavaScript Web Development",
-      img: aiImg,
+      title: "Touch Event Handling in Node.js with EventEmitter",
+      category: "Node js",
+      to: 'https://www.linkedin.com/pulse/touch-event-handling-nodejs-eventemitter-sarwar-hossain-ttsic/?trackingId=nkaDuNeqGz6stuzRFbIX6g%3D%3D',
+      img: 'https://media.licdn.com/dms/image/D5612AQG3CQGJNqN0LA/article-cover_image-shrink_720_1280/0/1711700015106?e=1717027200&v=beta&t=MrIfZXXxssafTizyi6XPwalE5A6b8e--iBqFuNOa1iQ',
       likes: 235,
       comments: 42,
+
       views: 1278,
       content:
-        "Next.js is a powerful framework for building server-side rendered React applications. Learn how to leverage its features for building scalable and efficient web applications.",
-      author: "John Smith",
-      createdAt: "2023-05-15",
+        "EventEmitter class, a core module in Node.js that facilitates the management of events such as mouse clicks, keyboard button presses, and mouse Node.js provides an event-driven architecture, allowing developers to handle events asynchronously.",
+      author: "Linkedin Articles",
+      createdAt: "March 29, 2024",
       readingTime: "8 minutes",
       author_img: author,
     },
     {
-      title: "State Management with Redux",
-      category: "JavaScript Web Development",
-      img: NetworkingImg,
+      title: "Streamlining Real-Time: MERN's Journey with Socket.io",
+      category: "Socket Io",
+      img: 'https://media.licdn.com/dms/image/D5612AQErNBGszcHBYQ/article-cover_image-shrink_423_752/0/1711094752254?e=1717027200&v=beta&t=fJ76NVyoZpq0q-LtL4vT3vxTYA4Em3aEWMwobokMD30',
+      to: 'https://www.linkedin.com/pulse/streamlining-real-time-merns-journey-socketio-sarwar-hossain-qnfac/?trackingId=fAvnnLqkn9%2BzfIZquSAbYw%3D%3D',
       likes: 198,
       comments: 31,
       views: 1037,
       content:
-        "Redux is a state management library commonly used in conjunction with React. Explore its principles and best practices for managing application state in complex web projects.",
-      author: "Sarah Johnson",
-      createdAt: "2023-06-02",
-      readingTime: "6 minutes",
+        "Are you considering incorporating real-time streaming into your MERN stack? Socket.io can provide you with a powerful solution that goes beyond basic pulling. With its ability to facilitate instant communication between your database and user interface, Socket.io is a valuable tool to consider. By using Socket.io, you can offer your users a dynamic experience that keeps them engaged and satisfied. We encourage you to try Socket.io in your MERN stack to enhance the functionality of your web applications.",
+      author: "Linkedin Articles",
+      createdAt: "March 22, 2024",
+      readingTime: "12 minutes",
       author_img: author,
     },
     {
-      title: "Building APIs with Node.js and MongoDB",
-      category: "JavaScript Web Development",
-      img: DataImg,
+      title: "🔍 Exploring the Power of Mongoose ORM for No-SQL Databases 📊.",
+      category: "Mongoose",
+      img: 'https://media.licdn.com/dms/image/D4E12AQGf2YqJYxqflg/article-cover_image-shrink_720_1280/0/1710833299935?e=1717027200&v=beta&t=nuJhLDEWTBQ7OBRuG_gAkd4yzgtH_eD_uMA5zXHpVSU',
+      to: "https://www.linkedin.com/pulse/exploring-power-mongoose-orm-no-sql-databases-sarwar-hossain-ngcke/?trackingId=9UTBJrDucfNwDg5rql2vjA%3D%3D",
       likes: 312,
       comments: 56,
       views: 1520,
       content:
-        "Node.js and MongoDB are a powerful combination for building scalable and efficient APIs. Learn how to create RESTful APIs and perform CRUD operations with Node.js and MongoDB.",
-      author: "Michael Anderson",
-      createdAt: "2023-06-20",
-      readingTime: "7 minutes",
+        "Embracing Mongoose ORM for NoSQL databases provides endless possibilities. Here are some of the key features that make it a game-changer:",
+      author: "Linkedin Articles",
+      createdAt: "March 19, 2024",
+      readingTime: "5 minutes",
+      author_img: author,
+    },
+    {
+      title: "🚀 Implementing Drag-and-Drop in Next.js without External Packages",
+      category: "Next js",
+      img: 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fli6cfg5ell53e6knvg7w.png',
+      to: "https://dev.to/sarwarasik/implementing-drag-and-drop-in-nextjs-without-external-packages-38c7",
+      likes: 120,
+      comments: 36,
+      views: 420,
+      content:
+        "Ever wondered how to implement a drag-and-drop feature in your Next.js application without relying on external packages? Here's a quick guide to get you started",
+      author: "Dev.to Articles",
+      createdAt: "Feb 9 , 2024",
+      readingTime: "8 minutes",
+      author_img: author,
+    },
+    {
+      title: "🚀 Tackling Next.js Hydration Errors: 10 Quick Tips",
+      category: "Next js error handle",
+      img: 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9x20kncouzks9yzvw74x.png',
+      to: "https://dev.to/sarwarasik/tackling-nextjs-hydration-errors-10-quick-tips-jn5",
+      likes: 150,
+      comments: 89,
+      views: 1413,
+      content:
+        "Ensure consistent HTML nesting between server and client renders to avoid Next.js hydration errors.",
+      author: "Dev.to Articles",
+      createdAt: "Feb 9 , 2024",
+      readingTime: "8 minutes",
       author_img: author,
     },
   ];
@@ -93,13 +128,14 @@ const BlogsPage = () => {
                 createdAt,
                 readingTime,
                 author_img,
+                to
               } = item;
               return (
                 <div key={i + 1} className="w-full mx-auto">
                   <div className="transition-all duration-150 flex w-full px-4 py-6">
                     <div className="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                       <div className="md:flex-shrink-0">
-                        <Image
+                        <img
                           width={200}
                           height={224}
                           src={img}
@@ -176,17 +212,17 @@ const BlogsPage = () => {
                       </div>
                       <hr className="border-gray-300" />
                       <div className="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
-                        <Link href="https://dev.to/sarwarasik"
+                        <Link href={to}
                           target="_blank" rel="noopener"
-                          className="hover:underline no-underline">
-                          <h2 className="text-2xl font-bold tracking-normal text-gray-800">
-                            {title}
+                          className="hover:underline no-underline ">
+                          <h2 className="text-2xl font-bold tracking-normal text-gray-800 min-h-[5rem]">
+                            {title.length > 48 ? `${title.substring(0, 48)}...` : title}
                           </h2>
                         </Link>
                       </div>
                       <hr className="border-gray-300" />
-                      <p className="px-2 text-sm text-justify text-gray-500">
-                        {content}
+                      <p className="px-2 text-sm text-justify text-gray-500 my-3  min-h-[6rem]">
+                        {content.length > 180 ? `${content.substring(0, 180)}...` : content} 
                       </p>
                       <hr className="border-gray-300" />
                       <section className="px-4 py-2 mt-2">
